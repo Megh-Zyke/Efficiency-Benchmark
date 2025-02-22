@@ -11,7 +11,7 @@ import re
 # os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 def load_model(model_name):
-    login("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")
+    login("")
     print(f"Loading model: {model_name}...")
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
