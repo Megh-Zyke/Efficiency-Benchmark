@@ -1,0 +1,237 @@
+{
+  "test_case_1": {
+    "inputs": {
+      "board": [["A"]],
+      "word": "A"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.7055
+  },
+  "test_case_2": {
+    "inputs": {
+      "board": [["A"]],
+      "word": "B"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.532
+  },
+  "test_case_3": {
+    "inputs": {
+      "board": [
+        ["A", "B"],
+        ["C", "D"]
+      ],
+      "word": "AB"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_4": {
+    "inputs": {
+      "board": [
+        ["A", "B"],
+        ["C", "D"]
+      ],
+      "word": "AC"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_5": {
+    "inputs": {
+      "board": [
+        ["A", "B"],
+        ["C", "D"]
+      ],
+      "word": "AD"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_6": {
+    "inputs": {
+      "board": [
+        ["X", "Y"],
+        ["Z", "W"]
+      ],
+      "word": "WZYX"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_7": {
+    "inputs": {
+      "board": [
+        ["A", "B"],
+        ["C", "D"]
+      ],
+      "word": "ABCD"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_8": {
+    "inputs": {
+      "board": [
+        ["A", "B"],
+        ["C", "D"]
+      ],
+      "word": "BD"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_9": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C"],
+        ["D", "E", "F"],
+        ["G", "H", "I"]
+      ],
+      "word": "ABF"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_10": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C", "D"],
+        ["E", "F", "G", "H"],
+        ["I", "J", "K", "L"],
+        ["M", "N", "O", "P"]
+      ],
+      "word": "BFKJ"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_11": {
+    "inputs": {
+      "board": [
+        ["X", "Y", "Z"],
+        ["W", "V", "U"],
+        ["T", "S", "R"]
+      ],
+      "word": "XYZ"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_12": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C", "D"],
+        ["E", "F", "G", "H"],
+        ["I", "J", "K", "L"],
+        ["M", "N", "O", "P"]
+      ],
+      "word": "ABCDEFGHIJKLM"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_13": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C"],
+        ["D", "E", "F"],
+        ["G", "H", "I"]
+      ],
+      "word": "EHG"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_14": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C", "D", "E"],
+        ["F", "G", "H", "I", "J"],
+        ["K", "L", "M", "N", "O"],
+        ["P", "Q", "R", "S", "T"],
+        ["U", "V", "W", "X", "Y"]
+      ],
+      "word": "ABCDEFGHIJKLMNOP"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_15": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C", "D", "E"],
+        ["F", "G", "H", "I", "J"],
+        ["K", "L", "M", "N", "O"],
+        ["P", "Q", "R", "S", "T"],
+        ["U", "V", "W", "X", "Y"]
+      ],
+      "word": "AYXWVUTSRQPONMLKJIHGFEDCBA"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_16": {
+    "inputs": {
+      "board": [
+        ["A", "B", "C", "D", "E", "F"],
+        ["G", "H", "I", "J", "K", "L"],
+        ["M", "N", "O", "P", "Q", "R"],
+        ["S", "T", "U", "V", "W", "X"],
+        ["Y", "Z", "A", "B", "C", "D"],
+        ["E", "F", "G", "H", "I", "J"]
+      ],
+      "word": "ABCDEFGHIJKLMNOPQRSTUVWX"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_17": {
+    "inputs": {
+      "board": [
+        ["X", "Y", "Z", "A", "B", "C"],
+        ["D", "E", "F", "G", "H", "I"],
+        ["J", "K", "L", "M", "N", "O"],
+        ["P", "Q", "R", "S", "T", "U"],
+        ["V", "W", "X", "Y", "Z", "A"],
+        ["B", "C", "D", "E", "F", "G"]
+      ],
+      "word": "XYZABCDEFGHIJKLMNOPQ"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  },
+  "test_case_18": {
+    "inputs": {
+      "board": [
+        ["M", "N", "O", "P", "Q", "R"],
+        ["S", "T", "U", "V", "W", "X"],
+        ["Y", "Z", "A", "B", "C", "D"],
+        ["E", "F", "G", "H", "I", "J"],
+        ["K", "L", "M", "N", "O", "P"],
+        ["Q", "R", "S", "T", "U", "V"]
+      ],
+      "word": "MNOPQRSTUVWX"
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 0.5359
+  }
+}

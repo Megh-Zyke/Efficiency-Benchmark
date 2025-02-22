@@ -1,0 +1,263 @@
+{
+  "test_case_1": {
+    "inputs": {
+      "s": "leetcode",
+      "wordDict": ["leet", "code"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 2.6875
+  },
+  "test_case_2": {
+    "inputs": {
+      "s": "applepenapple",
+      "wordDict": ["apple", "pen"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.2627
+  },
+  "test_case_3": {
+    "inputs": {
+      "s": "catsandog",
+      "wordDict": ["cats", "dog", "sand", "and", "cat"]
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 1.8057
+  },
+  "test_case_4": {
+    "inputs": {
+      "s": "pineapplepenapple",
+      "wordDict": ["apple", "pen", "pine", "pineapple"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.376
+  },
+  "test_case_5": {
+    "inputs": {
+      "s": "abcd",
+      "wordDict": ["a", "abc", "b", "cd"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3633
+  },
+  "test_case_6": {
+    "inputs": {
+      "s": "abcd",
+      "wordDict": ["ab", "bc", "cd"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3633
+  },
+  "test_case_7": {
+    "inputs": {
+      "s": "aaaaaaa",
+      "wordDict": ["aaaa", "aaa"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3662
+  },
+  "test_case_8": {
+    "inputs": {
+      "s": "a",
+      "wordDict": ["b"]
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 1.3594
+  },
+  "test_case_9": {
+    "inputs": {
+      "s": "a",
+      "wordDict": ["a"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3594
+  },
+  "test_case_10": {
+    "inputs": {
+      "s": "ab",
+      "wordDict": ["a", "b"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3594
+  },
+  "test_case_11": {
+    "inputs": {
+      "s": "abc",
+      "wordDict": ["ab", "c"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3623
+  },
+  "test_case_12": {
+    "inputs": {
+      "s": "abc",
+      "wordDict": ["a", "b"]
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 1.3623
+  },
+  "test_case_13": {
+    "inputs": {
+      "s": "abcd",
+      "wordDict": ["a", "b", "c", "d"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3633
+  },
+  "test_case_14": {
+    "inputs": {
+      "s": "carsanddogs",
+      "wordDict": ["cars", "car", "and", "dogs"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3701
+  },
+  "test_case_15": {
+    "inputs": {
+      "s": "catsanddogs",
+      "wordDict": ["cats", "dog", "sand", "and", "cat", "dogs"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 2.3594
+  },
+  "test_case_16": {
+    "inputs": {
+      "s": "helloworld",
+      "wordDict": ["hello", "world"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3691
+  },
+  "test_case_17": {
+    "inputs": {
+      "s": "thisisatest",
+      "wordDict": ["this", "is", "a", "test"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3701
+  },
+  "test_case_18": {
+    "inputs": {
+      "s": "thisisanimpossibletest",
+      "wordDict": ["this", "is", "an", "possible", "test"]
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 1.8809
+  },
+  "test_case_19": {
+    "inputs": {
+      "s": "xyzabcxyzabc",
+      "wordDict": ["xyz", "abc"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.3711
+  },
+  "test_case_20": {
+    "inputs": {
+      "s": "abababababab",
+      "wordDict": ["ab", "aba"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.8682
+  },
+  "test_case_21": {
+    "inputs": {
+      "s": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "wordDict": ["a", "aa", "aaa"]
+    },
+    "output": true,
+    "excecution_time": 26.9973,
+    "memory_used": 11.8281
+  },
+  "test_case_22": {
+    "inputs": {
+      "s": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "wordDict": ["a", "aa", "aaa"]
+    },
+    "output": false,
+    "excecution_time": 29.9985,
+    "memory_used": 11.3125
+  },
+  "test_case_23": {
+    "inputs": {
+      "s": "longstringlongstringlongstring",
+      "wordDict": ["long", "string", "longstring"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.8701
+  },
+  "test_case_24": {
+    "inputs": {
+      "s": "abcdefghijklmnopqrstuvwxy",
+      "wordDict": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 5.8125
+  },
+  "test_case_25": {
+    "inputs": {
+      "s": "abcdefabcdefabcdefabcdef",
+      "wordDict": ["abc", "def"]
+    },
+    "output": true,
+    "excecution_time": 0.0,
+    "memory_used": 1.8721
+  },
+  "test_case_26": {
+    "inputs": {
+      "s": "zxywvutsrqponmlkjihgfedcba",
+      "wordDict": ["abcd", "efg", "hij"]
+    },
+    "output": false,
+    "excecution_time": 0.0,
+    "memory_used": 1.3848
+  }
+}

@@ -1,0 +1,357 @@
+{
+    "test_case_1": {
+        "inputs": {
+            "beginWord": "hit",
+            "endWord": "cog",
+            "wordList": [
+                "hot",
+                "dot",
+                "dog",
+                "lot",
+                "log",
+                "cog"
+            ]
+        },
+        "output": [
+            [
+                "hit",
+                "hot",
+                "dot",
+                "dog",
+                "cog"
+            ],
+            [
+                "hit",
+                "hot",
+                "lot",
+                "log",
+                "cog"
+            ]
+        ],
+        "excecution_time": 0.19936561584472656,
+        "memory_used": 6.143359375
+    },
+    "test_case_2": {
+        "inputs": {
+            "beginWord": "hit",
+            "endWord": "cog",
+            "wordList": [
+                "hot",
+                "dot",
+                "dog",
+                "lot",
+                "log"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.0,
+        "memory_used": 0.23671875
+    },
+    "test_case_3": {
+        "inputs": {
+            "beginWord": "a",
+            "endWord": "c",
+            "wordList": [
+                "a",
+                "b",
+                "c"
+            ]
+        },
+        "output": [
+            [
+                "a",
+                "c"
+            ]
+        ],
+        "excecution_time": 0.0993967056274414,
+        "memory_used": 1.89765625
+    },
+    "test_case_4": {
+        "inputs": {
+            "beginWord": "abc",
+            "endWord": "xyz",
+            "wordList": [
+                "abd",
+                "xbc",
+                "xyc",
+                "xyz"
+            ]
+        },
+        "output": [
+            [
+                "abc",
+                "xbc",
+                "xyc",
+                "xyz"
+            ]
+        ],
+        "excecution_time": 0.09989738464355469,
+        "memory_used": 4.25390625
+    },
+    "test_case_5": {
+        "inputs": {
+            "beginWord": "aaa",
+            "endWord": "bbb",
+            "wordList": [
+                "aab",
+                "abb",
+                "bbb"
+            ]
+        },
+        "output": [
+            [
+                "aaa",
+                "aab",
+                "abb",
+                "bbb"
+            ]
+        ],
+        "excecution_time": 0.0,
+        "memory_used": 3.5125
+    },
+    "test_case_6": {
+        "inputs": {
+            "beginWord": "cold",
+            "endWord": "warm",
+            "wordList": [
+                "cord",
+                "word",
+                "ward",
+                "warm"
+            ]
+        },
+        "output": [
+            [
+                "cold",
+                "cord",
+                "word",
+                "ward",
+                "warm"
+            ]
+        ],
+        "excecution_time": 0.10001659393310547,
+        "memory_used": 5.1353515625
+    },
+    "test_case_7": {
+        "inputs": {
+            "beginWord": "game",
+            "endWord": "play",
+            "wordList": [
+                "came",
+                "same",
+                "sage",
+                "page",
+                "pale",
+                "play"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10001659393310547,
+        "memory_used": 6.77265625
+    },
+    "test_case_8": {
+        "inputs": {
+            "beginWord": "rate",
+            "endWord": "hate",
+            "wordList": [
+                "mate",
+                "rake",
+                "hate",
+                "gate"
+            ]
+        },
+        "output": [
+            [
+                "rate",
+                "hate"
+            ]
+        ],
+        "excecution_time": 0.0,
+        "memory_used": 4.46796875
+    },
+    "test_case_9": {
+        "inputs": {
+            "beginWord": "ball",
+            "endWord": "gold",
+            "wordList": [
+                "call",
+                "gall",
+                "gall",
+                "gold"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.09999275207519531,
+        "memory_used": 4.09765625
+    },
+    "test_case_10": {
+        "inputs": {
+            "beginWord": "play",
+            "endWord": "stop",
+            "wordList": [
+                "ploy",
+                "plot",
+                "spot",
+                "stop"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10042190551757812,
+        "memory_used": 4.6943359375
+    },
+    "test_case_11": {
+        "inputs": {
+            "beginWord": "stone",
+            "endWord": "water",
+            "wordList": [
+                "stole",
+                "store",
+                "wore",
+                "ware",
+                "water"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.1020669937133789,
+        "memory_used": 6.125
+    },
+    "test_case_12": {
+        "inputs": {
+            "beginWord": "black",
+            "endWord": "white",
+            "wordList": [
+                "blank",
+                "whale",
+                "while",
+                "white"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.09989738464355469,
+        "memory_used": 5.98046875
+    },
+    "test_case_13": {
+        "inputs": {
+            "beginWord": "apple",
+            "endWord": "peach",
+            "wordList": [
+                "apply",
+                "appal",
+                "appel",
+                "peach"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10004043579101562,
+        "memory_used": 5.80078125
+    },
+    "test_case_14": {
+        "inputs": {
+            "beginWord": "light",
+            "endWord": "heavy",
+            "wordList": [
+                "might",
+                "fight",
+                "heaty",
+                "heavy"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.1977682113647461,
+        "memory_used": 6.19140625
+    },
+    "test_case_15": {
+        "inputs": {
+            "beginWord": "house",
+            "endWord": "mouse",
+            "wordList": [
+                "rouse",
+                "moose",
+                "mouse"
+            ]
+        },
+        "output": [
+            [
+                "house",
+                "mouse"
+            ]
+        ],
+        "excecution_time": 0.10006427764892578,
+        "memory_used": 4.559765625
+    },
+    "test_case_16": {
+        "inputs": {
+            "beginWord": "start",
+            "endWord": "final",
+            "wordList": [
+                "stark",
+                "stack",
+                "slack",
+                "flack",
+                "final"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.20813941955566406,
+        "memory_used": 6.986328125
+    },
+    "test_case_17": {
+        "inputs": {
+            "beginWord": "great",
+            "endWord": "bravo",
+            "wordList": [
+                "greet",
+                "greed",
+                "breed",
+                "bravo"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.0997781753540039,
+        "memory_used": 5.94140625
+    },
+    "test_case_18": {
+        "inputs": {
+            "beginWord": "large",
+            "endWord": "small",
+            "wordList": [
+                "lance",
+                "lance",
+                "lance",
+                "small"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10020732879638672,
+        "memory_used": 3.642578125
+    },
+    "test_case_19": {
+        "inputs": {
+            "beginWord": "board",
+            "endWord": "card",
+            "wordList": [
+                "beard",
+                "bard",
+                "card"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.09980201721191406,
+        "memory_used": 4.1025390625
+    },
+    "test_case_20": {
+        "inputs": {
+            "beginWord": "earth",
+            "endWord": "space",
+            "wordList": [
+                "eagle",
+                "spear",
+                "spice",
+                "space"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.1209259033203125,
+        "memory_used": 5.76171875
+    }
+}

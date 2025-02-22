@@ -1,0 +1,218 @@
+{
+  "test_case_1": {
+    "inputs": {
+      "word1": "horse",
+      "word2": "ros"
+    },
+    "output": 3,
+    "excecution_time": 0.0,
+    "memory_used": 0.6039
+  },
+  "test_case_2": {
+    "inputs": {
+      "word1": "intention",
+      "word2": "execution"
+    },
+    "output": 5,
+    "excecution_time": 0.0,
+    "memory_used": 1.1961
+  },
+  "test_case_3": {
+    "inputs": {
+      "word1": "abc",
+      "word2": "abc"
+    },
+    "output": 0,
+    "excecution_time": 0.0,
+    "memory_used": 0.4297
+  },
+  "test_case_4": {
+    "inputs": {
+      "word1": "a",
+      "word2": "b"
+    },
+    "output": 1,
+    "excecution_time": 0.0,
+    "memory_used": 0.3359
+  },
+  "test_case_5": {
+    "inputs": {
+      "word1": "",
+      "word2": "abc"
+    },
+    "output": 3,
+    "excecution_time": 0.0,
+    "memory_used": 0.3281
+  },
+  "test_case_6": {
+    "inputs": {
+      "word1": "abc",
+      "word2": ""
+    },
+    "output": 3,
+    "excecution_time": 0.0,
+    "memory_used": 0.3406
+  },
+  "test_case_7": {
+    "inputs": {
+      "word1": "abcd",
+      "word2": "ab"
+    },
+    "output": 2,
+    "excecution_time": 0.0,
+    "memory_used": 0.4523
+  },
+  "test_case_8": {
+    "inputs": {
+      "word1": "kitten",
+      "word2": "sitting"
+    },
+    "output": 3,
+    "excecution_time": 0.1001,
+    "memory_used": 0.7828
+  },
+  "test_case_9": {
+    "inputs": {
+      "word1": "abcdefghijklmnop",
+      "word2": "mnopqrstuvwxyz"
+    },
+    "output": 16,
+    "excecution_time": 0.1024,
+    "memory_used": 2.4734
+  },
+  "test_case_10": {
+    "inputs": {
+      "word1": "longestcommonsubsequence",
+      "word2": "shortestcommonsupersequence"
+    },
+    "output": 7,
+    "excecution_time": 0.5025,
+    "memory_used": 6.0187
+  },
+  "test_case_11": {
+    "inputs": {
+      "word1": "abcdefabcdefabcdef",
+      "word2": "fedcbafedcbafedcba"
+    },
+    "output": 14,
+    "excecution_time": 0.3017,
+    "memory_used": 3.2812
+  },
+  "test_case_12": {
+    "inputs": {
+      "word1": "thisisateststringwithsometext",
+      "word2": "thisisarevisedstringwithothertext"
+    },
+    "output": 9,
+    "excecution_time": 0.6,
+    "memory_used": 8.5406
+  },
+  "test_case_13": {
+    "inputs": {
+      "word1": "samedifference",
+      "word2": "difference"
+    },
+    "output": 4,
+    "excecution_time": 0.201,
+    "memory_used": 1.6875
+  },
+  "test_case_14": {
+    "inputs": {
+      "word1": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "word2": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "output": 250,
+    "excecution_time": 239.4177,
+    "memory_used": 2814.9344
+  },
+  "test_case_15": {
+    "inputs": {
+      "word1": "thequickbrownfoxjumpsoverthelazydogthequickbrownfoxjumpsoverthelazydogthequickbrownfoxjumpsoverthelazydog",
+      "word2": "thefastbrownfoxjumpsoverthecrazydogthefastbrownfoxjumpsoverthecrazydogthefastbrownfoxjumpsoverthecrazydog"
+    },
+    "output": 21,
+    "excecution_time": 7.3001,
+    "memory_used": 90.5961
+  },
+  "test_case_16": {
+    "inputs": {
+      "word1": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "word2": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+    },
+    "output": 300,
+    "excecution_time": 91.5269,
+    "memory_used": 1396.293
+  },
+  "test_case_17": {
+    "inputs": {
+      "word1": "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello",
+      "word2": "helloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworldhelloworld"
+    },
+    "output": 120,
+    "excecution_time": 68.944,
+    "memory_used": 779.1445
+  },
+  "test_case_18": {
+    "inputs": {
+      "word1": "abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij",
+      "word2": "jihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcbajihgfedcba"
+    },
+    "output": 282,
+    "excecution_time": 135.6475,
+    "memory_used": 1791.9258
+  },
+  "test_case_19": {
+    "inputs": {
+      "word1": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "word2": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "output": 350,
+    "excecution_time": 159.3526,
+    "memory_used": 2545.4648
+  },
+  "test_case_20": {
+    "inputs": {
+      "word1": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "word2": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+    },
+    "output": 400,
+    "excecution_time": 231.6798,
+    "memory_used": 3870.8867
+  },
+  "test_case_21": {
+    "inputs": {
+      "word1": "wordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordwordword",
+      "word2": "wordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswordswords"
+    },
+    "output": 100,
+    "excecution_time": 256.7359,
+    "memory_used": 2537.3086
+  },
+  "test_case_22": {
+    "inputs": {
+      "word1": "thisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstringthisisaverylongstring",
+      "word2": "thisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstringthisisaverydifferentlongstring"
+    },
+    "output": 180,
+    "excecution_time": 376.9125,
+    "memory_used": 3871.5859
+  },
+  "test_case_23": {
+    "inputs": {
+      "word1": "datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata",
+      "word2": "sciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencesciencescience"
+    },
+    "output": 875,
+    "excecution_time": 863.8051,
+    "memory_used": 13652.9297
+  },
+  "test_case_24": {
+    "inputs": {
+      "word1": "longtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextdifferent",
+      "word2": "longtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextlongtextsame"
+    },
+    "output": 8,
+    "excecution_time": 340.0827,
+    "memory_used": 3479.3906
+  }
+}
