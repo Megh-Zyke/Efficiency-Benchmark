@@ -1,5 +1,6 @@
 {
   "test_case_1": {
+    "level": 0,
     "inputs": {
       "candidates": [2, 3, 6, 7],
       "target": 7
@@ -9,6 +10,7 @@
     "memory_used": 1.0461
   },
   "test_case_2": {
+    "level": 0,
     "inputs": {
       "candidates": [2, 3, 5],
       "target": 8
@@ -22,6 +24,7 @@
     "memory_used": 0.8852
   },
   "test_case_3": {
+    "level": 0,
     "inputs": {
       "candidates": [2],
       "target": 1
@@ -31,6 +34,7 @@
     "memory_used": 0.5547
   },
   "test_case_4": {
+    "level": 0,
     "inputs": {
       "candidates": [5, 10],
       "target": 5
@@ -40,6 +44,7 @@
     "memory_used": 0.6328
   },
   "test_case_5": {
+    "level": 0,
     "inputs": {
       "candidates": [2, 4, 6],
       "target": 3
@@ -49,6 +54,7 @@
     "memory_used": 0.5922
   },
   "test_case_6": {
+    "level": 0,
     "inputs": {
       "candidates": [1, 2, 3],
       "target": 5
@@ -64,6 +70,7 @@
     "memory_used": 1.0102
   },
   "test_case_7": {
+    "level": 1,
     "inputs": {
       "candidates": [3, 5, 7, 9],
       "target": 15
@@ -78,6 +85,7 @@
     "memory_used": 0.8973
   },
   "test_case_8": {
+    "level": 1,
     "inputs": {
       "candidates": [2, 3, 4, 5, 7],
       "target": 12
@@ -100,6 +108,7 @@
     "memory_used": 1.682
   },
   "test_case_9": {
+    "level": 1,
     "inputs": {
       "candidates": [4, 6, 8, 10],
       "target": 16
@@ -115,6 +124,7 @@
     "memory_used": 0.9375
   },
   "test_case_10": {
+    "level": 1,
     "inputs": {
       "candidates": [2, 3, 5, 7, 11],
       "target": 19
@@ -144,6 +154,7 @@
     "memory_used": 2.8039
   },
   "test_case_11": {
+    "level": 1,
     "inputs": {
       "candidates": [5, 10, 15, 20],
       "target": 20
@@ -153,6 +164,7 @@
     "memory_used": 0.8438
   },
   "test_case_12": {
+    "level": 1,
     "inputs": {
       "candidates": [1, 2, 5, 7, 10, 15],
       "target": 25
@@ -289,6 +301,7 @@
     "memory_used": 19.6367
   },
   "test_case_13": {
+    "level": 2,
     "inputs": {
       "candidates": [2, 4, 6, 8, 10, 12],
       "target": 22
@@ -343,6 +356,7 @@
     "memory_used": 5.1875
   },
   "test_case_14": {
+    "level": 2,
     "inputs": {
       "candidates": [3, 6, 9, 12, 15, 18],
       "target": 27
@@ -379,6 +393,7 @@
     "memory_used": 3.1016
   },
   "test_case_15": {
+    "level": 2,
     "inputs": {
       "candidates": [7, 14, 21, 28],
       "target": 28
@@ -388,6 +403,7 @@
     "memory_used": 0.8438
   },
   "test_case_16": {
+    "level": 2,
     "inputs": {
       "candidates": [2, 3, 7, 11, 13, 17],
       "target": 29
@@ -433,6 +449,7 @@
     "memory_used": 4.8359
   },
   "test_case_17": {
+    "level": 2,
     "inputs": {
       "candidates": [5, 10, 15, 20, 25],
       "target": 30
@@ -453,6 +470,7 @@
     "memory_used": 1.4297
   },
   "test_case_18": {
+    "level": 3,
     "inputs": {
       "candidates": [2, 5, 10, 15, 20, 25, 30],
       "target": 35
@@ -488,6 +506,7 @@
     "memory_used": 3.3594
   },
   "test_case_19": {
+    "level": 3,
     "inputs": {
       "candidates": [3, 6, 9, 12, 18, 21, 24],
       "target": 36
@@ -553,6 +572,7 @@
     "memory_used": 6.4453
   },
   "test_case_20": {
+    "level": 3,
     "inputs": {
       "candidates": [4, 8, 12, 16, 20, 24, 28],
       "target": 40
@@ -601,6 +621,7 @@
     "memory_used": 4.3203
   },
   "test_case_21": {
+    "level": 3,
     "inputs": {
       "candidates": [7, 14, 21, 28, 35],
       "target": 35
@@ -618,6 +639,7 @@
     "memory_used": 1.0312
   },
   "test_case_22": {
+    "level": 3,
     "inputs": {
       "candidates": [2, 3, 5, 7, 11, 13, 17, 19],
       "target": 39

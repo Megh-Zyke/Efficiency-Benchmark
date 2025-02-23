@@ -1,5 +1,6 @@
 {
   "test_case_1": {
+    "level": 0,
     "inputs": {
       "people": [
         [7, 0],
@@ -22,6 +23,7 @@
     "memory_used": 1.4531
   },
   "test_case_2": {
+    "level": 0,
     "inputs": {
       "people": [
         [6, 0],
@@ -44,6 +46,7 @@
     "memory_used": 0.5859
   },
   "test_case_3": {
+    "level": 0,
     "inputs": {
       "people": [
         [3, 0],
@@ -60,6 +63,7 @@
     "memory_used": 0.3438
   },
   "test_case_4": {
+    "level": 0,
     "inputs": {
       "people": [
         [3, 0],
@@ -76,6 +80,7 @@
     "memory_used": 0.3438
   },
   "test_case_5": {
+    "level": 0,
     "inputs": {
       "people": [
         [3, 1],
@@ -92,6 +97,7 @@
     "memory_used": 0.3438
   },
   "test_case_6": {
+    "level": 0,
     "inputs": {
       "people": [
         [5, 0],
@@ -112,6 +118,7 @@
     "memory_used": 0.5156
   },
   "test_case_7": {
+    "level": 0,
     "inputs": {
       "people": [
         [4, 0],
@@ -130,6 +137,7 @@
     "memory_used": 0.4141
   },
   "test_case_8": {
+    "level": 0,
     "inputs": {
       "people": [
         [7, 0],
@@ -152,6 +160,7 @@
     "memory_used": 0.5859
   },
   "test_case_9": {
+    "level": 1,
     "inputs": {
       "people": [[1, 0]]
     },
@@ -160,6 +169,7 @@
     "memory_used": 0.2578
   },
   "test_case_10": {
+    "level": 1,
     "inputs": {
       "people": [
         [2, 0],
@@ -174,6 +184,7 @@
     "memory_used": 0.2734
   },
   "test_case_11": {
+    "level": 1,
     "inputs": {
       "people": [
         [3, 0],
@@ -190,6 +201,7 @@
     "memory_used": 0.3438
   },
   "test_case_12": {
+    "level": 1,
     "inputs": {
       "people": [
         [1, 0],
@@ -204,6 +216,7 @@
     "memory_used": 0.2734
   },
   "test_case_13": {
+    "level": 1,
     "inputs": {
       "people": [
         [5, 0],
@@ -224,6 +237,7 @@
     "memory_used": 0.5156
   },
   "test_case_14": {
+    "level": 2,
     "inputs": {
       "people": [
         [10, 0],
@@ -248,6 +262,7 @@
     "memory_used": 0.6562
   },
   "test_case_15": {
+    "level": 2,
     "inputs": {
       "people": [
         [8, 0],
@@ -268,6 +283,7 @@
     "memory_used": 0.5156
   },
   "test_case_16": {
+    "level": 2,
     "inputs": {
       "people": [
         [9, 4],
@@ -288,6 +304,7 @@
     "memory_used": 0.5156
   },
   "test_case_17": {
+    "level": 2,
     "inputs": {
       "people": [
         [6, 0],
@@ -310,6 +327,7 @@
     "memory_used": 0.5859
   },
   "test_case_18": {
+    "level": 3,
     "inputs": {
       "people": [
         [2000, 0],
@@ -4320,6 +4338,7 @@
     "memory_used": 265.1953
   },
   "test_case_19": {
+    "level": 3,
     "inputs": {
       "people": [
         [1000000, 0],
@@ -8330,6 +8349,7 @@
     "memory_used": 156.4766
   },
   "test_case_20": {
+    "level": 3,
     "inputs": {
       "people": [
         [2000, 0],
@@ -12340,6 +12360,7 @@
     "memory_used": 156.4766
   },
   "test_case_21": {
+    "level": 3,
     "inputs": {
       "people": [
         [2000, 0],
