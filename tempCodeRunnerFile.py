@@ -1,1 +1,0 @@
-model, tokenizer = load_model("meta-llama/Llama-3.2-1B")
