@@ -1,255 +1,587 @@
 {
-  "test_case_1": {
-    "level": 0,
-    "inputs": {
-      "board": [["A"]],
-      "word": "A"
+    "test_case_1": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A"
+                ]
+            ],
+            "word": "A"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.7055
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.7055
-  },
-  "test_case_2": {
-    "level": 0,
-    "inputs": {
-      "board": [["A"]],
-      "word": "B"
+    "test_case_2": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A"
+                ]
+            ],
+            "word": "B"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.532
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.532
-  },
-  "test_case_3": {
-    "level": 0,
-    "inputs": {
-      "board": [
-        ["A", "B"],
-        ["C", "D"]
-      ],
-      "word": "AB"
+    "test_case_3": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B"
+                ],
+                [
+                    "C",
+                    "D"
+                ]
+            ],
+            "word": "AB"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_4": {
-    "level": 0,
-    "inputs": {
-      "board": [
-        ["A", "B"],
-        ["C", "D"]
-      ],
-      "word": "AC"
+    "test_case_4": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B"
+                ],
+                [
+                    "C",
+                    "D"
+                ]
+            ],
+            "word": "AC"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_5": {
-    "level": 0,
-    "inputs": {
-      "board": [
-        ["A", "B"],
-        ["C", "D"]
-      ],
-      "word": "AD"
+    "test_case_5": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B"
+                ],
+                [
+                    "C",
+                    "D"
+                ]
+            ],
+            "word": "AD"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_6": {
-    "level": 0,
-    "inputs": {
-      "board": [
-        ["X", "Y"],
-        ["Z", "W"]
-      ],
-      "word": "WZYX"
+    "test_case_6": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "X",
+                    "Y"
+                ],
+                [
+                    "Z",
+                    "W"
+                ]
+            ],
+            "word": "WZYX"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_7": {
-    "level": 0,
-    "inputs": {
-      "board": [
-        ["A", "B"],
-        ["C", "D"]
-      ],
-      "word": "ABCD"
+    "test_case_7": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B"
+                ],
+                [
+                    "C",
+                    "D"
+                ]
+            ],
+            "word": "ABCD"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_8": {
-    "level": 0,
-    "inputs": {
-      "board": [
-        ["A", "B"],
-        ["C", "D"]
-      ],
-      "word": "BD"
+    "test_case_8": {
+        "level": 0,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B"
+                ],
+                [
+                    "C",
+                    "D"
+                ]
+            ],
+            "word": "BD"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_9": {
-    "level": 1,
-    "inputs": {
-      "board": [
-        ["A", "B", "C"],
-        ["D", "E", "F"],
-        ["G", "H", "I"]
-      ],
-      "word": "ABF"
+    "test_case_9": {
+        "level": 1,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C"
+                ],
+                [
+                    "D",
+                    "E",
+                    "F"
+                ],
+                [
+                    "G",
+                    "H",
+                    "I"
+                ]
+            ],
+            "word": "ABF"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_10": {
-    "level": 1,
-    "inputs": {
-      "board": [
-        ["A", "B", "C", "D"],
-        ["E", "F", "G", "H"],
-        ["I", "J", "K", "L"],
-        ["M", "N", "O", "P"]
-      ],
-      "word": "BFKJ"
+    "test_case_10": {
+        "level": 1,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                [
+                    "E",
+                    "F",
+                    "G",
+                    "H"
+                ],
+                [
+                    "I",
+                    "J",
+                    "K",
+                    "L"
+                ],
+                [
+                    "M",
+                    "N",
+                    "O",
+                    "P"
+                ]
+            ],
+            "word": "BFKJ"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_11": {
-    "level": 1,
-    "inputs": {
-      "board": [
-        ["X", "Y", "Z"],
-        ["W", "V", "U"],
-        ["T", "S", "R"]
-      ],
-      "word": "XYZ"
+    "test_case_11": {
+        "level": 1,
+        "inputs": {
+            "board": [
+                [
+                    "X",
+                    "Y",
+                    "Z"
+                ],
+                [
+                    "W",
+                    "V",
+                    "U"
+                ],
+                [
+                    "T",
+                    "S",
+                    "R"
+                ]
+            ],
+            "word": "XYZ"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_12": {
-    "level": 1,
-    "inputs": {
-      "board": [
-        ["A", "B", "C", "D"],
-        ["E", "F", "G", "H"],
-        ["I", "J", "K", "L"],
-        ["M", "N", "O", "P"]
-      ],
-      "word": "ABCDEFGHIJKLM"
+    "test_case_12": {
+        "level": 1,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                [
+                    "E",
+                    "F",
+                    "G",
+                    "H"
+                ],
+                [
+                    "I",
+                    "J",
+                    "K",
+                    "L"
+                ],
+                [
+                    "M",
+                    "N",
+                    "O",
+                    "P"
+                ]
+            ],
+            "word": "ABCDEFGHIJKLM"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_13": {
-    "level": 1,
-    "inputs": {
-      "board": [
-        ["A", "B", "C"],
-        ["D", "E", "F"],
-        ["G", "H", "I"]
-      ],
-      "word": "EHG"
+    "test_case_13": {
+        "level": 1,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C"
+                ],
+                [
+                    "D",
+                    "E",
+                    "F"
+                ],
+                [
+                    "G",
+                    "H",
+                    "I"
+                ]
+            ],
+            "word": "EHG"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_14": {
-    "level": 2,
-    "inputs": {
-      "board": [
-        ["A", "B", "C", "D", "E"],
-        ["F", "G", "H", "I", "J"],
-        ["K", "L", "M", "N", "O"],
-        ["P", "Q", "R", "S", "T"],
-        ["U", "V", "W", "X", "Y"]
-      ],
-      "word": "ABCDEFGHIJKLMNOP"
+    "test_case_14": {
+        "level": 2,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E"
+                ],
+                [
+                    "F",
+                    "G",
+                    "H",
+                    "I",
+                    "J"
+                ],
+                [
+                    "K",
+                    "L",
+                    "M",
+                    "N",
+                    "O"
+                ],
+                [
+                    "P",
+                    "Q",
+                    "R",
+                    "S",
+                    "T"
+                ],
+                [
+                    "U",
+                    "V",
+                    "W",
+                    "X",
+                    "Y"
+                ]
+            ],
+            "word": "ABCDEFGHIJKLMNOP"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_15": {
-    "level": 2,
-    "inputs": {
-      "board": [
-        ["A", "B", "C", "D", "E"],
-        ["F", "G", "H", "I", "J"],
-        ["K", "L", "M", "N", "O"],
-        ["P", "Q", "R", "S", "T"],
-        ["U", "V", "W", "X", "Y"]
-      ],
-      "word": "AYXWVUTSRQPONMLKJIHGFEDCBA"
+    "test_case_15": {
+        "level": 2,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E"
+                ],
+                [
+                    "F",
+                    "G",
+                    "H",
+                    "I",
+                    "J"
+                ],
+                [
+                    "K",
+                    "L",
+                    "M",
+                    "N",
+                    "O"
+                ],
+                [
+                    "P",
+                    "Q",
+                    "R",
+                    "S",
+                    "T"
+                ],
+                [
+                    "U",
+                    "V",
+                    "W",
+                    "X",
+                    "Y"
+                ]
+            ],
+            "word": "AYXWVUTSRQPONMLKJIHGFEDCBA"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_16": {
-    "level": 3,
-    "inputs": {
-      "board": [
-        ["A", "B", "C", "D", "E", "F"],
-        ["G", "H", "I", "J", "K", "L"],
-        ["M", "N", "O", "P", "Q", "R"],
-        ["S", "T", "U", "V", "W", "X"],
-        ["Y", "Z", "A", "B", "C", "D"],
-        ["E", "F", "G", "H", "I", "J"]
-      ],
-      "word": "ABCDEFGHIJKLMNOPQRSTUVWX"
+    "test_case_16": {
+        "level": 3,
+        "inputs": {
+            "board": [
+                [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E",
+                    "F"
+                ],
+                [
+                    "G",
+                    "H",
+                    "I",
+                    "J",
+                    "K",
+                    "L"
+                ],
+                [
+                    "M",
+                    "N",
+                    "O",
+                    "P",
+                    "Q",
+                    "R"
+                ],
+                [
+                    "S",
+                    "T",
+                    "U",
+                    "V",
+                    "W",
+                    "X"
+                ],
+                [
+                    "Y",
+                    "Z",
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                [
+                    "E",
+                    "F",
+                    "G",
+                    "H",
+                    "I",
+                    "J"
+                ]
+            ],
+            "word": "ABCDEFGHIJKLMNOPQRSTUVWX"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_17": {
-    "level": 3,
-    "inputs": {
-      "board": [
-        ["X", "Y", "Z", "A", "B", "C"],
-        ["D", "E", "F", "G", "H", "I"],
-        ["J", "K", "L", "M", "N", "O"],
-        ["P", "Q", "R", "S", "T", "U"],
-        ["V", "W", "X", "Y", "Z", "A"],
-        ["B", "C", "D", "E", "F", "G"]
-      ],
-      "word": "XYZABCDEFGHIJKLMNOPQ"
+    "test_case_17": {
+        "level": 3,
+        "inputs": {
+            "board": [
+                [
+                    "X",
+                    "Y",
+                    "Z",
+                    "A",
+                    "B",
+                    "C"
+                ],
+                [
+                    "D",
+                    "E",
+                    "F",
+                    "G",
+                    "H",
+                    "I"
+                ],
+                [
+                    "J",
+                    "K",
+                    "L",
+                    "M",
+                    "N",
+                    "O"
+                ],
+                [
+                    "P",
+                    "Q",
+                    "R",
+                    "S",
+                    "T",
+                    "U"
+                ],
+                [
+                    "V",
+                    "W",
+                    "X",
+                    "Y",
+                    "Z",
+                    "A"
+                ],
+                [
+                    "B",
+                    "C",
+                    "D",
+                    "E",
+                    "F",
+                    "G"
+                ]
+            ],
+            "word": "XYZABCDEFGHIJKLMNOPQ"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  },
-  "test_case_18": {
-    "level": 3,
-    "inputs": {
-      "board": [
-        ["M", "N", "O", "P", "Q", "R"],
-        ["S", "T", "U", "V", "W", "X"],
-        ["Y", "Z", "A", "B", "C", "D"],
-        ["E", "F", "G", "H", "I", "J"],
-        ["K", "L", "M", "N", "O", "P"],
-        ["Q", "R", "S", "T", "U", "V"]
-      ],
-      "word": "MNOPQRSTUVWX"
+    "test_case_18": {
+        "level": 3,
+        "inputs": {
+            "board": [
+                [
+                    "M",
+                    "N",
+                    "O",
+                    "P",
+                    "Q",
+                    "R"
+                ],
+                [
+                    "S",
+                    "T",
+                    "U",
+                    "V",
+                    "W",
+                    "X"
+                ],
+                [
+                    "Y",
+                    "Z",
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                ],
+                [
+                    "E",
+                    "F",
+                    "G",
+                    "H",
+                    "I",
+                    "J"
+                ],
+                [
+                    "K",
+                    "L",
+                    "M",
+                    "N",
+                    "O",
+                    "P"
+                ],
+                [
+                    "Q",
+                    "R",
+                    "S",
+                    "T",
+                    "U",
+                    "V"
+                ]
+            ],
+            "word": "MNOPQRSTUVWX"
+        },
+        "output": false,
+        "excecution_time": 0.0,
+        "memory_used": 0.5359
     },
-    "output": false,
-    "excecution_time": 0.0,
-    "memory_used": 0.5359
-  }
+    "execution_time_info": {
+        "level_0": {
+            "optimal_time": 0.001,
+            "normal_time": 0.001,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.002
+        },
+        "level_1": {
+            "optimal_time": 0.001,
+            "normal_time": 0.001,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.002
+        },
+        "level_2": {
+            "optimal_time": 0.001,
+            "normal_time": 0.001,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.002
+        },
+        "level_3": {
+            "optimal_time": 0.001,
+            "normal_time": 0.001,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.002
+        }
+    }
 }

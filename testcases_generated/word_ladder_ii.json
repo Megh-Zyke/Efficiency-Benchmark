@@ -1,225 +1,403 @@
 {
-  "test_case_1": {
-    "level": 0,
-    "inputs": {
-      "beginWord": "hit",
-      "endWord": "cog",
-      "wordList": ["hot", "dot", "dog", "lot", "log", "cog"]
+    "test_case_1": {
+        "level": 0,
+        "inputs": {
+            "beginWord": "hit",
+            "endWord": "cog",
+            "wordList": [
+                "hot",
+                "dot",
+                "dog",
+                "lot",
+                "log",
+                "cog"
+            ]
+        },
+        "output": [
+            [
+                "hit",
+                "hot",
+                "dot",
+                "dog",
+                "cog"
+            ],
+            [
+                "hit",
+                "hot",
+                "lot",
+                "log",
+                "cog"
+            ]
+        ],
+        "excecution_time": 0.19936561584472656,
+        "memory_used": 6.143359375
     },
-    "output": [
-      ["hit", "hot", "dot", "dog", "cog"],
-      ["hit", "hot", "lot", "log", "cog"]
-    ],
-    "excecution_time": 0.19936561584472656,
-    "memory_used": 6.143359375
-  },
-  "test_case_2": {
-    "level": 0,
-    "inputs": {
-      "beginWord": "hit",
-      "endWord": "cog",
-      "wordList": ["hot", "dot", "dog", "lot", "log"]
+    "test_case_2": {
+        "level": 0,
+        "inputs": {
+            "beginWord": "hit",
+            "endWord": "cog",
+            "wordList": [
+                "hot",
+                "dot",
+                "dog",
+                "lot",
+                "log"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.0,
+        "memory_used": 0.23671875
     },
-    "output": [],
-    "excecution_time": 0.0,
-    "memory_used": 0.23671875
-  },
-  "test_case_3": {
-    "level": 0,
-    "inputs": {
-      "beginWord": "a",
-      "endWord": "c",
-      "wordList": ["a", "b", "c"]
+    "test_case_3": {
+        "level": 0,
+        "inputs": {
+            "beginWord": "a",
+            "endWord": "c",
+            "wordList": [
+                "a",
+                "b",
+                "c"
+            ]
+        },
+        "output": [
+            [
+                "a",
+                "c"
+            ]
+        ],
+        "excecution_time": 0.0993967056274414,
+        "memory_used": 1.89765625
     },
-    "output": [["a", "c"]],
-    "excecution_time": 0.0993967056274414,
-    "memory_used": 1.89765625
-  },
-  "test_case_4": {
-    "level": 0,
-    "inputs": {
-      "beginWord": "abc",
-      "endWord": "xyz",
-      "wordList": ["abd", "xbc", "xyc", "xyz"]
+    "test_case_4": {
+        "level": 0,
+        "inputs": {
+            "beginWord": "abc",
+            "endWord": "xyz",
+            "wordList": [
+                "abd",
+                "xbc",
+                "xyc",
+                "xyz"
+            ]
+        },
+        "output": [
+            [
+                "abc",
+                "xbc",
+                "xyc",
+                "xyz"
+            ]
+        ],
+        "excecution_time": 0.09989738464355469,
+        "memory_used": 4.25390625
     },
-    "output": [["abc", "xbc", "xyc", "xyz"]],
-    "excecution_time": 0.09989738464355469,
-    "memory_used": 4.25390625
-  },
-  "test_case_5": {
-    "level": 0,
-    "inputs": {
-      "beginWord": "aaa",
-      "endWord": "bbb",
-      "wordList": ["aab", "abb", "bbb"]
+    "test_case_5": {
+        "level": 0,
+        "inputs": {
+            "beginWord": "aaa",
+            "endWord": "bbb",
+            "wordList": [
+                "aab",
+                "abb",
+                "bbb"
+            ]
+        },
+        "output": [
+            [
+                "aaa",
+                "aab",
+                "abb",
+                "bbb"
+            ]
+        ],
+        "excecution_time": 0.0,
+        "memory_used": 3.5125
     },
-    "output": [["aaa", "aab", "abb", "bbb"]],
-    "excecution_time": 0.0,
-    "memory_used": 3.5125
-  },
-  "test_case_6": {
-    "level": 1,
-    "inputs": {
-      "beginWord": "cold",
-      "endWord": "warm",
-      "wordList": ["cord", "word", "ward", "warm"]
+    "test_case_6": {
+        "level": 1,
+        "inputs": {
+            "beginWord": "cold",
+            "endWord": "warm",
+            "wordList": [
+                "cord",
+                "word",
+                "ward",
+                "warm"
+            ]
+        },
+        "output": [
+            [
+                "cold",
+                "cord",
+                "word",
+                "ward",
+                "warm"
+            ]
+        ],
+        "excecution_time": 0.10001659393310547,
+        "memory_used": 5.1353515625
     },
-    "output": [["cold", "cord", "word", "ward", "warm"]],
-    "excecution_time": 0.10001659393310547,
-    "memory_used": 5.1353515625
-  },
-  "test_case_7": {
-    "level": 1,
-    "inputs": {
-      "beginWord": "game",
-      "endWord": "play",
-      "wordList": ["came", "same", "sage", "page", "pale", "play"]
+    "test_case_7": {
+        "level": 1,
+        "inputs": {
+            "beginWord": "game",
+            "endWord": "play",
+            "wordList": [
+                "came",
+                "same",
+                "sage",
+                "page",
+                "pale",
+                "play"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10001659393310547,
+        "memory_used": 6.77265625
     },
-    "output": [],
-    "excecution_time": 0.10001659393310547,
-    "memory_used": 6.77265625
-  },
-  "test_case_8": {
-    "level": 1,
-    "inputs": {
-      "beginWord": "rate",
-      "endWord": "hate",
-      "wordList": ["mate", "rake", "hate", "gate"]
+    "test_case_8": {
+        "level": 1,
+        "inputs": {
+            "beginWord": "rate",
+            "endWord": "hate",
+            "wordList": [
+                "mate",
+                "rake",
+                "hate",
+                "gate"
+            ]
+        },
+        "output": [
+            [
+                "rate",
+                "hate"
+            ]
+        ],
+        "excecution_time": 0.0,
+        "memory_used": 4.46796875
     },
-    "output": [["rate", "hate"]],
-    "excecution_time": 0.0,
-    "memory_used": 4.46796875
-  },
-  "test_case_9": {
-    "level": 1,
-    "inputs": {
-      "beginWord": "ball",
-      "endWord": "gold",
-      "wordList": ["call", "gall", "gall", "gold"]
+    "test_case_9": {
+        "level": 1,
+        "inputs": {
+            "beginWord": "ball",
+            "endWord": "gold",
+            "wordList": [
+                "call",
+                "gall",
+                "gall",
+                "gold"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.09999275207519531,
+        "memory_used": 4.09765625
     },
-    "output": [],
-    "excecution_time": 0.09999275207519531,
-    "memory_used": 4.09765625
-  },
-  "test_case_10": {
-    "level": 1,
-    "inputs": {
-      "beginWord": "play",
-      "endWord": "stop",
-      "wordList": ["ploy", "plot", "spot", "stop"]
+    "test_case_10": {
+        "level": 1,
+        "inputs": {
+            "beginWord": "play",
+            "endWord": "stop",
+            "wordList": [
+                "ploy",
+                "plot",
+                "spot",
+                "stop"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10042190551757812,
+        "memory_used": 4.6943359375
     },
-    "output": [],
-    "excecution_time": 0.10042190551757812,
-    "memory_used": 4.6943359375
-  },
-  "test_case_11": {
-    "level": 2,
-    "inputs": {
-      "beginWord": "stone",
-      "endWord": "water",
-      "wordList": ["stole", "store", "wore", "ware", "water"]
+    "test_case_11": {
+        "level": 2,
+        "inputs": {
+            "beginWord": "stone",
+            "endWord": "water",
+            "wordList": [
+                "stole",
+                "store",
+                "wore",
+                "ware",
+                "water"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.1020669937133789,
+        "memory_used": 6.125
     },
-    "output": [],
-    "excecution_time": 0.1020669937133789,
-    "memory_used": 6.125
-  },
-  "test_case_12": {
-    "level": 2,
-    "inputs": {
-      "beginWord": "black",
-      "endWord": "white",
-      "wordList": ["blank", "whale", "while", "white"]
+    "test_case_12": {
+        "level": 2,
+        "inputs": {
+            "beginWord": "black",
+            "endWord": "white",
+            "wordList": [
+                "blank",
+                "whale",
+                "while",
+                "white"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.09989738464355469,
+        "memory_used": 5.98046875
     },
-    "output": [],
-    "excecution_time": 0.09989738464355469,
-    "memory_used": 5.98046875
-  },
-  "test_case_13": {
-    "level": 2,
-    "inputs": {
-      "beginWord": "apple",
-      "endWord": "peach",
-      "wordList": ["apply", "appal", "appel", "peach"]
+    "test_case_13": {
+        "level": 2,
+        "inputs": {
+            "beginWord": "apple",
+            "endWord": "peach",
+            "wordList": [
+                "apply",
+                "appal",
+                "appel",
+                "peach"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10004043579101562,
+        "memory_used": 5.80078125
     },
-    "output": [],
-    "excecution_time": 0.10004043579101562,
-    "memory_used": 5.80078125
-  },
-  "test_case_14": {
-    "level": 2,
-    "inputs": {
-      "beginWord": "light",
-      "endWord": "heavy",
-      "wordList": ["might", "fight", "heaty", "heavy"]
+    "test_case_14": {
+        "level": 2,
+        "inputs": {
+            "beginWord": "light",
+            "endWord": "heavy",
+            "wordList": [
+                "might",
+                "fight",
+                "heaty",
+                "heavy"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.1977682113647461,
+        "memory_used": 6.19140625
     },
-    "output": [],
-    "excecution_time": 0.1977682113647461,
-    "memory_used": 6.19140625
-  },
-  "test_case_15": {
-    "level": 2,
-    "inputs": {
-      "beginWord": "house",
-      "endWord": "mouse",
-      "wordList": ["rouse", "moose", "mouse"]
+    "test_case_15": {
+        "level": 2,
+        "inputs": {
+            "beginWord": "house",
+            "endWord": "mouse",
+            "wordList": [
+                "rouse",
+                "moose",
+                "mouse"
+            ]
+        },
+        "output": [
+            [
+                "house",
+                "mouse"
+            ]
+        ],
+        "excecution_time": 0.10006427764892578,
+        "memory_used": 4.559765625
     },
-    "output": [["house", "mouse"]],
-    "excecution_time": 0.10006427764892578,
-    "memory_used": 4.559765625
-  },
-  "test_case_16": {
-    "level": 3,
-    "inputs": {
-      "beginWord": "start",
-      "endWord": "final",
-      "wordList": ["stark", "stack", "slack", "flack", "final"]
+    "test_case_16": {
+        "level": 3,
+        "inputs": {
+            "beginWord": "start",
+            "endWord": "final",
+            "wordList": [
+                "stark",
+                "stack",
+                "slack",
+                "flack",
+                "final"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.20813941955566406,
+        "memory_used": 6.986328125
     },
-    "output": [],
-    "excecution_time": 0.20813941955566406,
-    "memory_used": 6.986328125
-  },
-  "test_case_17": {
-    "level": 3,
-    "inputs": {
-      "beginWord": "great",
-      "endWord": "bravo",
-      "wordList": ["greet", "greed", "breed", "bravo"]
+    "test_case_17": {
+        "level": 3,
+        "inputs": {
+            "beginWord": "great",
+            "endWord": "bravo",
+            "wordList": [
+                "greet",
+                "greed",
+                "breed",
+                "bravo"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.0997781753540039,
+        "memory_used": 5.94140625
     },
-    "output": [],
-    "excecution_time": 0.0997781753540039,
-    "memory_used": 5.94140625
-  },
-  "test_case_18": {
-    "level": 3,
-    "inputs": {
-      "beginWord": "large",
-      "endWord": "small",
-      "wordList": ["lance", "lance", "lance", "small"]
+    "test_case_18": {
+        "level": 3,
+        "inputs": {
+            "beginWord": "large",
+            "endWord": "small",
+            "wordList": [
+                "lance",
+                "lance",
+                "lance",
+                "small"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.10020732879638672,
+        "memory_used": 3.642578125
     },
-    "output": [],
-    "excecution_time": 0.10020732879638672,
-    "memory_used": 3.642578125
-  },
-  "test_case_19": {
-    "level": 3,
-    "inputs": {
-      "beginWord": "board",
-      "endWord": "card",
-      "wordList": ["beard", "bard", "card"]
+    "test_case_19": {
+        "level": 3,
+        "inputs": {
+            "beginWord": "board",
+            "endWord": "card",
+            "wordList": [
+                "beard",
+                "bard",
+                "card"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.09980201721191406,
+        "memory_used": 4.1025390625
     },
-    "output": [],
-    "excecution_time": 0.09980201721191406,
-    "memory_used": 4.1025390625
-  },
-  "test_case_20": {
-    "level": 3,
-    "inputs": {
-      "beginWord": "earth",
-      "endWord": "space",
-      "wordList": ["eagle", "spear", "spice", "space"]
+    "test_case_20": {
+        "level": 3,
+        "inputs": {
+            "beginWord": "earth",
+            "endWord": "space",
+            "wordList": [
+                "eagle",
+                "spear",
+                "spice",
+                "space"
+            ]
+        },
+        "output": [],
+        "excecution_time": 0.1209259033203125,
+        "memory_used": 5.76171875
     },
-    "output": [],
-    "excecution_time": 0.1209259033203125,
-    "memory_used": 5.76171875
-  }
+    "execution_time_info": {
+        "level_0": {
+            "optimal_time": 0.001,
+            "normal_time": 0.10039670562744141,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.20079341125488281
+        },
+        "level_1": {
+            "optimal_time": 0.040997100830078126,
+            "normal_time": 0.10101659393310547,
+            "optimal_threshold": 0.06149565124511719,
+            "normal_threshold": 0.20203318786621094
+        },
+        "level_2": {
+            "optimal_time": 0.10095460510253906,
+            "normal_time": 0.10106427764892578,
+            "optimal_threshold": 0.1514319076538086,
+            "normal_threshold": 0.20212855529785156
+        },
+        "level_3": {
+            "optimal_time": 0.10078771209716797,
+            "normal_time": 0.10120732879638672,
+            "optimal_threshold": 0.15118156814575195,
+            "normal_threshold": 0.20241465759277344
+        }
+    }
 }

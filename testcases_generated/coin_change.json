@@ -272,5 +272,31 @@
     "output": 9,
     "excecution_time": 93.1221,
     "memory_used": 78.3398
+  },
+  "execution_time_info": {
+    "level_0": {
+      "optimal_time": 0.001,
+      "normal_time": 0.001,
+      "optimal_threshold": 0.0015,
+      "normal_threshold": 0.002
+    },
+    "level_1": {
+      "optimal_time": 0.14100000000000001,
+      "normal_time": 0.201,
+      "optimal_threshold": 0.21150000000000002,
+      "normal_threshold": 0.402
+    },
+    "level_2": {
+      "optimal_time": 10.726400000000002,
+      "normal_time": 23.0923,
+      "optimal_threshold": 16.089600000000004,
+      "normal_threshold": 46.1846
+    },
+    "level_3": {
+      "optimal_time": 71.18277,
+      "normal_time": 86.42535000000001,
+      "optimal_threshold": 106.77415500000001,
+      "normal_threshold": 172.85070000000002
+    }
   }
 }
