@@ -89,12 +89,22 @@ def compute_score(filename):
                
                 if question_id == 10:
                     res = []
-                    
                     for i in inputs:
                         for j in i:
                             res.append(list_to_linked_list(j))
                     inputs = [res]
+                
+                if question_id == 15:
+                    res = []
+                    for j in inputs:
+                        res.append(build_graph(j))
+                    inputs = res
                 # Extract method name from solution
+                if question_id == 17:
+                    res = []
+                    for j in inputs:
+                        res.append(list_to_tree(j))
+                    inputs = res
                 method_name = list(solution_instance.__class__.__dict__.keys())[1]  # Assuming first method is the target
                 
                 if hasattr(solution_instance, method_name):
@@ -111,10 +121,11 @@ def compute_score(filename):
 
                     total_tests += 1
 
-                    if question_id == 10:
-                        
+                    if question_id == 10:  
                         result = linked_list_to_list(result)
-                        
+
+                    if question_id == 15:   
+                        result = graph_to_adj_list(result)
 
                     if result == expected_output:
                         passed_tests += 1
