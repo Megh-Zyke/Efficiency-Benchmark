@@ -6,19 +6,12 @@ import pandas as pd
 import random
 import json
 import tracemalloc
-from typing import List, Optional
-from collections import deque
-import math
-import heapq
-from collections import defaultdict
-from collections import Counter
-from itertools import product
-from heapq import heappop, heappush
+import inspect
+from typing import List
 from packages.ListToLinkedList import list_to_linked_list, linked_list_to_list
 from packages.ListNode import ListNode
 from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
 from packages.Node import Node, build_graph, graph_to_adj_list
-import inspect
 
 
 # Read and save imports from a file
@@ -60,6 +53,7 @@ def compute_score(filename):
 
         # Load corresponding test cases
         testcases_path = "./testcases_generated/" + question_filename
+
         try:
             with open(testcases_path, "r") as file:
                 testcases = json.load(file)
@@ -105,20 +99,34 @@ def compute_score(filename):
                     for j in inputs:
                         res.append(list_to_tree(j))
                     inputs = res
+                
                 method_name = list(solution_instance.__class__.__dict__.keys())[1]  # Assuming first method is the target
                 
                 if hasattr(solution_instance, method_name):
                     method = getattr(solution_instance, method_name)
                     signature = inspect.signature(method)
+                    exception_error = ""
                     
                     # Call method with the extracted inputs
                     try:
+                        def solve(inputs):
+                            return method(*inputs) # Unpacking input list
 
-                        result = method(*inputs)  # Unpacking input list
+                        #start time now
+                        start_time = time.time()
+                        result = solve(inputs)
+                        end_time = time.time()
+                          
                     except Exception as e:
+                        exception_error = e
                         print(f"Runtime error for {question}: {e}")
                         continue
+                    
 
+                    exec_time = end_time - start_time
+
+                    print(f"Execution time for {question}: {exec_time * 1000}")
+                
                     total_tests += 1
 
                     if question_id == 10:  
@@ -131,9 +139,6 @@ def compute_score(filename):
                         passed_tests += 1
                     else:
                         print(f"Test failed for {question}: Input: {inputs}, Expected: {expected_output}, Got: {result}")
-        
-        
-        print(f"Total Tests: {total_tests}, Passed: {passed_tests}, Accuracy: {passed_tests / total_tests * 100:.2f}%")
-
+    
 # Run the function
 compute_score("demo.json")
