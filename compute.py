@@ -18,168 +18,161 @@ from packages.Node import Node, build_graph, graph_to_adj_list
 
 # Your given solution
 class Solution:
-    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        # Initialize the array to hold the right side view elements
-        right_side_view = []
-      
-        # If the tree is empty, return the empty list
-        if root is None:
-            return right_side_view
-      
-        # Use deque as a queue to hold the nodes at each level
-        queue = deque([root])
-      
-        # Continue until the queue is empty
-        while queue:
-            # The rightmost element at the current level is visible from the right side
-            right_side_view.append(queue[-1].val)
-          
-            # Iterate over nodes at the current level
-            for _ in range(len(queue)):
-                # Pop the node from the left side of the queue
-                current_node = queue.popleft()
-              
-                # If left child exists, add it to the queue
-                if current_node.left:
-                    queue.append(current_node.left)
-              
-                # If right child exists, add it to the queue
-                if current_node.right:
-                    queue.append(current_node.right)
-                  
-        # Return the list containing the right side view of the tree
-        return right_side_view
-
+    def maxArea(self, height: List[int]) -> int:
+        l = 0
+        r = len(height)-1
+        maxarea = 0
+        while l<r:
+            maxarea = max(maxarea,(r-l)*(min(height[l],height[r])))
+            if height[l]<height[r]:
+                l+=1
+            else:
+                r-=1
 # Define test cases
 test_cases = {
-    # Level 0: Basic Correctness & Edge Cases (5 test cases)
     "test_case_1": {
+        "level": 0,
         "inputs": {
-            "root": [1,2,3,None,5,None,4]
+            "height": [1, 8, 6, 2, 5, 4, 8, 3, 7]
         },
-        "output": [1,3,4]  # Rightmost nodes from top to bottom
+        "output": 49
     },
     "test_case_2": {
+        "level": 0,
         "inputs": {
-            "root": [1,2,3,4,None,None,None,5]
+            "height": [1, 1]
         },
-        "output": [1,3,4,5]  # Rightmost path down
+        "output": 1
     },
     "test_case_3": {
+        "level": 0,
         "inputs": {
-            "root": [1,None,3]
+            "height": [4, 3, 2, 1, 4]
         },
-        "output": [1,3]  # Right-skewed tree
+        "output": 16
     },
     "test_case_4": {
+        "level": 0,
         "inputs": {
-            "root": []
+            "height": [1, 2, 1]
         },
-        "output": []  # Empty tree case
+        "output": 2
     },
     "test_case_5": {
+        "level": 0,
         "inputs": {
-            "root": [1]
+            "height": [2, 3, 10, 5, 7, 8, 9]
         },
-        "output": [1]  # Single node tree
+        "output": 36
     },
-
-    # Level 1: Moderate Cases (5 test cases)
     "test_case_6": {
+        "level": 1,
         "inputs": {
-            "root": [1,2,3,4,5,6,7]
+            "height": [1, 1000, 1000, 1000, 1]
         },
-        "output": [1,3,7]  # Complete tree with clear right-side nodes
+        "output": 4000
     },
     "test_case_7": {
+        "level": 1,
         "inputs": {
-            "root": [10,8,15,6,9,12,20,None,7,None,None,11,13,18,25]
+            "height": [2, 3, 10, 5, 7, 8, 9, 12, 1]
         },
-        "output": [10,15,20,25]  # Rightmost visible nodes
+        "output": 49
     },
     "test_case_8": {
+        "level": 1,
         "inputs": {
-            "root": [5,3,10,None,4,None,12]
+            "height": [1, 2, 4, 3]
         },
-        "output": [5,10,12]  # Unbalanced tree, right-skewed
+        "output": 4
     },
     "test_case_9": {
+        "level": 1,
         "inputs": {
-            "root": [7,3,8,2,5,None,10,1,None,4,6,None,None,9,12]
+            "height": [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
         },
-        "output": [7,8,10,12]  # Right nodes from top to bottom
+        "output": 25
     },
     "test_case_10": {
+        "level": 1,
         "inputs": {
-            "root": [1,2,3,None,5,None,4,None,None,6]
+            "height": [1000, 1, 1000, 1, 1000, 1, 1000]
         },
-        "output": [1,3,4,6]  # Zig-zag tree with clear right view
+        "output": 6000
     },
-
-    # Level 2: Larger Trees (5 test cases)
     "test_case_11": {
+        "level": 2,
         "inputs": {
-            "root": [i for i in range(1, 32)]  # Full binary tree (1-31)
+            "height": [1000, 1, 1, 1, 1000]
         },
-        "output": [1,3,7,15,31]  # Rightmost nodes at each level
+        "output": 4000
     },
     "test_case_12": {
+        "level": 2,
         "inputs": {
-            "root": [20,10,30,5,15,25,35,None,7,12,18,22,28,33,40]
+            "height": [0, 0, 0, 0, 0, 0, 1000]
         },
-        "output": [20,30,35,40]  # Rightmost nodes in a balanced tree
+        "output": 0
     },
     "test_case_13": {
+        "level": 2,
         "inputs": {
-            "root": [50,30,70,20,40,60,80,None,None,None,45,None,65,None,85]
+            "height": [10000, 1, 1, 1, 1, 1, 10000]
         },
-        "output": [50,70,80,85]  # Unbalanced binary tree
+        "output": 60000
     },
     "test_case_14": {
+        "level": 2,
         "inputs": {
-            "root": [i for i in range(1, 40, 2)]  # Sparse right-leaning tree
+            "height": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         },
-        "output": [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39]  # All rightmost nodes
+        "output": 25
     },
     "test_case_15": {
+        "level": 2,
         "inputs": {
-            "root": [100,-10,200,-20,50,150,250,None,-15,45,None,None,175,None,300]
+            "height": [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 11]
         },
-        "output": [100,200,250,300]  # Complex tree with deep right side
+        "output": 100
     },
-
-    # Level 3: Stress Tests (5 test cases)
     "test_case_16": {
+        "level": 3,
         "inputs": {
-            "root": [i for i in range(1, 101)]  # Full tree with 100 nodes
+            "height": [i % 1000 for i in range(100000)]
         },
-        "output": [1,3,7,15,31,63,100]  # Deepest rightmost visible nodes
+        "output": 99900000
     },
     "test_case_17": {
+        "level": 3,
         "inputs": {
-            "root": [i for i in range(1, 101) if i % 2 == 0]  # Even values, right-skewed
+            "height": [10000] + [1] * 99998 + [10000]
         },
-        "output": [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100]  # All right nodes
+        "output": 999980000
     },
     "test_case_18": {
+        "level": 3,
         "inputs": {
-            "root": [1] + [None] * 99  # A single deep rightmost path
+            "height": [i for i in range(100000)]
         },
-        "output": [1]  # Only root is visible
+        "output": 2499975000
     },
     "test_case_19": {
+        "level": 3,
         "inputs": {
-            "root": [100] + [i for i in range(99, 0, -1)]  # Left-heavy tree
+            "height": [i for i in range(100000, 0, -1)]
         },
-        "output": [100]  # Only root is visible
+        "output": 2499975000
     },
     "test_case_20": {
+        "level": 3,
         "inputs": {
-            "root": [100, 50, 150, 25, 75, 125, 175, 12, 37, 63, 87, 112, 138, 162, 188] + [i for i in range(189, 250)]
+            "height": [10000 if i % 2 == 0 else 1 for i in range(100000)]
         },
-        "output": [100,150,175,188,249]  # Rightmost visible nodes in a large, deep tree
+        "output": 499950000
     }
 }
+
+
 
 # Function to run tests and measure performance
 def run_tests():
@@ -188,7 +181,7 @@ def run_tests():
 
     for test_name, test in test_cases.items():
        
-        root = test["inputs"]["root"]
+        inputs = test["inputs"]
      
 
         exc_time =  []
@@ -200,7 +193,7 @@ def run_tests():
             start_time = time.time()
 
             # Run the function
-            actual_output = solution.rightSideView(list_to_tree(root))
+            actual_output = solution.maxArea(**inputs)
 
             # Stop memory and time tracking
             end_time = time.time()
@@ -214,8 +207,9 @@ def run_tests():
         memory = []
         # Store results in the new dictionary format
         results[test_name] = {
+            "level" : test["level"],
             "inputs": {
-                "root" : root, 
+                "height": inputs["height"]
             },
             "output": actual_output,
             "excecution_time" : avg_time * 1000 ,
@@ -237,7 +231,7 @@ def run_tests():
 test_results = run_tests()
 
 # Save results to a JSON file
-with open("testcases_generated/binary_tree_right_side_view.json", "w") as file:
+with open("testcases_generated/container_with_most_water.json", "w") as file:
     json.dump(test_results, file, indent=4)
 
 print("\n✅ Test results saved to 'test_results.json'!")
