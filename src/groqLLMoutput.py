@@ -6,7 +6,7 @@ import pandas as pd
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from prompts.prompt import prompt
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = ""
 client = groq.Client(api_key=GROQ_API_KEY)
 df = pd.read_excel("benchmark_prototype.xlsx")
 problem = df.problem_description
