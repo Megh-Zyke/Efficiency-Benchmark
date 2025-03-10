@@ -13,6 +13,10 @@ for file_name in files:
         data = json.load(file)
 
         for testcase in data.values():
+            if "level" not in testcase:
+                print(f"Level not found in {file_name}. Skipping...")
+                
+                continue
             level = testcase["level"]
             exec_time = testcase["excecution_time"] + BIAS
             level_times[level].append(exec_time)

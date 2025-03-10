@@ -1,5 +1,6 @@
 {
     "test_case_1": {
+        "level": 0,
         "inputs": {
             "board": [
                 [
@@ -17,6 +18,7 @@
         "memory_used": 0.806640625
     },
     "test_case_2": {
+        "level": 0,
         "inputs": {
             "board": [
                 [
@@ -34,6 +36,7 @@
         "memory_used": 0.581640625
     },
     "test_case_3": {
+        "level": 0,
         "inputs": {
             "board": [
                 [
@@ -58,6 +61,7 @@
         "memory_used": 1.125
     },
     "test_case_4": {
+        "level": 0,
         "inputs": {
             "board": [
                 [
@@ -82,6 +86,7 @@
         "memory_used": 1.10859375
     },
     "test_case_5": {
+        "level": 0,
         "inputs": {
             "board": [
                 [
@@ -99,6 +104,7 @@
         "memory_used": 0.57734375
     },
     "test_case_6": {
+        "level": 1,
         "inputs": {
             "board": [
                 [
@@ -132,6 +138,7 @@
         "memory_used": 1.17109375
     },
     "test_case_7": {
+        "level": 1,
         "inputs": {
             "board": [
                 [
@@ -165,6 +172,7 @@
         "memory_used": 1.1546875
     },
     "test_case_8": {
+        "level": 1,
         "inputs": {
             "board": [
                 [
@@ -198,6 +206,7 @@
         "memory_used": 1.18203125
     },
     "test_case_9": {
+        "level": 1,
         "inputs": {
             "board": [
                 [
@@ -231,6 +240,7 @@
         "memory_used": 1.17109375
     },
     "test_case_10": {
+        "level": 1,
         "inputs": {
             "board": [
                 [
@@ -264,6 +274,7 @@
         "memory_used": 1.17109375
     },
     "test_case_11": {
+        "level": 2,
         "inputs": {
             "board": [
                 [
@@ -308,6 +319,7 @@
         "memory_used": 3.1921875
     },
     "test_case_12": {
+        "level": 2,
         "inputs": {
             "board": [
                 [
@@ -352,6 +364,7 @@
         "memory_used": 3.18671875
     },
     "test_case_13": {
+        "level": 2,
         "inputs": {
             "board": [
                 [
@@ -396,6 +409,7 @@
         "memory_used": 3.18671875
     },
     "test_case_14": {
+        "level": 2,
         "inputs": {
             "board": [
                 [
@@ -440,6 +454,7 @@
         "memory_used": 3.19765625
     },
     "test_case_15": {
+        "level": 2,
         "inputs": {
             "board": [
                 [
@@ -484,6 +499,7 @@
         "memory_used": 1.23359375
     },
     "test_case_16": {
+        "level": 3,
         "inputs": {
             "board": [
                 [
@@ -541,6 +557,7 @@
         "memory_used": 3.28046875
     },
     "test_case_17": {
+        "level": 3,
         "inputs": {
             "board": [
                 [
@@ -598,6 +615,7 @@
         "memory_used": 3.28046875
     },
     "test_case_18": {
+        "level": 3,
         "inputs": {
             "board": [
                 [
@@ -655,6 +673,7 @@
         "memory_used": 3.28046875
     },
     "test_case_19": {
+        "level": 3,
         "inputs": {
             "board": [
                 [
@@ -1104,6 +1123,7 @@
         "memory_used": 13.6828125
     },
     "test_case_20": {
+        "level": 3,
         "inputs": {
             "board": [
                 [
@@ -1551,5 +1571,31 @@
         "output": 67,
         "excecution_time": 1.9001960754394531,
         "memory_used": 45.07734375
+    },
+    "execution_time_info": {
+        "level_0": {
+            "optimal_time": 0.04186494445800781,
+            "normal_time": 0.20139081573486328,
+            "optimal_threshold": 0.06279741668701172,
+            "normal_threshold": 0.40278163146972656
+        },
+        "level_1": {
+            "optimal_time": 0.2004466781616211,
+            "normal_time": 0.20103318786621094,
+            "optimal_threshold": 0.30067001724243164,
+            "normal_threshold": 0.4020663757324219
+        },
+        "level_2": {
+            "optimal_time": 0.20123345947265625,
+            "normal_time": 0.2999768981933594,
+            "optimal_threshold": 0.3018501892089844,
+            "normal_threshold": 0.5999537963867188
+        },
+        "level_3": {
+            "optimal_time": 0.40086133575439453,
+            "normal_time": 0.5005107650756836,
+            "optimal_threshold": 0.6012920036315919,
+            "normal_threshold": 1.0010215301513672
+        }
     }
 }

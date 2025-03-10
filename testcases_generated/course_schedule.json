@@ -1,5 +1,6 @@
 {
     "test_case_1": {
+        "level": 0,
         "inputs": {
             "numCourses": 1,
             "prerequisites": []
@@ -9,6 +10,7 @@
         "memory_used": 0.6203125
     },
     "test_case_2": {
+        "level": 0,
         "inputs": {
             "numCourses": 2,
             "prerequisites": [
@@ -23,6 +25,7 @@
         "memory_used": 0.44453125
     },
     "test_case_3": {
+        "level": 0,
         "inputs": {
             "numCourses": 2,
             "prerequisites": [
@@ -41,6 +44,7 @@
         "memory_used": 0.46796875
     },
     "test_case_4": {
+        "level": 0,
         "inputs": {
             "numCourses": 3,
             "prerequisites": [
@@ -59,6 +63,7 @@
         "memory_used": 0.48125
     },
     "test_case_5": {
+        "level": 0,
         "inputs": {
             "numCourses": 3,
             "prerequisites": [
@@ -81,6 +86,7 @@
         "memory_used": 0.50703125
     },
     "test_case_6": {
+        "level": 1,
         "inputs": {
             "numCourses": 10,
             "prerequisites": [
@@ -127,6 +133,7 @@
         "memory_used": 0.88125
     },
     "test_case_7": {
+        "level": 1,
         "inputs": {
             "numCourses": 10,
             "prerequisites": [
@@ -177,6 +184,7 @@
         "memory_used": 0.8578125
     },
     "test_case_8": {
+        "level": 1,
         "inputs": {
             "numCourses": 10,
             "prerequisites": [
@@ -227,6 +235,7 @@
         "memory_used": 0.87421875
     },
     "test_case_9": {
+        "level": 1,
         "inputs": {
             "numCourses": 15,
             "prerequisites": [
@@ -293,6 +302,7 @@
         "memory_used": 1.065625
     },
     "test_case_10": {
+        "level": 1,
         "inputs": {
             "numCourses": 20,
             "prerequisites": [
@@ -379,6 +389,7 @@
         "memory_used": 1.3234375
     },
     "test_case_11": {
+        "level": 2,
         "inputs": {
             "numCourses": 100,
             "prerequisites": [
@@ -785,6 +796,7 @@
         "memory_used": 6.646875
     },
     "test_case_12": {
+        "level": 2,
         "inputs": {
             "numCourses": 100,
             "prerequisites": [
@@ -1195,6 +1207,7 @@
         "memory_used": 6.36640625
     },
     "test_case_13": {
+        "level": 2,
         "inputs": {
             "numCourses": 150,
             "prerequisites": [
@@ -1801,6 +1814,7 @@
         "memory_used": 11.52265625
     },
     "test_case_14": {
+        "level": 2,
         "inputs": {
             "numCourses": 200,
             "prerequisites": [
@@ -2607,6 +2621,7 @@
         "memory_used": 16.42890625
     },
     "test_case_15": {
+        "level": 2,
         "inputs": {
             "numCourses": 200,
             "prerequisites": [
@@ -3417,6 +3432,7 @@
         "memory_used": 16.46015625
     },
     "test_case_16": {
+        "level": 3,
         "inputs": {
             "numCourses": 2000,
             "prerequisites": [
@@ -11423,6 +11439,7 @@
         "memory_used": 199.40546875
     },
     "test_case_17": {
+        "level": 3,
         "inputs": {
             "numCourses": 2000,
             "prerequisites": [
@@ -19433,6 +19450,7 @@
         "memory_used": 199.42890625
     },
     "test_case_18": {
+        "level": 3,
         "inputs": {
             "numCourses": 2000,
             "prerequisites": [
@@ -27439,6 +27457,7 @@
         "memory_used": 161.628125
     },
     "test_case_19": {
+        "level": 3,
         "inputs": {
             "numCourses": 2000,
             "prerequisites": [
@@ -35445,6 +35464,7 @@
         "memory_used": 199.40546875
     },
     "test_case_20": {
+        "level": 3,
         "inputs": {
             "numCourses": 2000,
             "prerequisites": [
@@ -43453,5 +43473,31 @@
         "output": false,
         "excecution_time": 3.2921791076660156,
         "memory_used": 199.3734375
+    },
+    "execution_time_info": {
+        "level_0": {
+            "optimal_time": 0.001,
+            "normal_time": 0.001,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.002
+        },
+        "level_1": {
+            "optimal_time": 0.001,
+            "normal_time": 0.001,
+            "optimal_threshold": 0.0015,
+            "normal_threshold": 0.002
+        },
+        "level_2": {
+            "optimal_time": 0.14622552490234375,
+            "normal_time": 0.20253522491455078,
+            "optimal_threshold": 0.21933828735351563,
+            "normal_threshold": 0.40507044982910156
+        },
+        "level_3": {
+            "optimal_time": 3.183373046875,
+            "normal_time": 4.142998291015625,
+            "optimal_threshold": 4.7750595703125,
+            "normal_threshold": 8.28599658203125
+        }
     }
 }

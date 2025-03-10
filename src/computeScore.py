@@ -5,6 +5,7 @@ import time
 import pandas as pd
 import random
 import json
+import threading
 import tracemalloc
 import inspect
 from typing import List
@@ -12,6 +13,31 @@ from packages.ListToLinkedList import list_to_linked_list, linked_list_to_list
 from packages.ListNode import ListNode
 from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
 from packages.Node import Node, build_graph, graph_to_adj_list
+
+
+def run_with_timeout(method, inputs, level, time_limits):
+    result = None
+    exception_error = ""
+    finished = threading.Event()
+
+    def target():
+        nonlocal result, exception_error
+        try:
+            result = method(*inputs)
+        except Exception as e:
+            exception_error = str(e)
+        finally:
+            finished.set()  # Signal that execution is done
+
+    thread = threading.Thread(target=target)
+    thread.start()
+    thread.join(time_limits[level])
+
+    if not finished.is_set():
+        exception_error = "Time limit exceeded"
+        result = None
+
+    return result, exception_error
 
 
 # Read and save imports from a file
@@ -42,7 +68,7 @@ def compute_score(filename):
     total_tests = 0
     passed_tests = 0
 
-    solution_json =  {} # dictionary to store the solution for each question
+    solution_json = [] #list to hold the information and convert it to a csv table for further analysis
     for question, solution in data.items():
 
         question_id = int(question.split("_")[1])
@@ -74,9 +100,13 @@ def compute_score(filename):
             continue
         testcase_solution = {}
         solution_instance = exec_globals["Solution"]()
+        time_limits = {}
+        for levels , val in testcases["execution_time_info"].items():
+            time_limits[levels] = val["normal_threshold"]
+    
         for test_id ,testcase in testcases.items():
             if "inputs" in testcase.keys():
-                
+                level = testcase["level"]        
                 inputs = testcase["inputs"].values()
                 expected_output = testcase["output"]
                
@@ -108,16 +138,15 @@ def compute_score(filename):
                     
                     # Call method with the extracted inputs
                     try:
-                        def solve(inputs):
-                            return method(*inputs) # Unpacking input list
-
-                        #start time now
+                        tracemalloc.start()
                         start_time = time.time()
-                        result = solve(inputs)
+                        result , exception_error = run_with_timeout(method, inputs, "level_" + str(level), time_limits)
                         end_time = time.time()
+                        current, peak = tracemalloc.get_traced_memory()
+                        tracemalloc.stop()
                           
                     except Exception as e:
-                        exception_error = e
+                        exception_error = str(e)
                         continue
 
                     exec_time = end_time - start_time
@@ -128,16 +157,21 @@ def compute_score(filename):
 
                     if question_id == 15:   
                         result = graph_to_adj_list(result)
-
+                    
+                    solution_json.append({"question": question,
+                                         "test_id": test_id, 
+                                         "pass": result == expected_output, 
+                                         "exec_time": exec_time, 
+                                         "peak_memory": peak / 1024, 
+                                         "exception_error": exception_error})
                     if result == expected_output:
                         passed_tests += 1
-                        testcase_solution[test_id] = { "passs": "pass", "exec_time": exec_time , "exception_error": exception_error}
-                        
-                    else:
-                        print(f"Test failed for {question}: Input: {inputs}, Expected: {expected_output}, Got: {result}")
-                        testcase_solution[test_id] = { "passs": "fail", "exec_time": exec_time , "exception_error": exception_error}
-        solution_json[question] = testcase_solution
-    print(solution_json)
+    df = pd.DataFrame(solution_json)
+    output_csv_path = f"./results/{filename.replace('.json', '.csv')}"
+    os.makedirs('./results', exist_ok=True)
+    df.to_csv(output_csv_path, index=False) 
+
+    
     
 # Run the function
 compute_score("groq_llama.json")
