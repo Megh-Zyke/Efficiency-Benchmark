@@ -8,7 +8,6 @@ from prompts.prompt import prompt
 from dotenv import load_dotenv
 
 load_dotenv()
-
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = groq.Client(api_key=GROQ_API_KEY)
 df = pd.read_excel("benchmark_prototype.xlsx")
