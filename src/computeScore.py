@@ -42,15 +42,14 @@ def compute_score(filename):
     total_tests = 0
     passed_tests = 0
 
+    solution_json =  {} # dictionary to store the solution for each question
     for question, solution in data.items():
-
 
         question_id = int(question.split("_")[1])
         question_filename = questions[question_id].lower().replace(" ", "_") + ".json"
         print(f"Checking solution for {questions[question_id]}...")
 
         solution_code = imports_list + "\nclass Solution:\n" + solution.split("class Solution:\n")[1]
-
         # Load corresponding test cases
         testcases_path = "./testcases_generated/" + question_filename
 
@@ -73,11 +72,11 @@ def compute_score(filename):
         if "Solution" not in exec_globals:
             print(f"Solution class not found in {question}. Skipping...")
             continue
-
+        testcase_solution = {}
         solution_instance = exec_globals["Solution"]()
-        for testcase in testcases.values():
+        for test_id ,testcase in testcases.items():
             if "inputs" in testcase.keys():
-
+                
                 inputs = testcase["inputs"].values()
                 expected_output = testcase["output"]
                
@@ -119,14 +118,9 @@ def compute_score(filename):
                           
                     except Exception as e:
                         exception_error = e
-                        print(f"Runtime error for {question}: {e}")
                         continue
-                    
 
                     exec_time = end_time - start_time
-
-                    print(f"Execution time for {question}: {exec_time * 1000}")
-                
                     total_tests += 1
 
                     if question_id == 10:  
@@ -137,8 +131,13 @@ def compute_score(filename):
 
                     if result == expected_output:
                         passed_tests += 1
+                        testcase_solution[test_id] = { "passs": "pass", "exec_time": exec_time , "exception_error": exception_error}
+                        
                     else:
                         print(f"Test failed for {question}: Input: {inputs}, Expected: {expected_output}, Got: {result}")
+                        testcase_solution[test_id] = { "passs": "fail", "exec_time": exec_time , "exception_error": exception_error}
+        solution_json[question] = testcase_solution
+    print(solution_json)
     
 # Run the function
-compute_score("demo.json")
+compute_score("groq_llama.json")
