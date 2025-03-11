@@ -8,6 +8,7 @@ import json
 import threading
 import tracemalloc
 import inspect
+from tqdm import tqdm
 from typing import List
 from packages.ListToLinkedList import list_to_linked_list, linked_list_to_list
 from packages.ListNode import ListNode
@@ -104,7 +105,7 @@ def compute_score(filename):
         for levels , val in testcases["execution_time_info"].items():
             time_limits[levels] = val["normal_threshold"]
     
-        for test_id ,testcase in testcases.items():
+        for test_id ,testcase in tqdm(testcases.items()):
             if "inputs" in testcase.keys():
                 level = testcase["level"]        
                 inputs = testcase["inputs"].values()
@@ -171,7 +172,6 @@ def compute_score(filename):
     os.makedirs('./results', exist_ok=True)
     df.to_csv(output_csv_path, index=False) 
 
-    
     
 # Run the function
 compute_score("groq_llama.json")
