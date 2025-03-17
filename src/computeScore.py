@@ -2,6 +2,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import time
+import math
 import pandas as pd
 import random
 import json
@@ -15,6 +16,9 @@ from packages.ListNode import ListNode
 from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
 from packages.Node import Node, build_graph, graph_to_adj_list
 
+
+def score(ai_time , optimal , threshold):
+    return max(0 , round(1 - (ai_time  / threshold ), 2))
 
 def run_with_timeout(method, inputs, level, time_limits, memory_limit_kb):  # Default 10MB limit
     result = None
@@ -106,13 +110,14 @@ def compute_score(filename):
         if "Solution" not in exec_globals:
             print(f"Solution class not found in {question}. Skipping...")
             continue
-        testcase_solution = {}
         solution_instance = exec_globals["Solution"]()
         time_limits = {}
         memory_limits = {}
+        optimal_time = {}
         for levels , val in testcases["execution_time_info"].items():
             time_limits[levels] = val["normal_threshold"]
             memory_limits[levels] = val["normal_memory_threshold"]
+            optimal_time[levels] = val["optimal_time"]
 
         for test_id, testcase in tqdm(testcases.items()):
                 if not isinstance(testcase, dict) or "inputs" not in testcase:
@@ -162,15 +167,19 @@ def compute_score(filename):
 
                     if question_id == 15:   
                         result = graph_to_adj_list(result)
+
+                    
                     
                     solution_json.append({"question": question,
                                          "test_id": test_id, 
                                          "pass": result == expected_output, 
                                          "exec_time": exec_time, 
                                          "peak_memory": peak_memory / 1024, 
-                                         "exception_error": exception_error or ("Custom error: Output mismatch" if result != expected_output else "")})
+                                         "exception_error": exception_error or ("Custom error: Output mismatch" if result != expected_output else ""),
+                                         "score" : score(exec_time , optimal_time["level_" + str(level)] , time_limits["level_" + str(level)]) if result == expected_output else 0})
                     if result == expected_output:
                         passed_tests += 1
+                    
     df = pd.DataFrame(solution_json)
     output_csv_path = f"./results/{filename.replace('.json', '.csv')}"
     os.makedirs('./results', exist_ok=True)
