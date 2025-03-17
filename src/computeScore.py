@@ -16,19 +16,28 @@ from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
 from packages.Node import Node, build_graph, graph_to_adj_list
 
 
-def run_with_timeout(method, inputs, level, time_limits):
+def run_with_timeout(method, inputs, level, time_limits, memory_limit_kb):  # Default 10MB limit
     result = None
     exception_error = ""
+    peak_memory_kb = 0  # Store peak memory usage
     finished = threading.Event()
-
+    
     def target():
-        nonlocal result, exception_error
+        nonlocal result, exception_error, peak_memory_kb
         try:
+            tracemalloc.start()
             result = method(*inputs)
+            current, peak = tracemalloc.get_traced_memory()
+            tracemalloc.stop()
+            
+            peak_memory_kb = peak / 1024  # Convert to KB
+            if peak_memory_kb > memory_limit_kb:
+                exception_error = "Memory limit exceeded"
         except Exception as e:
-            exception_error = str(e)
+            result = None
+            exception_error = f"{type(e).__name__}: {e}"
         finally:
-            finished.set()  # Signal that execution is done
+            finished.set()
 
     thread = threading.Thread(target=target)
     thread.start()
@@ -38,9 +47,7 @@ def run_with_timeout(method, inputs, level, time_limits):
         exception_error = "Time limit exceeded"
         result = None
 
-    return result, exception_error
-
-
+    return result, exception_error, peak_memory_kb
 # Read and save imports from a file
 def read_imports(file_path: str) -> List[str]:
     with open(file_path, "r") as file:
@@ -102,11 +109,15 @@ def compute_score(filename):
         testcase_solution = {}
         solution_instance = exec_globals["Solution"]()
         time_limits = {}
+        memory_limits = {}
         for levels , val in testcases["execution_time_info"].items():
             time_limits[levels] = val["normal_threshold"]
-    
-        for test_id ,testcase in tqdm(testcases.items()):
-            if "inputs" in testcase.keys():
+            memory_limits[levels] = val["normal_memory_threshold"]
+
+        for test_id, testcase in tqdm(testcases.items()):
+                if not isinstance(testcase, dict) or "inputs" not in testcase:
+                    continue  # Skip non-testcase entries
+
                 level = testcase["level"]        
                 inputs = testcase["inputs"].values()
                 expected_output = testcase["output"]
@@ -138,18 +149,11 @@ def compute_score(filename):
                     exception_error = ""
                     
                     # Call method with the extracted inputs
-                    try:
-                        tracemalloc.start()
-                        start_time = time.time()
-                        result , exception_error = run_with_timeout(method, inputs, "level_" + str(level), time_limits)
-                        end_time = time.time()
-                        current, peak = tracemalloc.get_traced_memory()
-                        tracemalloc.stop()
-                          
-                    except Exception as e:
-                        exception_error = str(e)
-                        continue
-
+                    
+                
+                    start_time = time.time()
+                    result, exception_error, peak_memory = run_with_timeout(method, inputs, "level_" + str(level), time_limits , memory_limits["level_" + str(level)])
+                    end_time = time.time()
                     exec_time = end_time - start_time
                     total_tests += 1
 
@@ -163,8 +167,8 @@ def compute_score(filename):
                                          "test_id": test_id, 
                                          "pass": result == expected_output, 
                                          "exec_time": exec_time, 
-                                         "peak_memory": peak / 1024, 
-                                         "exception_error": exception_error})
+                                         "peak_memory": peak_memory / 1024, 
+                                         "exception_error": exception_error or ("Custom error: Output mismatch" if result != expected_output else "")})
                     if result == expected_output:
                         passed_tests += 1
     df = pd.DataFrame(solution_json)
@@ -172,6 +176,5 @@ def compute_score(filename):
     os.makedirs('./results', exist_ok=True)
     df.to_csv(output_csv_path, index=False) 
 
-    
 # Run the function
-compute_score("groq_llama.json")
+compute_score("demo.json")

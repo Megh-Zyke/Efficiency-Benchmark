@@ -6950,25 +6950,41 @@
             "optimal_time": 0.001,
             "normal_time": 0.001,
             "optimal_threshold": 0.0015,
-            "normal_threshold": 0.002
+            "normal_threshold": 0.002,
+            "optimal_memory": 0.5744499999999999,
+            "normal_memory": 0.76,
+            "optimal_memory_threshold": 0.8616749999999999,
+            "normal_memory_threshold": 1.52
         },
         "level_1": {
             "optimal_time": 0.05095,
             "normal_time": 0.15105,
             "optimal_threshold": 0.076425,
-            "normal_threshold": 0.3021
+            "normal_threshold": 0.3021,
+            "optimal_memory": 0.87155,
+            "normal_memory": 1.3107499999999999,
+            "optimal_memory_threshold": 1.307325,
+            "normal_memory_threshold": 2.6214999999999997
         },
         "level_2": {
             "optimal_time": 0.001,
             "normal_time": 0.3008,
             "optimal_threshold": 0.0015,
-            "normal_threshold": 0.6016
+            "normal_threshold": 0.6016,
+            "optimal_memory": 1.07916,
+            "normal_memory": 3.1026,
+            "optimal_memory_threshold": 1.6187399999999998,
+            "normal_memory_threshold": 6.2052
         },
         "level_3": {
             "optimal_time": 0.18168,
             "normal_time": 0.4027,
             "optimal_threshold": 0.27252,
-            "normal_threshold": 0.8054
+            "normal_threshold": 0.8054,
+            "optimal_memory": 1.9634799999999997,
+            "normal_memory": 4.3213,
+            "optimal_memory_threshold": 2.9452199999999995,
+            "normal_memory_threshold": 8.6426
         }
     }
 }

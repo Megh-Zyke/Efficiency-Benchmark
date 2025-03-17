@@ -5,7 +5,7 @@ import json
 import pandas as pd
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from prompts.prompt import prompt
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")

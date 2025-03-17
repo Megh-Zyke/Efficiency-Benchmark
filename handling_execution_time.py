@@ -8,6 +8,7 @@ BIAS = 0.001
 
 for file_name in files:
     level_times = {0: [], 1: [], 2: [], 3: []}
+    level_memory = {0: [], 1: [], 2: [], 3: []}
 
     with open(f"{location}/{file_name}", "r") as file:
         data = json.load(file)
@@ -19,6 +20,8 @@ for file_name in files:
                 continue
             level = testcase["level"]
             exec_time = testcase["excecution_time"] + BIAS
+            memory = testcase["memory_used"] + BIAS
+            level_memory[level].append(memory)
             level_times[level].append(exec_time)
 
     execution_time_info = {}
@@ -31,8 +34,15 @@ for file_name in files:
             optimal_time = np.percentile(level_times[level], 10)
             normal_time = np.median(level_times[level])
             
+            optimal_memory = np.percentile(level_memory[level], 10)
+            normal_memory = np.median(level_memory[level])
+
+
             optimal_threshold = optimal_time * OPTIMAL_THRESHOLD_FACTOR
             normal_threshold = normal_time * NORMAL_THRESHOLD_FACTOR
+
+            optimal_memory_threshold = optimal_memory * OPTIMAL_THRESHOLD_FACTOR
+            normal_memory_threshold = normal_memory * NORMAL_THRESHOLD_FACTOR
         else:
             optimal_time, normal_time, optimal_threshold, normal_threshold = None, None, None, None
 
@@ -40,7 +50,11 @@ for file_name in files:
             "optimal_time": optimal_time,
             "normal_time": normal_time,
             "optimal_threshold": optimal_threshold,
-            "normal_threshold": normal_threshold
+            "normal_threshold": normal_threshold,
+            "optimal_memory": optimal_memory,
+            "normal_memory": normal_memory,
+            "optimal_memory_threshold": optimal_memory_threshold,
+            "normal_memory_threshold": normal_memory_threshold,
         }
 
     data["execution_time_info"] = execution_time_info
