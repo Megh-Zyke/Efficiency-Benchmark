@@ -2,9 +2,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import time
-import math
 import pandas as pd
-import random
 import json
 import threading
 import tracemalloc
@@ -17,8 +15,32 @@ from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
 from packages.Node import Node, build_graph, graph_to_adj_list
 
 
-def score(ai_time , optimal , threshold):
-    return max(0 , round(1 - (ai_time  / threshold ), 2))
+def score(ai_time , optimal_time , threshold_time , ai_memory , threshold_memory , alpha = 1.875 , beta = 1 , w_t = 0.6 , w_m = 0.4):
+    # Time Score with Progressive Penalty
+    BIAS = 1e-6
+    ai_time += BIAS
+    ai_memory += BIAS
+    time_ratio = max(1e-6, ai_time / optimal_time)
+    
+    if ai_time > threshold_time:
+        time_penalty = 1 + alpha * ((ai_time - threshold_time) / threshold_time)
+    else:
+        time_penalty = 1
+
+    time_score =  min(1, 1 / (time_ratio * time_penalty))
+
+    # Memory Score with Separate Penalty
+    if ai_memory > threshold_memory:
+        memory_penalty = 1 + beta * ((ai_memory - threshold_memory) / threshold_memory)
+    else:
+        memory_penalty = 1
+
+    memory_score =  min(1, threshold_memory / (ai_memory * memory_penalty))
+
+    # Final Score: Weighted Geometric Mean
+    final_score = (time_score**w_t * memory_score**w_m)**(1 / (w_t + w_m))
+
+    return round(final_score, 2)
 
 def run_with_timeout(method, inputs, level, time_limits, memory_limit_kb):  # Default 10MB limit
     result = None
@@ -176,7 +198,7 @@ def compute_score(filename):
                                          "exec_time": exec_time, 
                                          "peak_memory": peak_memory / 1024, 
                                          "exception_error": exception_error or ("Custom error: Output mismatch" if result != expected_output else ""),
-                                         "score" : score(exec_time , optimal_time["level_" + str(level)] , time_limits["level_" + str(level)]) if result == expected_output else 0})
+                                         "score" : score(exec_time , optimal_time["level_" + str(level)] , time_limits["level_" + str(level)] , peak_memory , memory_limits["level_" + str(level)]) if result == expected_output else 0})
                     if result == expected_output:
                         passed_tests += 1
                     
@@ -186,4 +208,4 @@ def compute_score(filename):
     df.to_csv(output_csv_path, index=False) 
 
 # Run the function
-compute_score("demo.json")
+compute_score("groq_llama.json")
