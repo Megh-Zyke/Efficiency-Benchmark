@@ -1,0 +1,378 @@
+{
+    "test_case_1": {
+        "level": 0,
+        "inputs": {
+            "nums": [
+                3,
+                10,
+                5,
+                25,
+                2,
+                8
+            ]
+        },
+        "output": 28,
+        "excecution_time": 0.22215843200683594,
+        "memory_used": 1.52578125
+    },
+    "test_case_2": {
+        "level": 0,
+        "inputs": {
+            "nums": [
+                14,
+                70,
+                53,
+                83,
+                49,
+                91,
+                36,
+                80,
+                92,
+                51,
+                66,
+                70
+            ]
+        },
+        "output": 127,
+        "excecution_time": 0.10018348693847656,
+        "memory_used": 1.3609375
+    },
+    "test_case_3": {
+        "level": 0,
+        "inputs": {
+            "nums": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "output": 7,
+        "excecution_time": 0.0,
+        "memory_used": 0.8421875
+    },
+    "test_case_4": {
+        "level": 0,
+        "inputs": {
+            "nums": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        "output": 7,
+        "excecution_time": 0.10135173797607422,
+        "memory_used": 0.8421875
+    },
+    "test_case_5": {
+        "level": 0,
+        "inputs": {
+            "nums": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ]
+        },
+        "output": 15,
+        "excecution_time": 0.10449886322021484,
+        "memory_used": 0.8421875
+    },
+    "test_case_6": {
+        "level": 1,
+        "inputs": {
+            "nums": [
+                32,
+                16,
+                8,
+                4,
+                2,
+                1
+            ]
+        },
+        "output": 48,
+        "excecution_time": 0.09508132934570312,
+        "memory_used": 1.3421875
+    },
+    "test_case_7": {
+        "level": 1,
+        "inputs": {
+            "nums": [
+                255,
+                127,
+                63,
+                31,
+                15,
+                7,
+                3,
+                1
+            ]
+        },
+        "output": 254,
+        "excecution_time": 0.2444028854370117,
+        "memory_used": 1.32578125
+    },
+    "test_case_8": {
+        "level": 1,
+        "inputs": {
+            "nums": [
+                1023,
+                511,
+                255,
+                127,
+                63,
+                31
+            ]
+        },
+        "output": 992,
+        "excecution_time": 0.20122528076171875,
+        "memory_used": 1.47890625
+    },
+    "test_case_9": {
+        "level": 1,
+        "inputs": {
+            "nums": [
+                100,
+                200,
+                300,
+                400,
+                500
+            ]
+        },
+        "output": 500,
+        "excecution_time": 0.10173320770263672,
+        "memory_used": 1.50625
+    },
+    "test_case_10": {
+        "level": 1,
+        "inputs": {
+            "nums": [
+                123,
+                456,
+                789,
+                1011,
+                1200,
+                1345
+            ]
+        },
+        "output": 1957,
+        "excecution_time": 0.2023935317993164,
+        "memory_used": 1.5609375
+    },
+    "test_case_11": {
+        "level": 2,
+        "inputs": {
+            "nums": [
+                1,
+                2,
+                4,
+                8,
+                16,
+                32,
+                64,
+                128
+            ]
+        },
+        "output": 192,
+        "excecution_time": 0.15056133270263672,
+        "memory_used": 1.3421875
+    },
+    "test_case_12": {
+        "level": 2,
+        "inputs": {
+            "nums": [
+                5,
+                25,
+                50,
+                75,
+                100,
+                125,
+                150,
+                175,
+                200
+            ]
+        },
+        "output": 250,
+        "excecution_time": 0.3285646438598633,
+        "memory_used": 1.3421875
+    },
+    "test_case_13": {
+        "level": 2,
+        "inputs": {
+            "nums": [
+                1000,
+                2000,
+                3000,
+                4000,
+                5000,
+                6000,
+                7000
+            ]
+        },
+        "output": 7368,
+        "excecution_time": 0.3276348114013672,
+        "memory_used": 1.615625
+    },
+    "test_case_14": {
+        "level": 2,
+        "inputs": {
+            "nums": [
+                32767,
+                16383,
+                8191,
+                4095,
+                2047,
+                1023,
+                511,
+                255
+            ]
+        },
+        "output": 32512,
+        "excecution_time": 0.39975643157958984,
+        "memory_used": 1.615625
+    },
+    "test_case_15": {
+        "level": 2,
+        "inputs": {
+            "nums": [
+                12345,
+                67890,
+                54321,
+                98765,
+                11111,
+                22222
+            ]
+        },
+        "output": 122115,
+        "excecution_time": 0.3010749816894531,
+        "memory_used": 1.58828125
+    },
+    "test_case_16": {
+        "level": 3,
+        "inputs": {
+            "nums": [
+                2147483647,
+                1073741823,
+                536870911,
+                268435455,
+                134217727
+            ]
+        },
+        "output": 2013265920,
+        "excecution_time": 0.501561164855957,
+        "memory_used": 1.5765625
+    },
+    "test_case_17": {
+        "level": 3,
+        "inputs": {
+            "nums": [
+                100000,
+                200000,
+                300000,
+                400000,
+                500000
+            ]
+        },
+        "output": 499360,
+        "excecution_time": 0.42836666107177734,
+        "memory_used": 1.5609375
+    },
+    "test_case_18": {
+        "level": 3,
+        "inputs": {
+            "nums": [
+                2147483647,
+                0,
+                1073741824,
+                536870912,
+                268435456
+            ]
+        },
+        "output": 2147483647,
+        "excecution_time": 0.20072460174560547,
+        "memory_used": 0.9671875
+    },
+    "test_case_19": {
+        "level": 3,
+        "inputs": {
+            "nums": [
+                123456789,
+                987654321,
+                111111111,
+                222222222,
+                333333333
+            ]
+        },
+        "output": 1032168868,
+        "excecution_time": 0.22275447845458984,
+        "memory_used": 1.5609375
+    },
+    "test_case_20": {
+        "level": 3,
+        "inputs": {
+            "nums": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                100000
+            ]
+        },
+        "output": 100009,
+        "excecution_time": 0.9334087371826172,
+        "memory_used": 1.4515625
+    },
+    "execution_time_info": {
+        "level_0": {
+            "optimal_time": 0.041073394775390626,
+            "normal_time": 0.10235173797607422,
+            "optimal_threshold": 0.06161009216308594,
+            "normal_threshold": 0.20470347595214844,
+            "optimal_memory": 0.8431875,
+            "normal_memory": 0.8431875,
+            "optimal_memory_threshold": 1.26478125,
+            "normal_memory_threshold": 1.686375
+        },
+        "level_1": {
+            "optimal_time": 0.09874208068847656,
+            "normal_time": 0.20222528076171875,
+            "optimal_threshold": 0.14811312103271485,
+            "normal_threshold": 0.4044505615234375,
+            "optimal_memory": 1.3333437499999998,
+            "normal_memory": 1.47990625,
+            "optimal_memory_threshold": 2.0000156249999996,
+            "normal_memory_threshold": 2.9598125
+        },
+        "level_2": {
+            "optimal_time": 0.21176679229736328,
+            "normal_time": 0.3286348114013672,
+            "optimal_threshold": 0.3176501884460449,
+            "normal_threshold": 0.6572696228027344,
+            "optimal_memory": 1.3431875,
+            "normal_memory": 1.58928125,
+            "optimal_memory_threshold": 2.01478125,
+            "normal_memory_threshold": 3.1785625
+        },
+        "level_3": {
+            "optimal_time": 0.21053655242919922,
+            "normal_time": 0.42936666107177734,
+            "optimal_threshold": 0.31580482864379883,
+            "normal_threshold": 0.8587333221435547,
+            "optimal_memory": 1.1619375,
+            "normal_memory": 1.5619375,
+            "optimal_memory_threshold": 1.74290625,
+            "normal_memory_threshold": 3.123875
+        }
+    }
+}
