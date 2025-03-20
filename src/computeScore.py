@@ -3,6 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import time
 import pandas as pd
+import numpy as np
 import json
 import threading
 import tracemalloc
@@ -40,7 +41,22 @@ def score(ai_time , optimal_time , threshold_time , ai_memory , threshold_memory
     # Final Score: Weighted Geometric Mean
     final_score = (time_score**w_t * memory_score**w_m)**(1 / (w_t + w_m))
 
-    return round(final_score, 2)
+    return final_score
+def computeScore(filename):
+    efficiency_score = filename.groupby("question")["score"].mean().mean()
+    scores = []
+    pass_scores = filename.groupby("question")["pass"].apply(list).reset_index()
+    for i in range(len(pass_scores)):
+        count = 0
+        pass_val = 0
+        for val in pass_scores["pass"][i]:
+            if val:
+                pass_val += 1
+            count += 1
+        scores.append(pass_val/count)
+
+    return np.mean(scores) , efficiency_score
+
 
 def run_with_timeout(method, inputs, level, time_limits, memory_limit_kb):  # Default 10MB limit
     result = None
@@ -206,6 +222,10 @@ def compute_score(filename):
     output_csv_path = f"./results/{filename.replace('.json', '.csv')}"
     os.makedirs('./results', exist_ok=True)
     df.to_csv(output_csv_path, index=False) 
+
+    pass_1 , efficiency_score = computeScore(df)
+    print(f"pass@1: {pass_1} \n Efficiency Score: {efficiency_score}")
+
 
 # Run the function
 compute_score("groq_llama.json")

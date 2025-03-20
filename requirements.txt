@@ -1,0 +1,11 @@
+groq
+huggingface_hub
+matplotlib
+numpy
+pandas
+psutil
+python-dotenv
+scipy
+torch
+tqdm
+transformers
