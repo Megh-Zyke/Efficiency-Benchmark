@@ -164,8 +164,14 @@ def compute_score(filename):
                 level = testcase["level"]        
                 inputs = testcase["inputs"].values()
                 expected_output = testcase["output"]
+                
                
-                if question_id == 10:
+                # Convert inputs to the appropriate types
+                if question_id == 35:
+                    
+                    inputs = [list_to_linked_list(list(inputs)[0]), list(inputs)[1]]
+
+                if question_id in [10]:
                     res = []
                     for i in inputs:
                         for j in i:
@@ -178,7 +184,7 @@ def compute_score(filename):
                         res.append(build_graph(j))
                     inputs = res
                 # Extract method name from solution
-                if question_id == 17:
+                if question_id in [17 , 36 , 37, 38, 39]:
                     res = []
                     for j in inputs:
                         res.append(list_to_tree(j))
@@ -206,6 +212,8 @@ def compute_score(filename):
                     if question_id == 15:   
                         result = graph_to_adj_list(result)
 
+                    if question_id == 40:
+                        result = tree_to_list(result)
                     
                     
                     solution_json.append({"question": question,

@@ -6,6 +6,7 @@ import pandas as pd
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from prompts.prompt import prompt
 from dotenv import load_dotenv # type: ignore
+import tqdm
 
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
@@ -27,7 +28,7 @@ def generate_response(prompt, model="llama3-70b-8192", max_tokens=1024):
 
 output = {}
 
-for i in range(len(df)):
+for i in tqdm.tqdm(range(len(df)), desc="Processing problems"):
     response = generate_response(prompt(df.problem_description[i], df.entry_point[i])).split("```python\n")[1].split("```")[0]
     output["Solution_" + str(i)] = response
 

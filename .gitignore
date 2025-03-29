@@ -32,3 +32,10 @@ server/
 
 test.py
 testcases_generated/
+.ipynb_checkpoints/
+
+compute.py
+Preparing Benchmark Dataset.ipynb
+Time Complexity Analysis.ipynb
+temp_benchmark_data.xlsx
+handling_execution_time.py
