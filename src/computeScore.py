@@ -224,7 +224,7 @@ def compute_score(filename):
     df.to_csv(output_csv_path, index=False) 
 
     pass_1 , efficiency_score = computeScore(df)
-    print(f"pass@1: {pass_1} \n Efficiency Score: {efficiency_score}")
+    print(f"pass@1: {pass_1}\nEfficiency Score: {efficiency_score}")
 
 
 # Run the function
