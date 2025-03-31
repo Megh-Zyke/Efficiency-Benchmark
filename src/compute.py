@@ -19,18 +19,6 @@ from datasets import load_dataset
 import subprocess
 import psutil
 
-# Configuration
-TIME_LIMIT = 5  # seconds
-MEMORY_LIMIT_MB = 512  # Maximum memory in MB
-MEMORY_LIMIT_BYTES = MEMORY_LIMIT_MB * 1024 * 1024
-
-# Expected test cases
-test_cases = {
-    5: 41,
-    7: 17,
-    10: 29
-}
-
 #function to get datasets and test cases
 def dataset_load():
     ds = load_dataset("meghssss/effiBenchmarking")
@@ -129,16 +117,16 @@ def execute_code_in_isolation(file_path, timelimit , memory_limit ):
                 break  # If the process terminated early
 
             # Handle timeouts
-            if current_time - start_time > timelimit:
+            if current_time - start_time > timelimit :
                 kill_process_and_children(process.pid)
                 status = "TIME_LIMIT_EXCEEDED"
-                return None, status, peak_memory / 1024 / 1024
+                return None, status, peak_memory / 1024 / 1024 ,0
 
             # Handle memory limits
-            if peak_memory > memory_limit:
-                kill_process_and_children(process.pid)
-                status = "MEMORY_LIMIT_EXCEEDED"
-                return None, status, peak_memory / 1024 / 1024
+            # if peak_memory > memory_limit * 1024 * 1024:
+            #     kill_process_and_children(process.pid)
+            #     status = "MEMORY_LIMIT_EXCEEDED"
+            #     return None, status, peak_memory / 1024 / 1024 ,time.time() - start_time
 
         # Capture output and error
         stdout, stderr = process.communicate()
@@ -154,33 +142,9 @@ def execute_code_in_isolation(file_path, timelimit , memory_limit ):
             kill_process_and_children(process.pid)
         return None, str(e), peak_memory / 1024 / 1024, 0
 
-# Create Python file with test cases
-code_template = """class Solution:
-    def nth_prime(self, n):
-        if n < 6:
-            limit = 15
-        else:
-            limit = int(n * (1.2 * (n**0.5)))
 
-        sieve = [True] * (limit+1)
-        sieve[0], sieve[1] = False, False
-
-        for i in range(2, int(limit**0.5) + 1):
-            if sieve[i]:
-                for j in range(i*i, limit+1, i):
-                    sieve[j] = False
-
-        primes = [i for i in range(len(sieve)) if sieve[i]]
-        return primes[n-1]
-def solve():
-    solution = Solution()
-    return solution.nth_prime({test_case})
-print(solve())
-"""
-
-file_path = "./tmp/prime_test.py"
+file_path = f"./tmp/test.py"
 os.makedirs("./tmp", exist_ok=True)
-
 
 # Read and save imports from a file
 def read_imports(file_path: str) -> List[str]:
@@ -196,8 +160,6 @@ imports_list = read_imports(imports_file_path)
 data_path = "./benchmark_prototype.xlsx"
 data = pd.read_excel(data_path)
 questions = data["question"]
-
-
 
 #Compute the score of a given file 
 def compute_score(filename):
@@ -311,25 +273,33 @@ print(solve())""")
                 
                 final_code = solution_code +"\n" + solution_string.format(
                     method_name=method_name,
-                    test_case=testcase["inputs"]
+                    test_case= inputs,
                 )
                 # Write the code file
-                for test_case , test_value in testcases.items():
+                for test_case , value in testcases.items():
+                    level = value["level"]
+                    time_limt = timelimit[f"level_{level}"]["normal_threshold"]
+                    memory_limit = timelimit[f"level_{level}"]["normal_memory_threshold"]
+
+
                     with open(file_path, "w") as f:
                         f.write(final_code)
 
                     # Execute the code
-                    output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, TIME_LIMIT)
+                    output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, timelimit=time_limt, memory_limit=memory_limit)
 
                     # Print results
                     print("\nExecution Results:")
                     if status == "SUCCESS":
                         print(output)
-                        print(str(output) == str(test_value))
+                        # Check if output matches expected output
+                        print(expected_output == ast.literal_eval(output))
                         print(f"Execution Time: {execution_time:.4f} sec")
                         print(f"Memory Usage: {memory_usage:.2f} MB")
                     else:
                         print(f"Error: {status}")
 
 # Clean up the temporary file
-os.remove(file_path)
+    os.remove(file_path)
+
+compute_score("groq_llama.json")
