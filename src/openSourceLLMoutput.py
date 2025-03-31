@@ -1,12 +1,18 @@
-from transformers import AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
-from huggingface_hub import login
-from prompt.prompt import prompt
-import pandas as pd 
-import numpy as np
-import torch
 import json
 import os
 import re
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from transformers import AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
+from huggingface_hub import login
+from prompts.prompt import prompt
+import torch
+import pandas as pd
+import tqdm
+
+df = pd.read_excel("benchmark_prototype.xlsx")
+problem = df.problem_description
+start = df.entry_point
 
 def load_model(model_name):
     login("")
@@ -23,9 +29,12 @@ def load_model(model_name):
 
     return model, tokenizer
 
-model, tokenizer = load_model("meta-llama/Llama-3.2-1B")
+model_name = input("Enter the model name (e.g., meta-llama/Llama-3.2-1B): ")
 
-prompt =  "give me a python code snippet that reads a csv file and prints the first 5 rows of the dataframe"
+model, tokenizer = load_model("meta-llama/Llama-3.2-1B" if len(model_name) <= 0 else model_name) 
+
+output = {}
+
 def generate_response(model, tokenizer, prompt, max_length=512):
     """Generates a response from the model given a prompt."""
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
@@ -36,6 +45,9 @@ def generate_response(model, tokenizer, prompt, max_length=512):
     response = tokenizer.decode(output_ids[0], skip_special_tokens=True)
     return response
 
-response = generate_response(model, tokenizer, prompt)
-print(response)
+for i in tqdm.tqdm(range(len(df)), desc="Processing problems"):
+    response = generate_response(model, tokenizer, prompt(df.problem_description[i], df.entry_point[i]))
+    output["Solution_" + str(i)] = response
 
+with open(f"data/{model_name}", "w") as f:
+    json.dump(output, f, indent=4)

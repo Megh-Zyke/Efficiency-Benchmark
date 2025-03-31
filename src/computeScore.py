@@ -1,5 +1,6 @@
 import sys
 import os
+import ast
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import time
 import pandas as pd
@@ -14,6 +15,18 @@ from packages.ListToLinkedList import list_to_linked_list, linked_list_to_list
 from packages.ListNode import ListNode
 from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
 from packages.Node import Node, build_graph, graph_to_adj_list
+from datasets import load_dataset
+
+def dataset_load():
+    ds = load_dataset("meghssss/effiBenchmarking")
+    return pd.DataFrame(ds["train"])
+
+df = dataset_load()
+
+def get_values(question_name):
+    question_name = question_name.replace("_", " ")[:-5].capitalize()
+    index_value = df[df["name"] == question_name].index[0]
+    return ast.literal_eval(df["testcases"][index_value]) , ast.literal_eval(df["eff_metrics"][index_value])
 
 
 def score(ai_time , optimal_time , threshold_time , ai_memory , threshold_memory , alpha = 1.875 , beta = 1 , w_t = 0.6 , w_m = 0.4):
@@ -126,14 +139,12 @@ def compute_score(filename):
         print(f"Checking solution for {questions[question_id]}...")
 
         solution_code = imports_list + "\nclass Solution:\n" + solution.split("class Solution:\n")[1]
-        # Load corresponding test cases
-        testcases_path = "./testcases_generated/" + question_filename
+        
 
         try:
-            with open(testcases_path, "r") as file:
-                testcases = json.load(file)
-        except FileNotFoundError:
-            print(f"Test case file {testcases_path} not found. Skipping...")
+            testcases , timelimit =get_values(question_filename)
+        except IndexError:
+            print(f"Test case file not found. Skipping...")
             continue
 
         # Execute the generated solution dynamically
@@ -152,7 +163,7 @@ def compute_score(filename):
         time_limits = {}
         memory_limits = {}
         optimal_time = {}
-        for levels , val in testcases["execution_time_info"].items():
+        for levels , val in timelimit.items():
             time_limits[levels] = val["normal_threshold"]
             memory_limits[levels] = val["normal_memory_threshold"]
             optimal_time[levels] = val["optimal_time"]
@@ -232,7 +243,7 @@ def compute_score(filename):
     df.to_csv(output_csv_path, index=False) 
 
     pass_1 , efficiency_score = computeScore(df)
-    print(f"pass@1: {pass_1}\nEfficiency Score: {efficiency_score}")
+    print(f"pass@1: {pass_1}\nEfficiency Score: {efficiency_score}\nTotal Score : {pass_1*efficiency_score}")
 
 
 # Run the function
