@@ -202,9 +202,6 @@ def compute_score(filename):
                     inputs = res
                 
                 method_name = list(solution_instance.__class__.__dict__.keys())[1]  # Assuming first method is the target
-                print(f"Method name: {method_name}")
-
-
                 if hasattr(solution_instance, method_name):
                     method = getattr(solution_instance, method_name)
                     signature = inspect.signature(method)
