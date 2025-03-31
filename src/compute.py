@@ -1,7 +1,23 @@
-import subprocess
+import sys
 import os
+import ast
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import time
-import psutil  
+import pandas as pd
+import numpy as np
+import json
+import threading
+import tracemalloc
+import inspect
+from tqdm import tqdm
+from typing import List
+from packages.ListToLinkedList import list_to_linked_list, linked_list_to_list
+from packages.ListNode import ListNode
+from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
+from packages.Node import Node, build_graph, graph_to_adj_list
+from datasets import load_dataset
+import subprocess
+import psutil
 
 # Configuration
 TIME_LIMIT = 5  # seconds
@@ -15,6 +31,66 @@ test_cases = {
     10: 29
 }
 
+#function to get datasets and test cases
+def dataset_load():
+    ds = load_dataset("meghssss/effiBenchmarking")
+    return pd.DataFrame(ds["train"])
+
+df = dataset_load()
+
+# Function to get test cases and efficiency metrics for a given question name
+def get_values(question_name):
+    question_name = question_name.replace("_", " ")[:-5].capitalize()
+    index_value = df[df["name"] == question_name].index[0]
+    return ast.literal_eval(df["testcases"][index_value]) , ast.literal_eval(df["eff_metrics"][index_value])
+
+#Function to compute the score of a program based on time and memory usage
+
+def score(ai_time , optimal_time , threshold_time , ai_memory , threshold_memory , alpha = 1.875 , beta = 1 , w_t = 0.6 , w_m = 0.4):
+    # Time Score with Progressive Penalty
+    BIAS = 1e-6
+    ai_time += BIAS
+    ai_memory += BIAS
+    time_ratio = max(1e-6, ai_time / optimal_time)
+    
+    if ai_time > threshold_time:
+        time_penalty = 1 + alpha * ((ai_time - threshold_time) / threshold_time)
+    else:
+        time_penalty = 1
+
+    time_score =  min(1, 1 / (time_ratio * time_penalty))
+
+    # Memory Score with Separate Penalty
+    if ai_memory > threshold_memory:
+        memory_penalty = 1 + beta * ((ai_memory - threshold_memory) / threshold_memory)
+    else:
+        memory_penalty = 1
+
+    memory_score =  min(1, threshold_memory / (ai_memory * memory_penalty))
+
+    # Final Score: Weighted Geometric Mean
+    final_score = (time_score**w_t * memory_score**w_m)**(1 / (w_t + w_m))
+
+    return final_score
+
+# Function to compute the efficiency score and pass rate for a given DataFrame
+def computeScore(filename):
+    efficiency_score = filename.groupby("question")["score"].mean().mean()
+    scores = []
+    pass_scores = filename.groupby("question")["pass"].apply(list).reset_index()
+    for i in range(len(pass_scores)):
+        count = 0
+        pass_val = 0
+        for val in pass_scores["pass"][i]:
+            if val:
+                pass_val += 1
+            count += 1
+        scores.append(pass_val/count)
+
+    return np.mean(scores) , efficiency_score
+
+
+
 # Function to forcefully kill a process and its children (Windows)
 def kill_process_and_children(pid):
     try:
@@ -26,7 +102,7 @@ def kill_process_and_children(pid):
         pass  # Ignore if the process already terminated
 
 # Function to execute code in an isolated process
-def execute_code_in_isolation(file_path, timeout):
+def execute_code_in_isolation(file_path, timelimit , memory_limit ):
     process = None
     peak_memory = 0
     status = "SUCCESS"
@@ -53,13 +129,13 @@ def execute_code_in_isolation(file_path, timeout):
                 break  # If the process terminated early
 
             # Handle timeouts
-            if current_time - start_time > timeout:
+            if current_time - start_time > timelimit:
                 kill_process_and_children(process.pid)
                 status = "TIME_LIMIT_EXCEEDED"
                 return None, status, peak_memory / 1024 / 1024
 
             # Handle memory limits
-            if peak_memory > MEMORY_LIMIT_BYTES:
+            if peak_memory > memory_limit:
                 kill_process_and_children(process.pid)
                 status = "MEMORY_LIMIT_EXCEEDED"
                 return None, status, peak_memory / 1024 / 1024
@@ -105,23 +181,155 @@ print(solve())
 file_path = "./tmp/prime_test.py"
 os.makedirs("./tmp", exist_ok=True)
 
-# Write the code file
-for test_case , test_value in test_cases.items():
-    with open(file_path, "w") as f:
-        f.write(code_template.format(test_case = test_case))
 
-    # Execute the code
-    output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, TIME_LIMIT)
+# Read and save imports from a file
+def read_imports(file_path: str) -> List[str]:
+    with open(file_path, "r") as file:
+        imports = file.read()
+    return imports
 
-    # Print results
-    print("\nExecution Results:")
-    if status == "SUCCESS":
-        print(output)
-        print(str(output) == str(test_value))
-        print(f"Execution Time: {execution_time:.4f} sec")
-        print(f"Memory Usage: {memory_usage:.2f} MB")
-    else:
-        print(f"Error: {status}")
+# Example usage
+imports_file_path = "./src/imports.txt"
+imports_list = read_imports(imports_file_path)
+
+# Load questions from Excel file
+data_path = "./benchmark_prototype.xlsx"
+data = pd.read_excel(data_path)
+questions = data["question"]
+
+
+
+#Compute the score of a given file 
+def compute_score(filename):
+    """Computes the score of the generated code."""
+    # Load the generated code
+    path = "data/" + filename
+    try:
+        with open(path, "r") as file:
+            data = json.load(file)
+    except json.JSONDecodeError:
+        raise ValueError("File is not a valid JSON")
+
+    total_tests = 0
+    passed_tests = 0
+
+    solution_json = [] #list to hold the information and convert it to a csv table for further analysis
+
+    for question, solution in data.items():
+
+        question_id = int(question.split("_")[1])
+        question_filename = questions[question_id].lower().replace(" ", "_") + ".json"
+        print(f"Checking solution for {questions[question_id]}...")
+
+        solution_code = imports_list + "\nclass Solution:\n" + solution.split("class Solution:\n")[1]
+        
+        try:
+            testcases , timelimit = get_values(question_filename)
+        except IndexError:
+            print(f"Test case file not found. Skipping...")
+            continue 
+
+        exec_globals = {}
+        try:
+            exec(solution_code, exec_globals)
+        except Exception as e:
+            print(f"Error executing solution for {question}: {e}")
+            continue
+        
+        # Check if class Solution exists
+        if "Solution" not in exec_globals:
+            print(f"Solution class not found in {question}. Skipping...")
+            continue
+        solution_instance = exec_globals["Solution"]()
+
+        time_limits = {}
+        memory_limits = {}
+        optimal_time = {}
+        for levels , val in timelimit.items():
+            time_limits[levels] = val["normal_threshold"]
+            memory_limits[levels] = val["normal_memory_threshold"]
+            optimal_time[levels] = val["optimal_time"]
+
+        for test_id, testcase in tqdm(testcases.items()):
+                if not isinstance(testcase, dict) or "inputs" not in testcase:
+                    continue  # Skip non-testcase entries
+
+                level = testcase["level"]        
+                inputs = testcase["inputs"].values()
+                expected_output = testcase["output"]
+                
+                method_name = list(solution_instance.__class__.__dict__.keys())[1]  #first method is the target
+
+                # Convert inputs to the appropriate types
+                if question_id == 35:
+                    inputs = [list_to_linked_list(list(inputs)[0]), list(inputs)[1]]
+
+                if question_id in [10]:
+                    res = []
+                    for i in inputs:
+                        for j in i:
+                            res.append(list_to_linked_list(j))
+                    inputs = [res]
+                
+                if question_id == 15:
+                    res = []
+                    for j in inputs:
+                        res.append(build_graph(j))
+                    inputs = res
+                # Extract method name from solution
+                if question_id in [17 , 36 , 37, 38, 39]:
+                    res = []
+                    for j in inputs:
+                        res.append(list_to_tree(j))
+                    inputs = res
+                
+                solution_templates = {
+                    10: """def solve():
+    solution = Solution()
+    result = solution.{method_name}({test_case})
+    return linked_list_to_list(result)
+print(solve())""",
+                    15: """def solve():
+    solution = Solution()
+    result = solution.{method_name}({test_case})
+    return graph_to_adj_list(result)
+print(solve())""",
+                    40: """def solve():
+    solution = Solution()
+    result = solution.{method_name}({test_case})
+    return tree_to_list(result)
+print(solve())"""
+                }
+
+                solution_string = solution_templates.get(
+                    question_id,
+                    """def solve():
+    solution = Solution()
+    result = solution.{method_name}({test_case})
+    return result
+print(solve())""")
+                
+                final_code = solution_code +"\n" + solution_string.format(
+                    method_name=method_name,
+                    test_case=testcase["inputs"]
+                )
+                # Write the code file
+                for test_case , test_value in testcases.items():
+                    with open(file_path, "w") as f:
+                        f.write(final_code)
+
+                    # Execute the code
+                    output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, TIME_LIMIT)
+
+                    # Print results
+                    print("\nExecution Results:")
+                    if status == "SUCCESS":
+                        print(output)
+                        print(str(output) == str(test_value))
+                        print(f"Execution Time: {execution_time:.4f} sec")
+                        print(f"Memory Usage: {memory_usage:.2f} MB")
+                    else:
+                        print(f"Error: {status}")
 
 # Clean up the temporary file
-#os.remove(file_path)
+os.remove(file_path)
