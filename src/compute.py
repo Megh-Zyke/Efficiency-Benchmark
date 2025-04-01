@@ -186,7 +186,7 @@ def compute_score(filename):
         solution_code = imports_list + "\nclass Solution:\n" + solution.split("class Solution:\n")[1]
         
         try:
-            testcases , timelimit = get_values(question_filename)
+            testcases , timeLimit = get_values(question_filename)
         except IndexError:
             print(f"Test case file not found. Skipping...")
             continue 
@@ -204,23 +204,17 @@ def compute_score(filename):
             continue
         solution_instance = exec_globals["Solution"]()
 
-        time_limits = {}
-        memory_limits = {}
-        optimal_time = {}
-        for levels , val in timelimit.items():
-            time_limits[levels] = val["normal_threshold"]
-            memory_limits[levels] = val["normal_memory_threshold"]
-            optimal_time[levels] = val["optimal_time"]
-
         for test_id, testcase in tqdm(testcases.items()):
                 if not isinstance(testcase, dict) or "inputs" not in testcase:
                     continue  # Skip non-testcase entries
 
                 level = testcase["level"]        
-                inputs = testcase["inputs"].values()
+                inputs = list(testcase["inputs"].values())
                 expected_output = testcase["output"]
                 
                 method_name = list(solution_instance.__class__.__dict__.keys())[1]  #first method is the target
+
+                test_case = ", ".join(map(str, inputs))
 
                 # Convert inputs to the appropriate types
                 if question_id == 35:
@@ -273,33 +267,47 @@ print(solve())""")
                 
                 final_code = solution_code +"\n" + solution_string.format(
                     method_name=method_name,
-                    test_case= inputs,
+                    test_case= test_case,
                 )
                 # Write the code file
-                for test_case , value in testcases.items():
-                    level = value["level"]
-                    time_limt = timelimit[f"level_{level}"]["normal_threshold"]
-                    memory_limit = timelimit[f"level_{level}"]["normal_memory_threshold"]
-
-
-                    with open(file_path, "w") as f:
-                        f.write(final_code)
+                
+                time_limt = timeLimit[f"level_{level}"]["normal_threshold"]
+                memory_limit = timeLimit[f"level_{level}"]["normal_memory_threshold"]
+                with open(file_path, "w") as f:
+                     f.write(final_code)
 
                     # Execute the code
-                    output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, timelimit=time_limt, memory_limit=memory_limit)
-
-                    # Print results
-                    print("\nExecution Results:")
-                    if status == "SUCCESS":
+                output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, timelimit=time_limt, memory_limit=memory_limit)
+                print("\nExecution Results:")
+                if status == "SUCCESS":
                         print(output)
-                        # Check if output matches expected output
                         print(expected_output == ast.literal_eval(output))
                         print(f"Execution Time: {execution_time:.4f} sec")
                         print(f"Memory Usage: {memory_usage:.2f} MB")
-                    else:
+                else:
                         print(f"Error: {status}")
+
+                    # Print results
+
+                    # solution_json.append({
+                    #     "question": question,
+                    #     "test_id": test_id,
+                    #     "pass": ast.literal_eval(output) == expected_output,
+                    #     "exec_time": execution_time,
+                    #     "peak_memory": memory_usage / 1024,
+                    #     "exception_error": status or ("Custom error: Output mismatch" if ast.literal_eval(output) != expected_output else ""),
+                    #     "score": score(
+                    #         execution_time,
+                    #         optimal_time["level_" + str(level)],
+                    #         time_limits["level_" + str(level)],
+                    #         memory_usage,
+                    #         memory_limits["level_" + str(level)]
+                    #     ) if ast.literal_eval(output) == expected_output else 0
+                    # })
+
 
 # Clean up the temporary file
     os.remove(file_path)
+    print(solution_json)
 
 compute_score("groq_llama.json")
