@@ -9,6 +9,20 @@ from prompts.prompt import prompt
 import torch
 import pandas as pd
 import tqdm
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Log in to Hugging Face Hub
+HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN", "")
+if not HUGGINGFACE_TOKEN:
+    HUGGINGFACE_TOKEN = input("Hugging Face token not found in environment. Please enter your Hugging Face token: ")
+    if not HUGGINGFACE_TOKEN:
+        raise ValueError("Hugging Face token is required to proceed.")
+    # Save the token to the environment
+    os.environ["HUGGINGFACE_TOKEN"] = HUGGINGFACE_TOKEN
+login(HUGGINGFACE_TOKEN)
 
 df = pd.read_excel("benchmark_prototype.xlsx")
 problem = df.problem_description
@@ -31,7 +45,7 @@ def load_model(model_name):
 
 model_name = input("Enter the model name (e.g., meta-llama/Llama-3.2-1B): ")
 
-model, tokenizer = load_model("meta-llama/Llama-3.2-1B" if len(model_name) <= 0 else model_name) 
+model, tokenizer = load_model("deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B" if len(model_name) <= 0 else model_name) 
 
 output = {}
 

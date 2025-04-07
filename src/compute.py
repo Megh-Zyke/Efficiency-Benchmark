@@ -6,22 +6,69 @@ import time
 import pandas as pd
 import numpy as np
 import json
-import threading
-import tracemalloc
-import inspect
 from tqdm import tqdm
 from typing import List
-from packages.ListToLinkedList import list_to_linked_list, linked_list_to_list
-from packages.ListNode import ListNode
-from packages.TreeNode import TreeNode, list_to_tree, tree_to_list
-from packages.Node import Node, build_graph, graph_to_adj_list
 from datasets import load_dataset
 import subprocess
 import psutil
 
+#sub section of the code 
+code_ending = """
+question_id = {question_id}
+inputs = {test_case}
+
+inputs = list(inputs.values())
+if question_id == 35:
+    inputs = [list_to_linked_list(inputs[0]), (inputs)[1]]
+if question_id in [10]:
+    res = []
+    for i in inputs:
+        for j in i:
+            res.append(list_to_linked_list(j))
+    inputs = [res]
+if question_id == 15:
+    res = []
+    for j in inputs:
+        res.append(build_graph(j))
+    inputs = res
+if question_id in [17 , 36 , 37, 38, 39]:
+    res = []
+    for j in inputs:
+        res.append(list_to_tree(j))
+    inputs = res
+time_limit = {time_limit}
+memory_limit = {memory_limit}
+def solve():
+    solution = Solution()
+    tracemalloc.start()
+    start_time = time.time()
+    result = solution.{method_name}(*inputs)
+    end_time = time.time()
+    current, peak = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+    exec_time = end_time - start_time
+    peak_memory = peak / 1024 
+
+    if question_id == 10:  
+        result = linked_list_to_list(result)
+    if question_id == 15:   
+        result = graph_to_adj_list(result)
+    if question_id == 40:
+        result = tree_to_list(result)
+    
+    return {{
+        "result": result,
+        "exec_time": exec_time if exec_time < time_limit else "Time Limit Exceeded",
+        "peak_memory": peak_memory if peak_memory < memory_limit else "Memory Limit Exceeded",
+        "status": "SUCCESS" if (exec_time < time_limit and peak_memory < memory_limit) else "FAILURE"
+    }}
+print(solve())
+"""
 #function to get datasets and test cases
 def dataset_load():
     ds = load_dataset("meghssss/effiBenchmarking")
+    for _ in tqdm(range(1), desc="Loading dataset"):
+        pass  # Simulate progress bar for loading
     return pd.DataFrame(ds["train"])
 
 df = dataset_load()
@@ -90,11 +137,9 @@ def kill_process_and_children(pid):
         pass  # Ignore if the process already terminated
 
 # Function to execute code in an isolated process
-def execute_code_in_isolation(file_path, timelimit , memory_limit ):
+def execute_code_in_isolation(file_path ):
     process = None
-    peak_memory = 0
     status = "SUCCESS"
-    
     try:
         # Launch the Python code as a subprocess
         process = subprocess.Popen(
@@ -103,45 +148,23 @@ def execute_code_in_isolation(file_path, timelimit , memory_limit ):
             stderr=subprocess.PIPE,
             text=True
         )
-
         # Monitor the process in real-time
         start_time = time.time()
         while process.poll() is None:
             current_time = time.time()
-
-            # Track memory usage in real-time
-            try:
-                mem_info = psutil.Process(process.pid).memory_info().rss
-                peak_memory = max(peak_memory, mem_info)
-            except psutil.NoSuchProcess:
-                break  # If the process terminated early
-
             # Handle timeouts
-            if current_time - start_time > timelimit :
+            if current_time - start_time > 10 :
                 kill_process_and_children(process.pid)
                 status = "TIME_LIMIT_EXCEEDED"
-                return None, status, peak_memory / 1024 / 1024 ,0
-
-            # Handle memory limits
-            # if peak_memory > memory_limit * 1024 * 1024:
-            #     kill_process_and_children(process.pid)
-            #     status = "MEMORY_LIMIT_EXCEEDED"
-            #     return None, status, peak_memory / 1024 / 1024 ,time.time() - start_time
-
-        # Capture output and error
+                return None, status
         stdout, stderr = process.communicate()
-        execution_time = time.time() - start_time
-
         if stderr:
-            return None, stderr.strip(), peak_memory / 1024 / 1024 , 0
-
-        return stdout.strip(), status, peak_memory / 1024 / 1024, execution_time
-
+            return None, stderr.strip()
+        return stdout.strip(), status
     except Exception as e:
         if process:
             kill_process_and_children(process.pid)
-        return None, str(e), peak_memory / 1024 / 1024, 0
-
+        return None, str(e)
 
 file_path = f"./tmp/test.py"
 os.makedirs("./tmp", exist_ok=True)
@@ -171,10 +194,10 @@ def compute_score(filename):
             data = json.load(file)
     except json.JSONDecodeError:
         raise ValueError("File is not a valid JSON")
-
-    total_tests = 0
-    passed_tests = 0
-
+    
+    passed = 0
+    total_cases = 0
+    
     solution_json = [] #list to hold the information and convert it to a csv table for further analysis
 
     for question, solution in data.items():
@@ -207,107 +230,40 @@ def compute_score(filename):
         for test_id, testcase in tqdm(testcases.items()):
                 if not isinstance(testcase, dict) or "inputs" not in testcase:
                     continue  # Skip non-testcase entries
-
                 level = testcase["level"]        
-                inputs = list(testcase["inputs"].values())
+                inputs = testcase["inputs"]
                 expected_output = testcase["output"]
                 
                 method_name = list(solution_instance.__class__.__dict__.keys())[1]  #first method is the target
-
-                test_case = ", ".join(map(str, inputs))
-
-                # Convert inputs to the appropriate types
-                if question_id == 35:
-                    inputs = [list_to_linked_list(list(inputs)[0]), list(inputs)[1]]
-
-                if question_id in [10]:
-                    res = []
-                    for i in inputs:
-                        for j in i:
-                            res.append(list_to_linked_list(j))
-                    inputs = [res]
                 
-                if question_id == 15:
-                    res = []
-                    for j in inputs:
-                        res.append(build_graph(j))
-                    inputs = res
-                # Extract method name from solution
-                if question_id in [17 , 36 , 37, 38, 39]:
-                    res = []
-                    for j in inputs:
-                        res.append(list_to_tree(j))
-                    inputs = res
+            
+                # if question_id in [10 , 17 , 36,37,38,39,35]:
+                #     return
                 
-                solution_templates = {
-                    10: """def solve():
-    solution = Solution()
-    result = solution.{method_name}({test_case})
-    return linked_list_to_list(result)
-print(solve())""",
-                    15: """def solve():
-    solution = Solution()
-    result = solution.{method_name}({test_case})
-    return graph_to_adj_list(result)
-print(solve())""",
-                    40: """def solve():
-    solution = Solution()
-    result = solution.{method_name}({test_case})
-    return tree_to_list(result)
-print(solve())"""
-                }
-
-                solution_string = solution_templates.get(
-                    question_id,
-                    """def solve():
-    solution = Solution()
-    result = solution.{method_name}({test_case})
-    return result
-print(solve())""")
-                
-                final_code = solution_code +"\n" + solution_string.format(
-                    method_name=method_name,
-                    test_case= test_case,
-                )
-                # Write the code file
-                
-                time_limt = timeLimit[f"level_{level}"]["normal_threshold"]
+                time_limt = timeLimit[f"level_{level}"]["normal_threshold"] * 1000
                 memory_limit = timeLimit[f"level_{level}"]["normal_memory_threshold"]
+                final_code = solution_code + code_ending.format(
+                    question_id=question_id,
+                    test_case= inputs,
+                    method_name=method_name,
+                    time_limit=time_limt,
+                    memory_limit=memory_limit,
+                )
                 with open(file_path, "w") as f:
                      f.write(final_code)
 
-                    # Execute the code
-                output, status, memory_usage, execution_time = execute_code_in_isolation(file_path, timelimit=time_limt, memory_limit=memory_limit)
-                print("\nExecution Results:")
+                     # Execute the code
+                output, status = execute_code_in_isolation(file_path)
+                try:
+                    output = ast.literal_eval(output)
+                except:
+                    print(status)
                 if status == "SUCCESS":
-                        print(output)
-                        print(expected_output == ast.literal_eval(output))
-                        print(f"Execution Time: {execution_time:.4f} sec")
-                        print(f"Memory Usage: {memory_usage:.2f} MB")
-                else:
-                        print(f"Error: {status}")
-
-                    # Print results
-
-                    # solution_json.append({
-                    #     "question": question,
-                    #     "test_id": test_id,
-                    #     "pass": ast.literal_eval(output) == expected_output,
-                    #     "exec_time": execution_time,
-                    #     "peak_memory": memory_usage / 1024,
-                    #     "exception_error": status or ("Custom error: Output mismatch" if ast.literal_eval(output) != expected_output else ""),
-                    #     "score": score(
-                    #         execution_time,
-                    #         optimal_time["level_" + str(level)],
-                    #         time_limits["level_" + str(level)],
-                    #         memory_usage,
-                    #         memory_limits["level_" + str(level)]
-                    #     ) if ast.literal_eval(output) == expected_output else 0
-                    # })
-
-
+                    if expected_output == output["result"]:
+                        passed += 1
+                total_cases += 1
 # Clean up the temporary file
     os.remove(file_path)
-    print(solution_json)
+    print(f"{passed} , {passed/total_cases}")
 
 compute_score("groq_llama.json")
