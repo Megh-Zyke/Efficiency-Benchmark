@@ -208,8 +208,6 @@ def compute_score(filename):
                     exception_error = ""
                     
                     # Call method with the extracted inputs
-                    
-                
                     start_time = time.time()
                     result, exception_error, peak_memory = run_with_timeout(method, inputs, "level_" + str(level), time_limits , memory_limits["level_" + str(level)])
                     end_time = time.time()

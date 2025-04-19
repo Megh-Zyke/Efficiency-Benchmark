@@ -49,7 +49,7 @@ def solve():
     exec_time = end_time - start_time
     peak_memory = peak / 1024 
 
-    if question_id == 10:  
+    if question_id in [10, 35]:  
         result = linked_list_to_list(result)
     if question_id == 15:   
         result = graph_to_adj_list(result)
@@ -59,10 +59,11 @@ def solve():
     return {{
         "result": result,
         "exec_time": exec_time if exec_time < time_limit else "Time Limit Exceeded",
-        "peak_memory": peak_memory if peak_memory < memory_limit else "Memory Limit Exceeded",
-        "status": "SUCCESS" if (exec_time < time_limit and peak_memory < memory_limit) else "FAILURE"
+        "peak_memory": peak_memory ,
+        "status": "SUCCESS" if (exec_time < time_limit) else "FAILURE"
     }}
-print(solve())
+
+print(json.dumps(solve()))
 """
 #function to get datasets and test cases
 def dataset_load():
@@ -84,8 +85,12 @@ def get_values(question_name):
 def score(ai_time , optimal_time , threshold_time , ai_memory , threshold_memory , alpha = 1.875 , beta = 1 , w_t = 0.6 , w_m = 0.4):
     # Time Score with Progressive Penalty
     BIAS = 1e-6
-    ai_time += BIAS
-    ai_memory += BIAS
+    ai_time = max(ai_time, BIAS)
+    ai_memory = max(ai_memory, BIAS)
+    threshold_memory = max(threshold_memory, BIAS)
+    threshold_time = max(threshold_time, BIAS)
+    optimal_time = max(optimal_time, BIAS)
+
     time_ratio = max(1e-6, ai_time / optimal_time)
     
     if ai_time > threshold_time:
@@ -149,17 +154,15 @@ def execute_code_in_isolation(file_path ):
             text=True
         )
         # Monitor the process in real-time
-        start_time = time.time()
-        while process.poll() is None:
-            current_time = time.time()
-            # Handle timeouts
-            if current_time - start_time > 10 :
-                kill_process_and_children(process.pid)
-                status = "TIME_LIMIT_EXCEEDED"
-                return None, status
-        stdout, stderr = process.communicate()
-        if stderr:
-            return None, stderr.strip()
+        try:
+            stdout, stderr = process.communicate(timeout = 5)  # Set a timeout for the process
+        except subprocess.TimeoutExpired:
+            kill_process_and_children(process.pid)
+            return None, "TIME_LIMIT_EXCEEDED"
+        
+        if stderr and "Traceback" in stderr:
+            return None, stderr.strip().split('\n')[-1]
+            
         return stdout.strip(), status
     except Exception as e:
         if process:
@@ -194,10 +197,7 @@ def compute_score(filename):
             data = json.load(file)
     except json.JSONDecodeError:
         raise ValueError("File is not a valid JSON")
-    
-    passed = 0
-    total_cases = 0
-    
+        
     solution_json = [] #list to hold the information and convert it to a csv table for further analysis
 
     for question, solution in data.items():
@@ -235,18 +235,15 @@ def compute_score(filename):
                 expected_output = testcase["output"]
                 
                 method_name = list(solution_instance.__class__.__dict__.keys())[1]  #first method is the target
-                
-            
-                # if question_id in [10 , 17 , 36,37,38,39,35]:
-                #     return
-                
-                time_limt = timeLimit[f"level_{level}"]["normal_threshold"] * 1000
+
+                time_limit = timeLimit[f"level_{level}"]["normal_threshold"] 
+                optimal_time = timeLimit[f"level_{level}"]["optimal_time"]
                 memory_limit = timeLimit[f"level_{level}"]["normal_memory_threshold"]
                 final_code = solution_code + code_ending.format(
                     question_id=question_id,
                     test_case= inputs,
                     method_name=method_name,
-                    time_limit=time_limt,
+                    time_limit=time_limit,
                     memory_limit=memory_limit,
                 )
                 with open(file_path, "w") as f:
@@ -255,15 +252,50 @@ def compute_score(filename):
                      # Execute the code
                 output, status = execute_code_in_isolation(file_path)
                 try:
-                    output = ast.literal_eval(output)
+                    output = json.loads(output)
                 except:
-                    print(status)
+                    continue
                 if status == "SUCCESS":
-                    if expected_output == output["result"]:
-                        passed += 1
-                total_cases += 1
+
+                    try:
+                        exec_time = float(output["exec_time"])
+                        peak_memory = float(output["peak_memory"])
+                        is_pass = expected_output == output["result"] and output["status"] == "SUCCESS"
+                        sc = score(exec_time, optimal_time, time_limit, peak_memory, memory_limit if is_pass else 0)
+                    except:
+                        exec_time = 0
+                        peak_memory = 0
+                        is_pass = False
+                        sc = 0
+
+                    solution_json.append({
+                            "question": question,
+                            "test_id": test_id,
+                            "pass": is_pass,
+                            "exec_time": exec_time,
+                            "peak_memory": peak_memory,
+                            "exception_error": "" if is_pass else "Time or Memory Limit Exceeded",
+                            "score": sc
+                        })
+
+                else:
+                    solution_json.append({"question": question,
+                                         "test_id": test_id, 
+                                         "pass": False,
+                                         "exec_time": 0, 
+                                         "peak_memory": 0, 
+                                         "exception_error": status,
+                                         "score" : 0})
+                        
+                        
 # Clean up the temporary file
     os.remove(file_path)
-    print(f"{passed} , {passed/total_cases}")
+    df = pd.DataFrame(solution_json)
+    output_csv_path = f"./results/{filename.replace('.json', '.csv')}"
+    os.makedirs('./results', exist_ok=True)
+    df.to_csv(output_csv_path, index=False) 
 
-compute_score("groq_llama.json")
+    pass_1 , efficiency_score = computeScore(df)
+    print(f"pass@1: {pass_1}\nEfficiency Score: {efficiency_score}\nTotal Score : {pass_1*efficiency_score}")
+
+compute_score("llama-3.3-70b.json")
