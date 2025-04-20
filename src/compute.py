@@ -298,4 +298,15 @@ def compute_score(filename):
     pass_1 , efficiency_score = computeScore(df)
     print(f"pass@1: {pass_1}\nEfficiency Score: {efficiency_score}\nTotal Score : {pass_1*efficiency_score}")
 
-compute_score("llama-3.3-70b.json")
+
+
+data_dir = "data/"
+files = [f for f in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, f))]
+
+# for filename in files:
+#     if filename in ["groq_llama.json", "demo.json" , "llama-3.3-70b.json" ,"gemini-2.5-pro.json"]:
+#         continue
+#     print(f"Processing {filename}...")
+#     compute_score(filename)
+
+compute_score("groq_llama.json")

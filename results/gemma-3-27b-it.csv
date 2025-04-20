@@ -1,0 +1,840 @@
+question,test_id,pass,exec_time,peak_memory,exception_error,score
+Solution_0,test_case_1,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_2,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_3,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_4,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_5,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_6,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_7,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_8,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_9,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_10,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_11,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_12,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_13,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_14,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_15,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_16,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_17,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_18,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_19,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_20,True,0.0,0.640625,,0.3266495597090237
+Solution_0,test_case_21,True,0.0975484848022461,0.75,,0.5285478973950697
+Solution_0,test_case_22,True,0.22013187408447266,0.77734375,,0.5136211174120098
+Solution_0,test_case_23,True,0.06957197189331055,0.8046875,,0.4996104989462237
+Solution_0,test_case_24,True,0.031501054763793945,0.8046875,,0.4996104989462237
+Solution_0,test_case_25,True,0.12472724914550781,0.8046875,,0.4996104989462237
+Solution_0,test_case_26,True,0.16807293891906738,0.77734375,,0.5136211174120098
+Solution_1,test_case_1,True,0.0,0.6484375,,0.44609101875294416
+Solution_1,test_case_2,True,0.0,0.6484375,,0.44609101875294416
+Solution_1,test_case_3,True,0.0,0.6640625,,0.43767406527882025
+Solution_1,test_case_4,True,0.0,0.6640625,,0.43767406527882025
+Solution_1,test_case_5,True,0.0,0.6796875,,0.4296062108749223
+Solution_1,test_case_6,True,0.0,0.6640625,,0.43767406527882025
+Solution_1,test_case_7,True,0.0,0.6796875,,0.4296062108749223
+Solution_1,test_case_8,True,0.0,0.6640625,,0.43767406527882025
+Solution_1,test_case_9,True,0.0,0.640625,,0.37756137602774753
+Solution_1,test_case_10,True,0.0,0.640625,,0.37756137602774753
+Solution_1,test_case_11,True,0.0,0.640625,,0.37756137602774753
+Solution_1,test_case_12,True,0.0,0.6484375,,0.37391782445041405
+Solution_1,test_case_13,True,0.0,0.6484375,,0.37391782445041405
+Solution_1,test_case_14,True,0.0,0.6640625,,0.4833054833074316
+Solution_1,test_case_15,True,0.0,0.6796875,,0.4743964832517717
+Solution_1,test_case_16,True,0.0,0.6640625,,0.4833054833074316
+Solution_1,test_case_17,True,0.0,0.6796875,,0.4743964832517717
+Solution_1,test_case_18,True,0.0,0.671875,,0.4788043661246911
+Solution_1,test_case_19,True,0.0,0.6953125,,0.4658486676025345
+Solution_1,test_case_20,True,0.0,0.7265625,,0.44974930836694593
+Solution_1,test_case_21,True,0.018699169158935547,345.30078125,,1.0
+Solution_1,test_case_22,True,0.035001516342163086,345.21484375,,1.0
+Solution_1,test_case_23,True,0.011908531188964844,78.86328125,,1.0
+Solution_1,test_case_24,True,0.021009445190429688,208.58203125,,1.0
+Solution_1,test_case_25,True,0.026002883911132812,338.2421875,,1.0
+Solution_1,test_case_26,True,0.018088340759277344,78.86328125,,1.0
+Solution_2,test_case_1,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_2,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_3,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_4,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_5,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_6,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_7,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_8,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_9,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_10,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_11,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_12,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_13,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_14,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_15,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_16,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_17,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_18,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_19,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_20,True,0.0,0.640625,,0.3266495597090237
+Solution_2,test_case_21,True,0.04900097846984863,0.69921875,,0.47991717890585317
+Solution_2,test_case_22,True,0.04579329490661621,0.69921875,,0.47991717890585317
+Solution_2,test_case_23,True,0.11879658699035645,0.73046875,,0.46342070714827616
+Solution_2,test_case_24,True,0.04536032676696777,0.69921875,,0.47991717890585317
+Solution_2,test_case_25,True,0.1099557876586914,0.7578125,,0.4499946359086502
+Solution_2,test_case_26,True,0.09696841239929199,0.703125,,0.47778302604421763
+Solution_3,test_case_1,True,0.0,1.33203125,,0.7512930052366671
+Solution_3,test_case_2,True,0.0,1.27734375,,0.7769170393681976
+Solution_3,test_case_3,True,0.0,1.140625,,0.8505631581740389
+Solution_3,test_case_4,True,0.0,1.140625,,0.8505631581740389
+Solution_3,test_case_5,True,0.0,1.140625,,0.8505631581740389
+Solution_3,test_case_6,True,0.0009834766387939453,1.1953125,,0.8192863278286303
+Solution_3,test_case_7,True,0.0,1.140625,,0.8505631581740389
+Solution_3,test_case_8,True,0.0,1.3046875,,0.7638633535530543
+Solution_3,test_case_9,True,0.0,1.140625,,0.5569509810145954
+Solution_3,test_case_10,True,0.0,1.140625,,0.5569509810145954
+Solution_3,test_case_11,True,0.0,1.140625,,0.5569509810145954
+Solution_3,test_case_12,True,0.0,1.140625,,0.5569509810145954
+Solution_3,test_case_13,True,0.0,1.1953125,,0.536470830685373
+Solution_3,test_case_14,True,0.0,1.44140625,,0.80758594002154
+Solution_3,test_case_15,True,0.0,1.27734375,,0.889552613803229
+Solution_3,test_case_16,True,0.0,1.25,,0.9050860257887023
+Solution_3,test_case_17,True,0.0,1.27734375,,0.889552613803229
+Solution_3,test_case_18,True,0.00299835205078125,180.47265625,,1.0
+Solution_3,test_case_19,True,0.0029823780059814453,180.609375,,1.0
+Solution_3,test_case_20,True,0.0029997825622558594,180.47265625,,1.0
+Solution_3,test_case_21,True,0.003087759017944336,180.47265625,,1.0
+Solution_4,test_case_1,True,0.0,0.625,,0.8287397671028421
+Solution_4,test_case_2,True,0.0,0.625,,0.8287397671028421
+Solution_4,test_case_3,True,0.0,0.625,,0.8287397671028421
+Solution_4,test_case_4,True,0.0,0.71875,,0.7410711504124367
+Solution_4,test_case_5,True,0.0,0.625,,0.8287397671028421
+Solution_4,test_case_6,True,0.0,0.625,,0.8287397671028421
+Solution_4,test_case_7,True,0.0,0.625,,0.8287397671028421
+Solution_4,test_case_8,True,0.0,0.71875,,0.7410711504124367
+Solution_4,test_case_9,True,0.0,0.625,,0.5541157067005615
+Solution_4,test_case_10,True,0.0,0.625,,0.5541157067005615
+Solution_4,test_case_11,True,0.0,0.625,,0.5541157067005615
+Solution_4,test_case_12,True,0.0,0.625,,0.5541157067005615
+Solution_4,test_case_13,True,0.0,0.625,,0.5541157067005615
+Solution_4,test_case_14,True,0.0,0.65625,,1.0
+Solution_4,test_case_15,True,0.0,0.71875,,0.9848896118576921
+Solution_4,test_case_16,True,0.0,0.65625,,1.0
+Solution_4,test_case_17,True,0.0,0.65625,,1.0
+Solution_4,test_case_18,True,0.0,0.625,,1.0
+Solution_4,test_case_19,True,0.0,0.65625,,1.0
+Solution_4,test_case_20,True,0.0,0.65625,,1.0
+Solution_4,test_case_21,True,0.0,20.59375,,1.0
+Solution_4,test_case_22,True,0.00099945068359375,0.625,,1.0
+Solution_4,test_case_23,True,0.0036754608154296875,11.671875,,1.0
+Solution_4,test_case_24,True,0.0009951591491699219,11.5625,,1.0
+Solution_4,test_case_25,True,0.012918233871459961,11.69921875,,1.0
+Solution_4,test_case_26,True,0.002003192901611328,0.65625,,1.0
+Solution_5,test_case_1,True,0.0,0.7421875,,1.0
+Solution_5,test_case_2,True,0.0,0.7861328125,,1.0
+Solution_5,test_case_3,True,0.0,0.7509765625,,1.0
+Solution_5,test_case_4,True,0.0,0.8212890625,,1.0
+Solution_5,test_case_5,True,0.0,0.70703125,,1.0
+Solution_5,test_case_6,True,0.0,0.70703125,,1.0
+Solution_5,test_case_7,True,0.0,0.7333984375,,1.0
+Solution_5,test_case_8,True,0.0,0.6796875,,1.0
+Solution_5,test_case_9,True,0.0,0.6796875,,1.0
+Solution_5,test_case_10,True,0.0,0.6875,,1.0
+Solution_5,test_case_11,True,0.0,0.6982421875,,1.0
+Solution_5,test_case_12,True,0.0,0.6982421875,,1.0
+Solution_5,test_case_13,True,0.0,0.70703125,,1.0
+Solution_5,test_case_14,True,0.0,0.7685546875,,1.0
+Solution_5,test_case_15,True,0.0,0.7685546875,,1.0
+Solution_5,test_case_16,True,0.0,0.759765625,,1.0
+Solution_5,test_case_17,True,0.0,0.7685546875,,1.0
+Solution_5,test_case_18,True,0.0,0.865234375,,1.0
+Solution_5,test_case_19,True,0.0,0.77734375,,1.0
+Solution_5,test_case_20,True,0.0,0.77734375,,1.0
+Solution_5,test_case_21,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_5,test_case_22,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_5,test_case_23,True,0.0,0.935546875,,1.0
+Solution_5,test_case_24,True,0.0,0.8916015625,,1.0
+Solution_5,test_case_25,True,0.0,0.8828125,,1.0
+Solution_5,test_case_26,True,0.0,0.900390625,,1.0
+Solution_6,test_case_1,True,0.0,0.7890625,,0.7393816853137954
+Solution_6,test_case_2,True,0.0,0.7265625,,0.7898405546128161
+Solution_6,test_case_3,True,0.0,0.65625,,0.8568451817984448
+Solution_6,test_case_4,True,0.0,0.7578125,,0.7636746954582055
+Solution_6,test_case_5,True,0.0,0.921875,,0.6528601823084376
+Solution_6,test_case_6,True,0.0,0.7890625,,0.7393816853137954
+Solution_6,test_case_7,True,0.0,0.859375,,0.6905762523452084
+Solution_6,test_case_8,True,0.0,0.765625,,0.7574342288951674
+Solution_6,test_case_9,True,0.0,1.0546875,,1.0
+Solution_6,test_case_10,True,0.0,1.078125,,1.0
+Solution_6,test_case_11,True,0.0,1.09375,,1.0
+Solution_6,test_case_12,True,0.0,1.0078125,,1.0
+Solution_6,test_case_13,True,0.0,1.40625,,0.8469647728169384
+Solution_6,test_case_14,True,0.03499627113342285,4.6640625,,1.0
+Solution_6,test_case_15,True,0.046802520751953125,8.24609375,,1.0
+Solution_6,test_case_16,True,0.014891862869262695,4.69140625,,1.0
+Solution_6,test_case_17,True,0.02709054946899414,8.59765625,,1.0
+Solution_6,test_case_18,True,0.03960609436035156,32.0078125,,0.5763148236658546
+Solution_6,test_case_19,True,0.045614004135131836,39.84765625,,0.48366243729547354
+Solution_6,test_case_20,True,1.3482465744018555,35.94140625,,0.5252771796490592
+Solution_6,test_case_21,True,0.12064075469970703,78.8828125,,1.0
+Solution_6,test_case_22,True,0.1947925090789795,268.28515625,,0.6503873965357186
+Solution_6,test_case_23,True,0.20670628547668457,78.91015625,,1.0
+Solution_6,test_case_24,True,0.15195965766906738,78.875,,1.0
+Solution_7,test_case_1,True,0.0,1.5390625,,0.6417365967423757
+Solution_7,test_case_2,True,0.0,2.1953125,,0.4830195753833201
+Solution_7,test_case_3,True,0.0,1.4453125,,0.6748269293137995
+Solution_7,test_case_4,True,0.0,1.3515625,,0.7120211680974728
+Solution_7,test_case_5,True,0.0,1.34375,,0.7153309735018737
+Solution_7,test_case_6,True,0.0,1.3515625,,0.7120211680974728
+Solution_7,test_case_7,True,0.0,1.4609375,,0.6690468071722723
+Solution_7,test_case_8,True,0.0,1.7890625,,0.5689333626636162
+Solution_7,test_case_9,True,0.00099945068359375,3.4609375,,1.0
+Solution_7,test_case_10,True,0.0,7.0,,0.9498993651824393
+Solution_7,test_case_11,True,0.0,4.296875,,1.0
+Solution_7,test_case_12,True,0.0,9.5078125,,0.743518095289938
+Solution_7,test_case_13,True,0.0,2.703125,,1.0
+Solution_7,test_case_14,True,0.37596631050109863,3672.54296875,,0.8930282633629147
+Solution_7,test_case_15,True,0.009917259216308594,93.140625,,1.0
+Solution_7,test_case_16,True,0.1008138656616211,1396.76953125,,1.0
+Solution_7,test_case_17,True,0.08253073692321777,777.5703125,,1.0
+Solution_7,test_case_18,True,0.20354843139648438,1792.40234375,,1.0
+Solution_7,test_case_19,True,0.20368146896362305,2545.94140625,,1.0
+Solution_7,test_case_20,True,0.3011128902435303,3871.36328125,,1.0
+Solution_7,test_case_21,True,0.35452723503112793,2535.1328125,,1.0
+Solution_7,test_case_22,True,0.4982428550720215,3873.375,,1.0
+Solution_7,test_case_23,True,1.2055020332336426,13653.40625,,0.6351548870706427
+Solution_7,test_case_24,True,0.503331184387207,3434.83203125,,1.0
+Solution_8,test_case_1,False,0.0,1.8359375,Time or Memory Limit Exceeded,9.74795882112572e-06
+Solution_8,test_case_2,True,0.0,0.9296875,,1.0
+Solution_8,test_case_3,False,0.0,2.3125,Time or Memory Limit Exceeded,8.104656388365772e-06
+Solution_8,test_case_4,False,0.0,2.3125,Time or Memory Limit Exceeded,8.104656388365772e-06
+Solution_8,test_case_5,True,0.0,1.8828125,,0.6381063425260604
+Solution_8,test_case_6,True,0.0,2.3125,,0.5413439986849492
+Solution_8,test_case_7,True,0.0,2.359375,,0.5327226239830865
+Solution_8,test_case_8,False,0.0,2.3125,Time or Memory Limit Exceeded,8.104656388365772e-06
+Solution_8,test_case_9,True,0.0,2.359375,,0.5327226239830865
+Solution_8,test_case_10,True,0.0,2.359375,,0.5327226239830865
+Solution_8,test_case_11,False,0.0,2.7890625,Time or Memory Limit Exceeded,6.976432600043128e-06
+Solution_8,test_case_12,True,0.0,3.3125,,0.40608225318633073
+Solution_8,test_case_13,False,0.0,2.7890625,Time or Memory Limit Exceeded,6.976432600043128e-06
+Solution_8,test_case_14,True,0.0,3.7890625,,0.3646811406683858
+Solution_8,test_case_15,True,0.0,1.8828125,,0.6381063425260604
+Solution_8,test_case_16,True,0.0,4.265625,,0.33170543023017285
+Solution_8,test_case_17,True,0.0,4.265625,,0.33170543023017285
+Solution_8,test_case_18,True,0.0,4.265625,,0.33170543023017285
+Solution_9,test_case_1,True,0.0,3.3984375,,0.5253532708385714
+Solution_9,test_case_2,True,0.0,3.4375,,0.5205718799851373
+Solution_9,test_case_3,True,0.0,1.8046875,,0.8716723340490972
+Solution_9,test_case_4,True,0.0,1.84375,,0.856866657220542
+Solution_9,test_case_5,True,0.0,2.3125,,0.7148410387465779
+Solution_9,test_case_6,True,0.0,3.984375,,0.4625798438618503
+Solution_9,test_case_7,True,0.0,3.984375,,0.7154045937001476
+Solution_9,test_case_8,True,0.0,4.765625,,0.6199319182951568
+Solution_9,test_case_9,True,0.0,3.484375,,0.7964160036086225
+Solution_9,test_case_10,True,0.000993490219116211,7.2734375,,0.44202631067519393
+Solution_9,test_case_11,True,0.0,3.4296875,,0.8065591996894088
+Solution_9,test_case_12,True,0.001998424530029297,29.32421875,,0.14489677827199696
+Solution_9,test_case_13,True,0.0,8.953125,,0.7458043440886736
+Solution_9,test_case_14,True,0.0,6.8984375,,0.9187641481919668
+Solution_9,test_case_15,True,0.0,3.4296875,,1.0
+Solution_9,test_case_16,True,0.0009903907775878906,11.0625,,0.6296830457992064
+Solution_9,test_case_17,True,0.0,4.65625,,1.0
+Solution_9,test_case_18,True,0.0009181499481201172,11.484375,,0.7965804407868221
+Solution_9,test_case_19,True,0.0010023117065429688,10.5625,,0.8517304091854251
+Solution_9,test_case_20,True,0.001013040542602539,7.921875,,1.0
+Solution_9,test_case_21,True,0.0,4.015625,,1.0
+Solution_9,test_case_22,True,0.007083892822265625,42.17578125,,0.28136172749396154
+Solution_10,test_case_1,True,0.0,0.7734375,,0.46726612184959426
+Solution_10,test_case_2,True,0.0,1.09375,,0.3541359544246181
+Solution_10,test_case_3,True,0.0,1.09375,,0.3541359544246181
+Solution_10,test_case_4,True,0.0,0.734375,,0.48704620906404117
+Solution_10,test_case_5,True,0.0,0.7734375,,0.46726612184959426
+Solution_10,test_case_6,True,0.0,0.7734375,,1.0
+Solution_10,test_case_7,True,0.0,0.7734375,,1.0
+Solution_10,test_case_8,True,0.0,0.7734375,,1.0
+Solution_10,test_case_9,True,0.0,0.7734375,,1.0
+Solution_10,test_case_10,True,0.0,1.3046875,,1.0
+Solution_10,test_case_11,True,0.0,0.7734375,,1.0
+Solution_10,test_case_12,True,0.0010943412780761719,0.7734375,,1.0
+Solution_10,test_case_13,True,0.0010080337524414062,42.51171875,,1.0
+Solution_10,test_case_14,True,0.0,0.9296875,,1.0
+Solution_10,test_case_15,True,0.0,0.7734375,,1.0
+Solution_10,test_case_16,True,0.0009992122650146484,1.9921875,,1.0
+Solution_10,test_case_17,True,0.0030908584594726562,0.8359375,,1.0
+Solution_10,test_case_18,True,0.007004499435424805,483.58984375,,1.0
+Solution_10,test_case_19,True,0.0039081573486328125,0.7734375,,1.0
+Solution_10,test_case_20,True,0.005002737045288086,1.9921875,,1.0
+Solution_11,test_case_1,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_2,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_3,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_4,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_5,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_6,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_7,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_8,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_9,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_10,True,0.0,0.53125,,0.01149700822573381
+Solution_11,test_case_11,True,0.0,0.53125,,0.1669362637024029
+Solution_11,test_case_12,True,0.0,0.53125,,0.1669362637024029
+Solution_11,test_case_13,True,0.0,0.55859375,,0.16036625443427804
+Solution_11,test_case_14,True,0.0,0.66796875,,0.13899043926212812
+Solution_11,test_case_15,True,0.0,0.66796875,,0.13899043926212812
+Solution_11,test_case_16,True,0.0,0.66796875,,0.4922815260484974
+Solution_11,test_case_17,True,0.0,0.66796875,,0.4922815260484974
+Solution_11,test_case_18,True,0.0,0.66796875,,0.4922815260484974
+Solution_11,test_case_19,True,0.0,0.66796875,,0.4922815260484974
+Solution_11,test_case_20,True,0.0,0.66796875,,0.4922815260484974
+Solution_12,test_case_1,True,0.0,2.2734375,,0.1548011398935877
+Solution_12,test_case_2,True,0.0,2.4375,,0.14640802099912661
+Solution_12,test_case_3,True,0.0,1.2890625,,0.2437257357785104
+Solution_12,test_case_4,True,0.0,2.2734375,,0.1548011398935877
+Solution_12,test_case_5,True,0.0,1.2578125,,0.24855805662806704
+Solution_12,test_case_6,True,0.0,2.30078125,,0.15332758884303363
+Solution_12,test_case_7,True,0.0,2.52734375,,0.14222931470685693
+Solution_12,test_case_8,True,0.0,2.58203125,,0.13981422974796984
+Solution_12,test_case_9,True,0.0,1.2890625,,0.2437257357785104
+Solution_12,test_case_10,True,0.0,2.6640625,,0.13635938766627617
+Solution_12,test_case_11,True,0.0,11.828125,,1.0
+Solution_12,test_case_12,True,0.0056269168853759766,51.2421875,,1.0
+Solution_12,test_case_13,True,0.0010809898376464844,7.015625,,1.0
+Solution_12,test_case_14,True,0.01289677619934082,101.3203125,,0.8425084698252692
+Solution_12,test_case_15,True,0.0019872188568115234,51.2421875,,1.0
+Solution_12,test_case_16,True,0.0030786991119384766,101.3203125,,1.0
+Solution_12,test_case_17,True,0.01499795913696289,988.5,,1.0
+Solution_12,test_case_18,True,0.019967079162597656,493.9453125,,1.0
+Solution_12,test_case_19,True,0.05533623695373535,988.6640625,,1.0
+Solution_12,test_case_20,True,0.16509222984313965,1980.5390625,,0.8280438730925481
+Solution_13,test_case_1,True,0.0009756088256835938,0.703125,,0.5232871318772889
+Solution_13,test_case_2,True,0.0,0.7109375,,0.5186817277830583
+Solution_13,test_case_3,True,0.0,0.7109375,,0.5186817277830583
+Solution_13,test_case_4,True,0.0,0.65625,,0.5529815402873272
+Solution_13,test_case_5,True,0.0,0.65625,,0.5529815402873272
+Solution_13,test_case_6,True,0.0,0.7890625,,0.48288378154074774
+Solution_13,test_case_7,True,0.0,0.8046875,,0.4753679946462166
+Solution_13,test_case_8,True,0.0,0.7578125,,0.4987493362826967
+Solution_13,test_case_9,True,0.0,0.7578125,,0.4987493362826967
+Solution_13,test_case_10,True,0.0,0.78125,,0.486743004090655
+Solution_13,test_case_11,True,0.0,0.78125,,0.5058061460904463
+Solution_13,test_case_12,True,0.0,0.78125,,0.5058061460904463
+Solution_13,test_case_13,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_13,test_case_14,False,0.0,7.6640625,Time or Memory Limit Exceeded,3.107654790523067e-06
+Solution_13,test_case_15,True,0.0,16.2421875,,0.044637566553321115
+Solution_13,test_case_16,True,0.0,31.8671875,,0.04178324875513341
+Solution_13,test_case_20,True,0.0,31.8671875,,0.04178324875513341
+Solution_14,test_case_1,True,0.0,5.5,,0.24968690597779325
+Solution_14,test_case_2,True,0.0,3.234375,,0.3818155592281385
+Solution_14,test_case_3,True,0.0,0.96875,,1.0
+Solution_14,test_case_4,True,0.0,1.828125,,0.6026722698362055
+Solution_14,test_case_5,True,0.0,1.875,,0.5905883852790068
+Solution_14,test_case_6,True,0.0,3.6875,,0.4297970152245491
+Solution_14,test_case_7,True,0.0009551048278808594,46.734375,,0.056355961933873974
+Solution_14,test_case_8,True,0.0,12.75,,0.15930920505789278
+Solution_14,test_case_9,True,0.0,1.875,,0.7383257252903336
+Solution_14,test_case_10,True,0.0,4.59375,,0.36050818814410523
+Solution_14,test_case_12,True,0.0019974708557128906,1.90234375,,1.0
+Solution_14,test_case_13,True,0.0935983657836914,409.1875,,0.5182750520437772
+Solution_14,test_case_17,True,0.10029315948486328,2.04296875,,1.0
+Solution_14,test_case_20,True,0.06454634666442871,10.55859375,,1.0
+Solution_15,test_case_1,True,0.0,3.6640625,,1.0
+Solution_15,test_case_2,True,0.0,1.359375,,1.0
+Solution_15,test_case_3,True,0.0,0.59375,,1.0
+Solution_15,test_case_4,True,0.0,2.4296875,,1.0
+Solution_15,test_case_5,True,0.0,3.046875,,1.0
+Solution_15,test_case_6,True,0.0,3.84375,,0.9712061780176042
+Solution_15,test_case_7,True,0.0,3.40625,,1.0
+Solution_15,test_case_8,True,0.0,4.40625,,0.8706833416366597
+Solution_15,test_case_9,True,0.0,3.90625,,0.958754720206694
+Solution_15,test_case_10,True,0.0,5.4375,,0.7358615770881036
+Solution_15,test_case_11,True,0.0,7.5390625,,1.0
+Solution_15,test_case_12,True,0.001007080078125,37.9765625,,0.7312488322417223
+Solution_15,test_case_13,True,0.0,8.828125,,1.0
+Solution_15,test_case_14,True,0.0,16.3671875,,1.0
+Solution_15,test_case_15,True,0.0,10.296875,,1.0
+Solution_15,test_case_16,True,0.0010075569152832031,30.890625,,1.0
+Solution_15,test_case_17,True,0.0010485649108886719,75.28125,,1.0
+Solution_15,test_case_18,True,0.0010194778442382812,27.34375,,1.0
+Solution_15,test_case_19,True,0.0,27.34375,,1.0
+Solution_15,test_case_20,True,0.0009987354278564453,50.953125,,1.0
+Solution_16,test_case_1,True,0.0,2.796875,,0.5172937182422267
+Solution_16,test_case_2,True,0.0,4.078125,,0.3825667517404078
+Solution_16,test_case_3,True,0.0,2.09375,,0.6521324192354673
+Solution_16,test_case_4,True,0.0,4.6875,,0.34223358415319755
+Solution_16,test_case_5,True,0.0,4.71875,,0.34041922213205567
+Solution_16,test_case_6,True,0.0,4.078125,,0.4080802140057188
+Solution_16,test_case_7,True,0.0,3.4375,,0.4678641831297761
+Solution_16,test_case_8,True,0.0,4.015625,,0.4131535088277434
+Solution_16,test_case_9,True,0.0,4.0625,,0.40933536323967357
+Solution_16,test_case_10,True,0.0,2.15625,,0.6794455757087434
+Solution_16,test_case_11,True,0.009989261627197266,59.025390625,,1.0
+Solution_16,test_case_12,True,0.007985591888427734,25.533203125,,1.0
+Solution_16,test_case_13,True,0.012930154800415039,92.9765625,,1.0
+Solution_16,test_case_14,True,0.009601831436157227,60.4453125,,1.0
+Solution_16,test_case_15,True,0.06552743911743164,224.2734375,,1.0
+Solution_16,test_case_16,True,0.20674848556518555,465.650390625,,1.0
+Solution_16,test_case_17,True,0.5627238750457764,748.291015625,,1.0
+Solution_16,test_case_18,True,0.151763916015625,609.419921875,,1.0
+Solution_16,test_case_19,True,0.47725796699523926,741.029296875,,1.0
+Solution_16,test_case_20,True,0.5508577823638916,748.291015625,,1.0
+Solution_17,test_case_1,True,0.0,0.7265625,,1.0
+Solution_17,test_case_2,True,0.0,0.7265625,,1.0
+Solution_17,test_case_3,True,0.0,0.671875,,1.0
+Solution_17,test_case_4,True,0.0,0.5546875,,1.0
+Solution_17,test_case_5,True,0.0,0.640625,,1.0
+Solution_17,test_case_6,True,0.0,0.7265625,,1.0
+Solution_17,test_case_7,True,0.0,0.7265625,,1.0
+Solution_17,test_case_8,True,0.0,0.7265625,,1.0
+Solution_17,test_case_9,True,0.0,0.7265625,,1.0
+Solution_17,test_case_10,True,0.0,0.7265625,,1.0
+Solution_17,test_case_11,True,0.0,0.7890625,,1.0
+Solution_17,test_case_12,True,0.0,0.7265625,,1.0
+Solution_17,test_case_13,True,0.0,0.7265625,,1.0
+Solution_17,test_case_14,True,0.0,0.7421875,,1.0
+Solution_17,test_case_15,True,0.0,0.7265625,,1.0
+Solution_17,test_case_16,True,0.0,1.1015625,,1.0
+Solution_17,test_case_17,True,0.0,0.9453125,,1.0
+Solution_17,test_case_18,True,0.0,0.640625,,1.0
+Solution_17,test_case_19,True,0.0,1.1015625,,1.0
+Solution_17,test_case_20,True,0.0,0.9609375,,1.0
+Solution_18,test_case_1,True,0.0,1.1953125,,0.842280248611166
+Solution_18,test_case_2,True,0.0,1.1953125,,0.842280248611166
+Solution_18,test_case_3,True,0.0,1.1953125,,0.842280248611166
+Solution_18,test_case_4,True,0.0,1.1953125,,0.842280248611166
+Solution_18,test_case_5,True,0.0,1.2265625,,0.8250685621600157
+Solution_18,test_case_6,True,0.0,1.5625,,1.0
+Solution_18,test_case_7,True,0.0009920597076416016,1.59375,,1.0
+Solution_18,test_case_8,True,0.0,1.59375,,1.0
+Solution_18,test_case_9,True,0.0,1.7578125,,1.0
+Solution_18,test_case_10,True,0.0,2.015625,,0.8990203886661011
+Solution_18,test_case_11,True,0.001033782958984375,11.4296875,,1.0
+Solution_18,test_case_12,True,0.0,11.4609375,,1.0
+Solution_18,test_case_13,True,0.0,16.6171875,,1.0
+Solution_18,test_case_14,True,0.0,21.5234375,,1.0
+Solution_18,test_case_15,True,0.0,21.5546875,,1.0
+Solution_18,test_case_16,True,0.007998466491699219,204.515625,,1.0
+Solution_18,test_case_17,True,0.0039997100830078125,204.5234375,,1.0
+Solution_18,test_case_18,True,0.008996248245239258,173.515625,,1.0
+Solution_18,test_case_19,True,0.008079051971435547,204.515625,,1.0
+Solution_18,test_case_20,True,0.003996133804321289,204.4609375,,1.0
+Solution_19,test_case_1,True,0.0,1.5546875,,1.0
+Solution_19,test_case_2,True,0.0,1.5546875,,1.0
+Solution_19,test_case_3,True,0.0,2.1640625,,0.7913756476608745
+Solution_19,test_case_4,True,0.0,2.109375,,0.807747245827583
+Solution_19,test_case_5,True,0.0,1.5234375,,1.0
+Solution_19,test_case_6,True,0.0,2.1640625,,1.0
+Solution_19,test_case_7,True,0.0010018348693847656,2.1640625,,1.0
+Solution_19,test_case_8,True,0.0,2.2734375,,1.0
+Solution_19,test_case_9,True,0.0,2.1640625,,1.0
+Solution_19,test_case_10,True,0.0,2.1640625,,1.0
+Solution_19,test_case_11,True,0.0,4.28125,,1.0
+Solution_19,test_case_12,True,0.0009245872497558594,4.1171875,,1.0
+Solution_19,test_case_13,True,0.0009925365447998047,4.171875,,1.0
+Solution_19,test_case_14,True,0.0,4.453125,,1.0
+Solution_19,test_case_15,True,0.0,2.1640625,,1.0
+Solution_19,test_case_16,True,0.0,4.1171875,,1.0
+Solution_19,test_case_17,True,0.0,4.1171875,,1.0
+Solution_19,test_case_18,True,0.0,4.1171875,,1.0
+Solution_19,test_case_19,True,0.0009419918060302734,11.6171875,,0.6332829792254833
+Solution_19,test_case_20,True,0.003009796142578125,43.01171875,,0.222233321290251
+Solution_20,test_case_1,True,0.0010042190551757812,2.5732421875,,0.8938222731695369
+Solution_20,test_case_2,True,0.0,0.6015625,,1.0
+Solution_20,test_case_3,True,0.0,1.8466796875,,1.0
+Solution_20,test_case_4,True,0.0,1.3974609375,,1.0
+Solution_20,test_case_5,True,0.0009984970092773438,1.3974609375,,1.0
+Solution_20,test_case_6,True,0.0009989738464355469,1.904296875,,1.0
+Solution_20,test_case_7,True,0.0,1.3525390625,,1.0
+Solution_20,test_case_8,True,0.0,1.904296875,,1.0
+Solution_20,test_case_9,True,0.0005040168762207031,1.2998046875,,1.0
+Solution_20,test_case_10,True,0.0,1.2998046875,,1.0
+Solution_20,test_case_11,True,0.0009975433349609375,1.3564453125,,1.0
+Solution_20,test_case_12,True,0.0,1.3564453125,,1.0
+Solution_20,test_case_13,True,0.0,1.4091796875,,1.0
+Solution_20,test_case_14,True,0.0,1.3037109375,,1.0
+Solution_20,test_case_15,True,0.0010633468627929688,1.3037109375,,1.0
+Solution_20,test_case_16,True,0.0009205341339111328,1.4091796875,,1.0
+Solution_20,test_case_17,True,0.0,1.3564453125,,1.0
+Solution_20,test_case_18,True,0.0,1.3037109375,,1.0
+Solution_20,test_case_19,True,0.0010135173797607422,1.3564453125,,1.0
+Solution_20,test_case_20,True,0.0,1.3037109375,,1.0
+Solution_21,test_case_1,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_2,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_3,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_4,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_5,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_6,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_7,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_8,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_9,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_10,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_11,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_12,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_13,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_14,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_15,True,0.0,0.5234375,,0.469749530041166
+Solution_21,test_case_16,True,0.0,0.66015625,,0.7710762237397134
+Solution_21,test_case_17,True,0.0,0.66015625,,0.7710762237397134
+Solution_21,test_case_18,True,0.0,0.66015625,,0.7710762237397134
+Solution_21,test_case_19,True,0.0,0.60546875,,0.8263067813465063
+Solution_21,test_case_20,True,0.0,0.66015625,,0.7710762237397134
+Solution_22,test_case_1,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_2,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_3,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_4,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_5,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_6,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_7,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_8,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_9,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_10,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_11,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_12,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_13,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_14,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_15,True,0.0,0.5703125,,0.5560983417970188
+Solution_22,test_case_16,True,0.0,0.70703125,,0.7489662892141319
+Solution_22,test_case_17,True,0.0,0.70703125,,0.7489662892141319
+Solution_22,test_case_18,True,0.0,0.6796875,,0.7729755054351336
+Solution_22,test_case_19,True,0.0,0.70703125,,0.7489662892141319
+Solution_22,test_case_20,True,0.0,0.70703125,,0.7489662892141319
+Solution_23,test_case_1,True,0.0,0.703125,,0.5232871318772889
+Solution_23,test_case_2,True,0.0,0.7109375,,0.5186817277830583
+Solution_23,test_case_3,True,0.0,0.7109375,,0.5186817277830583
+Solution_23,test_case_4,True,0.0,0.65625,,0.5529815402873272
+Solution_23,test_case_5,True,0.0,0.65625,,0.5529815402873272
+Solution_23,test_case_6,True,0.0,0.7890625,,0.48288378154074774
+Solution_23,test_case_7,True,0.0,0.8046875,,0.4753679946462166
+Solution_23,test_case_8,True,0.0,0.7578125,,0.4987493362826967
+Solution_23,test_case_9,True,0.0,0.7578125,,0.4987493362826967
+Solution_23,test_case_10,True,0.0,0.78125,,0.486743004090655
+Solution_23,test_case_11,True,0.0,0.78125,,0.5058061460904463
+Solution_23,test_case_12,True,0.0,0.78125,,0.5058061460904463
+Solution_23,test_case_13,True,0.0,16.2421875,,0.044637566553321115
+Solution_23,test_case_14,False,0.0,7.6640625,Time or Memory Limit Exceeded,3.107654790523067e-06
+Solution_23,test_case_15,True,0.0,16.2421875,,0.044637566553321115
+Solution_23,test_case_16,True,0.0,31.8671875,,0.04178324875513341
+Solution_23,test_case_20,True,0.0,31.8671875,,0.04178324875513341
+Solution_24,test_case_1,True,0.0,0.53125,,1.0
+Solution_24,test_case_2,True,0.0,0.53125,,1.0
+Solution_24,test_case_3,True,0.0,0.53125,,1.0
+Solution_24,test_case_4,True,0.0,0.53125,,1.0
+Solution_24,test_case_5,True,0.0,0.53125,,1.0
+Solution_24,test_case_6,True,0.0,0.53125,,1.0
+Solution_24,test_case_7,True,0.0,0.53125,,1.0
+Solution_24,test_case_8,True,0.0,0.53125,,1.0
+Solution_24,test_case_9,True,0.0,0.53125,,1.0
+Solution_24,test_case_10,True,0.0,0.53125,,1.0
+Solution_24,test_case_11,True,0.0,0.53125,,1.0
+Solution_24,test_case_12,True,0.0,0.53125,,1.0
+Solution_24,test_case_13,True,0.0,0.53125,,1.0
+Solution_24,test_case_14,True,0.0,0.53125,,1.0
+Solution_24,test_case_15,True,0.0,0.53125,,1.0
+Solution_24,test_case_16,False,0.0,0.66796875,Time or Memory Limit Exceeded,2.1887445814549233e-05
+Solution_24,test_case_17,True,0.0,0.5859375,,1.0
+Solution_24,test_case_18,True,0.0,0.66796875,,1.0
+Solution_24,test_case_19,True,0.0,0.66796875,,1.0
+Solution_24,test_case_20,True,0.0,0.66796875,,1.0
+Solution_25,test_case_1,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_2,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_3,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_4,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_5,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_6,False,0.0,0.65625,Time or Memory Limit Exceeded,2.2199569208199545e-05
+Solution_25,test_case_7,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_8,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_9,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_10,False,0.0,0.65625,Time or Memory Limit Exceeded,2.2199569208199545e-05
+Solution_25,test_case_11,False,0.0,0.62890625,Time or Memory Limit Exceeded,2.2968427952264955e-05
+Solution_25,test_case_12,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_13,False,0.0,0.62890625,Time or Memory Limit Exceeded,2.2968427952264955e-05
+Solution_25,test_case_14,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_15,False,0.0,0.6015625,Time or Memory Limit Exceeded,2.3799914428876323e-05
+Solution_25,test_case_16,False,0.1902146339416504,0.73828125,Time or Memory Limit Exceeded,2.0203310055747058e-05
+Solution_25,test_case_17,False,0.2611219882965088,0.7109375,Time or Memory Limit Exceeded,2.0822595464878667e-05
+Solution_25,test_case_18,False,0.23691105842590332,0.74609375,Time or Memory Limit Exceeded,2.0033889704110857e-05
+Solution_25,test_case_19,False,0.21806001663208008,0.71875,Time or Memory Limit Exceeded,2.064133174558565e-05
+Solution_25,test_case_20,False,0.22112250328063965,0.7109375,Time or Memory Limit Exceeded,2.0822595464878667e-05
+Solution_27,test_case_1,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_2,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_3,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_4,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_5,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_6,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_7,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_8,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_9,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_10,True,0.0,0.609375,,0.5632002365950842
+Solution_27,test_case_11,True,0.00607752799987793,0.66796875,,0.5233179349254096
+Solution_27,test_case_12,True,0.0010914802551269531,0.609375,,0.5632002365950842
+Solution_27,test_case_13,False,0.005888462066650391,0.66796875,Time or Memory Limit Exceeded,2.1887445814549233e-05
+Solution_27,test_case_14,True,0.005746126174926758,0.66796875,,0.5233179349254096
+Solution_27,test_case_15,True,0.011002779006958008,0.66796875,,0.5233179349254096
+Solution_27,test_case_16,True,0.009006261825561523,0.66796875,,0.6723629023268153
+Solution_27,test_case_17,True,0.02900981903076172,0.66796875,,0.6723629023268153
+Solution_27,test_case_18,True,0.054996490478515625,0.66796875,,0.6723629023268153
+Solution_27,test_case_19,True,0.046053409576416016,0.66796875,,0.6723629023268153
+Solution_27,test_case_20,True,0.04391813278198242,0.66796875,,0.6723629023268153
+Solution_28,test_case_1,True,0.0,0.828125,,1.0
+Solution_28,test_case_2,True,0.0,0.734375,,1.0
+Solution_28,test_case_3,True,0.0,0.71875,,1.0
+Solution_28,test_case_4,True,0.0,0.71875,,1.0
+Solution_28,test_case_5,True,0.0,0.6875,,1.0
+Solution_28,test_case_6,True,0.0,0.71875,,1.0
+Solution_28,test_case_7,True,0.0,0.796875,,1.0
+Solution_28,test_case_8,True,0.0,0.75,,1.0
+Solution_28,test_case_9,True,0.0,0.734375,,1.0
+Solution_28,test_case_10,True,0.0,0.8125,,1.0
+Solution_28,test_case_11,True,0.0,0.859375,,1.0
+Solution_28,test_case_12,True,0.0,0.859375,,1.0
+Solution_28,test_case_13,True,0.0,0.828125,,1.0
+Solution_28,test_case_14,True,0.0,0.84375,,1.0
+Solution_28,test_case_15,True,0.0,0.8125,,1.0
+Solution_28,test_case_16,True,0.07818269729614258,313.26953125,,1.0
+Solution_28,test_case_17,True,0.0679175853729248,313.25390625,,1.0
+Solution_28,test_case_18,True,0.06407880783081055,313.25390625,,1.0
+Solution_28,test_case_19,True,0.06420636177062988,313.25390625,,1.0
+Solution_28,test_case_20,True,0.0776214599609375,313.25390625,,1.0
+Solution_29,test_case_1,True,0.0,0.640625,,1.0
+Solution_29,test_case_2,True,0.0,0.640625,,1.0
+Solution_29,test_case_3,True,0.0,0.640625,,1.0
+Solution_29,test_case_4,True,0.0,0.9296875,,1.0
+Solution_29,test_case_5,True,0.0,0.640625,,1.0
+Solution_29,test_case_6,True,0.0,0.640625,,1.0
+Solution_29,test_case_7,True,0.0,0.640625,,1.0
+Solution_29,test_case_8,True,0.0,0.640625,,1.0
+Solution_29,test_case_9,True,0.0,0.9296875,,1.0
+Solution_29,test_case_10,True,0.0,0.9296875,,1.0
+Solution_29,test_case_11,True,0.0,3.8359375,,1.0
+Solution_29,test_case_12,True,0.0010001659393310547,2.2421875,,0.9999004496166802
+Solution_29,test_case_13,True,0.0,3.8359375,,1.0
+Solution_29,test_case_14,True,0.0,2.2421875,,1.0
+Solution_29,test_case_15,True,0.0,2.2421875,,1.0
+Solution_29,test_case_16,True,0.0852808952331543,0.703125,,1.0
+Solution_29,test_case_17,True,0.08199262619018555,1.12890625,,1.0
+Solution_29,test_case_18,True,0.08131265640258789,2.47265625,,1.0
+Solution_29,test_case_19,True,0.09579801559448242,0.8125,,1.0
+Solution_29,test_case_20,True,0.06458258628845215,1.5390625,,1.0
+Solution_30,test_case_1,True,0.0,1.1689453125,,0.4932897996779902
+Solution_30,test_case_2,True,0.0,0.828125,,0.6499213048594721
+Solution_30,test_case_3,True,0.0,0.8515625,,0.635571284848934
+Solution_30,test_case_4,True,0.0,0.828125,,0.6499213048594721
+Solution_30,test_case_5,True,0.0,1.16796875,,0.4936197318308326
+Solution_30,test_case_6,True,0.0,0.8798828125,,0.5814248021305941
+Solution_30,test_case_7,True,0.0,0.87890625,,0.581941566777767
+Solution_30,test_case_8,True,0.0,0.8818359375,,0.5803943636940675
+Solution_30,test_case_9,True,0.0,0.8798828125,,0.5814248021305941
+Solution_30,test_case_10,True,0.0,0.8818359375,,0.5803943636940675
+Solution_30,test_case_11,True,0.003997802734375,1.04296875,,0.8493699361393046
+Solution_30,test_case_12,True,0.1545107364654541,0.93359375,,0.9280846146373724
+Solution_30,test_case_13,True,0.16392302513122559,1.224609375,,0.7469918402272234
+Solution_30,test_case_14,True,0.03481769561767578,10.8896484375,,0.1300477474975729
+Solution_30,test_case_15,True,0.35826563835144043,1.07421875,,0.8295445967588675
+Solution_30,test_case_16,True,0.16431236267089844,0.9326171875,,0.8319958074334608
+Solution_30,test_case_17,True,0.23583006858825684,1.0419921875,,0.7613639326211892
+Solution_30,test_case_18,True,0.14466524124145508,2.4765625,,0.38089426678219673
+Solution_30,test_case_19,True,0.14756369590759277,1.0283203125,,0.7694513007052176
+Solution_30,test_case_20,True,0.2491774559020996,1.0458984375,,0.7590882315131947
+Solution_31,test_case_1,True,0.0,0.6796875,,0.8733863864312172
+Solution_31,test_case_2,True,0.0,0.5546875,,1.0
+Solution_31,test_case_3,True,0.0,0.6484375,,0.9068998841860022
+Solution_31,test_case_4,True,0.0,0.6484375,,0.9068998841860022
+Solution_31,test_case_5,True,0.0,0.6484375,,0.9068998841860022
+Solution_31,test_case_6,True,0.0,0.6484375,,0.9461970252518723
+Solution_31,test_case_7,True,0.0,0.6796875,,0.9112313444371429
+Solution_31,test_case_8,True,0.0,0.6796875,,0.9112313444371429
+Solution_31,test_case_9,True,0.0,0.6796875,,0.9112313444371429
+Solution_31,test_case_10,True,0.0,0.6796875,,0.9112313444371429
+Solution_31,test_case_11,True,0.0,1.3359375,,0.9739779575498122
+Solution_31,test_case_12,True,0.0,1.0546875,,1.0
+Solution_31,test_case_13,True,0.0,1.0234375,,1.0
+Solution_31,test_case_14,True,0.0,1.0234375,,1.0
+Solution_31,test_case_15,True,0.0,0.6796875,,1.0
+Solution_31,test_case_16,True,0.21821141242980957,782.85546875,,1.0
+Solution_31,test_case_17,True,0.14463233947753906,782.91015625,,1.0
+Solution_31,test_case_20,True,0.0,0.5546875,,1.0
+Solution_32,test_case_1,True,0.0,0.8046875,,1.0
+Solution_32,test_case_2,True,0.0,0.921875,,1.0
+Solution_32,test_case_3,True,0.0,0.7578125,,1.0
+Solution_32,test_case_4,True,0.0,0.7578125,,1.0
+Solution_32,test_case_5,True,0.0,0.7578125,,1.0
+Solution_32,test_case_6,True,0.0,1.046875,,1.0
+Solution_32,test_case_7,True,0.0,1.046875,,1.0
+Solution_32,test_case_8,True,0.0,0.7578125,,1.0
+Solution_32,test_case_9,True,0.0,0.7578125,,1.0
+Solution_32,test_case_10,True,0.0,0.8046875,,1.0
+Solution_32,test_case_11,True,0.0,0.7578125,,1.0
+Solution_32,test_case_12,True,0.0,1.3359375,,0.9472782734948106
+Solution_32,test_case_13,True,0.0,0.8046875,,1.0
+Solution_32,test_case_14,True,0.0,1.171875,,1.0
+Solution_32,test_case_15,True,0.0,0.8046875,,1.0
+Solution_32,test_case_16,True,0.001001596450805664,0.8671875,,1.0
+Solution_32,test_case_17,True,0.00995945930480957,1.03125,,1.0
+Solution_32,test_case_18,True,0.003993511199951172,1.03125,,1.0
+Solution_32,test_case_19,True,0.009992122650146484,1.44921875,,1.0
+Solution_32,test_case_20,True,0.0060329437255859375,4.2421875,,0.5381918841398162
+Solution_33,test_case_1,True,0.0,0.6875,,0.7997672807148843
+Solution_33,test_case_2,True,0.0,0.6875,,0.7997672807148843
+Solution_33,test_case_3,True,0.0,0.6484375,,0.8380835117872638
+Solution_33,test_case_4,True,0.0,0.66796875,,0.8184212151942695
+Solution_33,test_case_5,True,0.0,0.6640625,,0.8222703489357371
+Solution_33,test_case_6,True,0.0,0.66796875,,0.8184212151942695
+Solution_33,test_case_7,True,0.0,0.66796875,,0.8184212151942695
+Solution_33,test_case_8,True,0.0,0.66796875,,0.8184212151942695
+Solution_33,test_case_9,True,0.0,0.66015625,,0.8261604551904049
+Solution_33,test_case_10,True,0.0,0.66015625,,0.8261604551904049
+Solution_33,test_case_11,True,0.0009543895721435547,0.66796875,,0.8184212151942695
+Solution_33,test_case_12,True,0.0,0.6875,,0.7997672807148843
+Solution_33,test_case_13,True,0.0,0.6875,,0.7997672807148843
+Solution_33,test_case_14,True,0.0,0.6875,,0.7997672807148843
+Solution_33,test_case_15,True,0.0,0.6875,,0.7997672807148843
+Solution_33,test_case_16,True,0.0,0.6875,,0.8045702632013906
+Solution_33,test_case_17,True,0.0,0.6640625,,0.8272084730380154
+Solution_33,test_case_18,True,0.0,0.66796875,,0.8233362234197241
+Solution_33,test_case_19,True,0.0,0.6875,,0.8045702632013906
+Solution_33,test_case_20,True,0.0,0.6875,,0.8045702632013906
+Solution_34,test_case_1,True,0.0,0.6640625,,1.0
+Solution_34,test_case_2,True,0.0,0.6640625,,1.0
+Solution_34,test_case_3,True,0.0,0.6640625,,1.0
+Solution_34,test_case_4,True,0.0,0.6640625,,1.0
+Solution_34,test_case_5,True,0.0,0.6640625,,1.0
+Solution_34,test_case_6,True,0.0,0.6640625,,1.0
+Solution_34,test_case_7,True,0.0,0.6640625,,1.0
+Solution_34,test_case_8,True,0.002002239227294922,0.71875,,1.0
+Solution_34,test_case_9,True,0.0,0.71875,,1.0
+Solution_34,test_case_10,True,0.0,0.71875,,1.0
+Solution_34,test_case_11,True,0.0,0.6640625,,1.0
+Solution_34,test_case_12,True,0.0,0.6640625,,1.0
+Solution_34,test_case_13,True,0.0,0.71875,,1.0
+Solution_34,test_case_14,True,0.0,0.71875,,1.0
+Solution_34,test_case_15,True,0.0,0.71875,,1.0
+Solution_34,test_case_16,True,0.0,0.7265625,,1.0
+Solution_34,test_case_17,True,0.0,0.71875,,1.0
+Solution_34,test_case_18,True,0.0,0.7265625,,1.0
+Solution_34,test_case_19,True,0.0,0.71875,,1.0
+Solution_34,test_case_20,True,0.0,0.71875,,1.0
+Solution_35,test_case_1,True,0.0,0.7109375,,1.0
+Solution_35,test_case_2,True,0.0,1.296875,,1.0
+Solution_35,test_case_3,True,0.0,1.375,,0.9893311884760525
+Solution_35,test_case_4,True,0.0,1.296875,,1.0
+Solution_35,test_case_5,True,0.0,1.234375,,1.0
+Solution_35,test_case_6,True,0.0,1.375,,1.0
+Solution_35,test_case_7,True,0.0,1.375,,1.0
+Solution_35,test_case_8,True,0.0,1.375,,1.0
+Solution_35,test_case_9,True,0.0,1.375,,1.0
+Solution_35,test_case_10,True,0.0,1.375,,1.0
+Solution_35,test_case_11,True,0.0,1.375,,1.0
+Solution_35,test_case_12,True,0.0,1.375,,1.0
+Solution_35,test_case_13,True,0.0,1.375,,1.0
+Solution_35,test_case_14,True,0.0,1.375,,1.0
+Solution_35,test_case_15,True,0.0009996891021728516,1.375,,1.0
+Solution_35,test_case_16,True,0.00499272346496582,1.4609375,,1.0
+Solution_35,test_case_17,True,0.004954338073730469,1.40625,,1.0
+Solution_35,test_case_18,True,0.005990743637084961,1.4609375,,1.0
+Solution_35,test_case_19,True,0.0030002593994140625,1.4609375,,1.0
+Solution_35,test_case_20,True,0.001909017562866211,1.375,,1.0
+Solution_37,test_case_1,True,0.0,1.75,,0.9571104045788613
+Solution_37,test_case_2,True,0.0,2.203125,,0.7960881610652595
+Solution_37,test_case_3,True,0.0,2.203125,,0.7960881610652595
+Solution_37,test_case_4,True,0.0,2.203125,,0.7960881610652595
+Solution_37,test_case_5,False,0.0,2.65625,Time or Memory Limit Exceeded,7.254121779575939e-06
+Solution_37,test_case_6,False,0.0,3.13671875,Time or Memory Limit Exceeded,6.350669853105515e-06
+Solution_37,test_case_7,True,0.0,2.65625,,0.8366494176247443
+Solution_37,test_case_8,False,0.0,3.109375,Time or Memory Limit Exceeded,6.395308780246307e-06
+Solution_37,test_case_9,True,0.0,2.65625,,0.8366494176247443
+Solution_37,test_case_10,False,0.0,3.5625,Time or Memory Limit Exceeded,5.735827760943938e-06
+Solution_37,test_case_11,True,0.03309822082519531,8.11328125,,1.0
+Solution_37,test_case_12,True,0.039075374603271484,8.140625,,1.0
+Solution_37,test_case_13,True,0.024750471115112305,7.66015625,,1.0
+Solution_37,test_case_14,True,0.030097007751464844,7.66015625,,1.0
+Solution_37,test_case_15,True,0.02292013168334961,7.66015625,,1.0
+Solution_37,test_case_16,True,0.09972357749938965,8.6484375,,1.0
+Solution_37,test_case_17,True,0.12148261070251465,8.59375,,1.0
+Solution_37,test_case_18,True,0.14936351776123047,8.62109375,,1.0
+Solution_37,test_case_19,True,0.09702157974243164,8.59375,,1.0
+Solution_37,test_case_20,True,0.09470844268798828,8.62109375,,1.0
+Solution_38,test_case_1,False,0.0,1.6328125,Time or Memory Limit Exceeded,1.0706584447772183e-05
+Solution_38,test_case_2,False,0.0,2.078125,Time or Memory Limit Exceeded,8.828006950363929e-06
+Solution_38,test_case_3,False,0.0,2.078125,Time or Memory Limit Exceeded,8.828006950363929e-06
+Solution_38,test_case_4,False,0.0,2.5234375,Time or Memory Limit Exceeded,7.5579838200257e-06
+Solution_38,test_case_5,False,0.0,2.5234375,Time or Memory Limit Exceeded,7.5579838200257e-06
+Solution_38,test_case_6,False,0.0,3.4140625,Time or Memory Limit Exceeded,5.934482126129818e-06
+Solution_38,test_case_7,False,0.0,2.5234375,Time or Memory Limit Exceeded,7.5579838200257e-06
+Solution_38,test_case_8,False,0.0,3.4140625,Time or Memory Limit Exceeded,5.934482126129818e-06
+Solution_38,test_case_9,False,0.0,2.96875,Time or Memory Limit Exceeded,6.636530557622782e-06
+Solution_38,test_case_10,False,0.0,3.4140625,Time or Memory Limit Exceeded,5.934482126129818e-06
+Solution_38,test_case_11,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_12,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_13,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_14,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_15,False,0.0009984970092773438,5.1953125,Time or Memory Limit Exceeded,4.241413940576005e-06
+Solution_38,test_case_16,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_17,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_18,False,0.0,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_19,False,0.0009915828704833984,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_38,test_case_20,False,0.001012563705444336,5.6953125,Time or Memory Limit Exceeded,3.940814142522057e-06
+Solution_39,test_case_1,True,0.0,1.3359375,,1.0
+Solution_39,test_case_2,True,0.0,1.578125,,1.0
+Solution_39,test_case_3,True,0.0,1.5859375,,1.0
+Solution_39,test_case_4,True,0.0,1.5859375,,1.0
+Solution_39,test_case_5,True,0.0,1.578125,,1.0
+Solution_39,test_case_6,True,0.0,1.9296875,,1.0
+Solution_39,test_case_7,True,0.0,1.7578125,,1.0
+Solution_39,test_case_8,True,0.0,1.6953125,,1.0
+Solution_39,test_case_9,True,0.0,1.6875,,1.0
+Solution_39,test_case_10,True,0.0,1.8671875,,1.0
+Solution_39,test_case_11,True,0.0010097026824951172,74.4375,,1.0
+Solution_39,test_case_12,True,0.000993490219116211,69.390625,,1.0
+Solution_39,test_case_13,True,0.001001119613647461,63.96875,,1.0
+Solution_39,test_case_14,True,0.0010149478912353516,58.796875,,1.0
+Solution_39,test_case_15,True,0.001009225845336914,53.37890625,,1.0
+Solution_39,test_case_16,True,0.002001523971557617,105.59375,,1.0
+Solution_39,test_case_17,True,0.0029904842376708984,103.25,,1.0
+Solution_39,test_case_18,True,0.0019996166229248047,100.84375,,1.0
+Solution_39,test_case_19,True,0.0019137859344482422,99.0,,1.0
+Solution_39,test_case_20,True,0.0010001659393310547,96.90625,,1.0
+Solution_40,test_case_1,True,0.0,1.8046875,,1.0
+Solution_40,test_case_2,True,0.0,2.3515625,,1.0
+Solution_40,test_case_11,False,0.05107855796813965,473.3046875,Time or Memory Limit Exceeded,1.1478558594032444e-07
+Solution_40,test_case_13,False,0.025674104690551758,368.90234375,Time or Memory Limit Exceeded,1.4011055985933424e-07
+Solution_40,test_case_19,False,0.07376885414123535,638.30078125,Time or Memory Limit Exceeded,9.036072342530666e-08
+Solution_41,test_case_1,True,0.0,1.7109375,,1.0
+Solution_41,test_case_2,True,0.0,2.0546875,,1.0
+Solution_41,test_case_3,True,0.0010039806365966797,2.2578125,,0.9375262615438501
+Solution_41,test_case_4,True,0.0010242462158203125,2.2578125,,0.9263519564102675
+Solution_41,test_case_5,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_42,test_case_1,True,0.0,2.6484375,,0.6304867565376402
+Solution_42,test_case_2,True,0.0,3.21875,,0.5394087093333164
+Solution_42,test_case_3,True,0.0,3.8203125,,0.47031479392335385
+Solution_42,test_case_4,True,0.001001119613647461,3.8203125,,0.4699991341187547
+Solution_42,test_case_5,True,0.0,4.390625,,0.42077184733960515
+Solution_42,test_case_6,True,0.0,4.9609375,,0.5051941538827526
+Solution_42,test_case_7,False,0.0,5.0,Time or Memory Limit Exceeded,4.373448295773109e-06
+Solution_42,test_case_8,True,0.0,6.1640625,,0.4246349085188416
+Solution_42,test_case_9,True,0.0010006427764892578,6.734375,,0.3954613504249928
+Solution_42,test_case_10,True,0.0,7.38671875,,0.3674075444075063
+Solution_42,test_case_11,True,0.0009174346923828125,34.71875,,0.6327767930948195
+Solution_42,test_case_12,True,0.0009741783142089844,51.1328125,,0.46423947098318846
+Solution_42,test_case_13,True,0.001998424530029297,67.74609375,,0.37067594261559383
+Solution_42,test_case_14,True,0.005064964294433594,80.40234375,,0.32321152672556464
+Solution_42,test_case_15,True,0.0059931278228759766,100.75390625,,0.2698312799118347
+Solution_43,test_case_1,True,0.0,1.34375,,0.5959191817460016
+Solution_43,test_case_2,True,0.0,1.34375,,0.5959191817460016
+Solution_43,test_case_3,True,0.0,1.34375,,0.5959191817460016
+Solution_43,test_case_4,True,0.0009794235229492188,1.34375,,0.5959191817460016
+Solution_43,test_case_5,True,0.0,1.375,,0.585059436071782
+Solution_43,test_case_6,True,0.00099945068359375,1.40234375,,0.8105739950733852
+Solution_43,test_case_7,True,0.0019989013671875,1.40234375,,0.5349557347357041
+Solution_43,test_case_8,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_43,test_case_9,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_43,test_case_10,False,0.0,0.0,Time or Memory Limit Exceeded,0.0
+Solution_44,test_case_1,False,0.0,0.71875,Time or Memory Limit Exceeded,2.064133174558565e-05
+Solution_44,test_case_2,False,0.0,0.71875,Time or Memory Limit Exceeded,2.064133174558565e-05
+Solution_44,test_case_3,False,0.0,0.71875,Time or Memory Limit Exceeded,2.064133174558565e-05
+Solution_44,test_case_4,False,0.0,0.734375,Time or Memory Limit Exceeded,2.0289235955374002e-05
+Solution_44,test_case_5,False,0.0,0.7421875,Time or Memory Limit Exceeded,2.0118198620682682e-05
+Solution_44,test_case_6,False,0.0,0.78125,Time or Memory Limit Exceeded,1.930936427694451e-05
+Solution_44,test_case_7,False,0.0,0.7890625,Time or Memory Limit Exceeded,1.915626678316301e-05
+Solution_44,test_case_8,False,0.0,0.75,Time or Memory Limit Exceeded,1.9950371596517917e-05
+Solution_44,test_case_9,False,0.0,0.77734375,Time or Memory Limit Exceeded,1.938695093233747e-05
+Solution_44,test_case_10,False,0.0,0.8125,Time or Memory Limit Exceeded,1.8712908941262737e-05
+Solution_44,test_case_11,False,0.0,1.12109375,Time or Memory Limit Exceeded,1.446393478079926e-05
+Solution_44,test_case_12,False,0.0010187625885009766,1.1875,Time or Memory Limit Exceeded,1.3813162004423472e-05
+Solution_44,test_case_13,False,0.0,1.5546875,Time or Memory Limit Exceeded,1.1134879322192141e-05
+Solution_44,test_case_14,False,0.0,1.43359375,Time or Memory Limit Exceeded,1.1881167561974406e-05
+Solution_44,test_case_15,False,0.005002737045288086,1.53125,Time or Memory Limit Exceeded,1.12710173583023e-05
+Solution_44,test_case_16,False,0.0029494762420654297,13.1171875,Time or Memory Limit Exceeded,2.021749846494029e-06
+Solution_44,test_case_18,False,1.928311824798584,61.5,Time or Memory Limit Exceeded,5.8735396841732e-07
+Solution_44,test_case_19,False,2.6742610931396484,61.6484375,Time or Memory Limit Exceeded,5.862223080409825e-07
+Solution_44,test_case_20,False,0.003522157669067383,32.08984375,Time or Memory Limit Exceeded,9.88338965878672e-07

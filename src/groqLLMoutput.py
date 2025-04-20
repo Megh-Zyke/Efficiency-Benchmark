@@ -17,7 +17,7 @@ start = df.entry_point
 
 Prompt = prompt(problem, start)
 
-def generate_response(prompt, model="llama3-70b-8192", max_tokens=1024):
+def generate_response(prompt, model="deepseek-r1-distill-llama-70b", max_tokens=58250):
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
@@ -32,5 +32,5 @@ for i in tqdm.tqdm(range(len(df)), desc="Processing problems"):
     response = generate_response(prompt(df.problem_description[i], df.entry_point[i])).split("```python\n")[1].split("```")[0]
     output["Solution_" + str(i)] = response
 
-with open("data/groq_llama.json", "w") as f:
+with open("data/deepseek-r1.json", "w") as f:
     json.dump(output, f, indent=4)
