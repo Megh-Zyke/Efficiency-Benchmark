@@ -1,6 +1,7 @@
 import time
 import random
 import json
+import re
 import tracemalloc
 from typing import List, Optional, Tuple
 from collections import deque

@@ -309,4 +309,4 @@ files = [f for f in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir
 #     print(f"Processing {filename}...")
 #     compute_score(filename)
 
-compute_score("groq_llama.json")
+compute_score("deepseek-r1.json")

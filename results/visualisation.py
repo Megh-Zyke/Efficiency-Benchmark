@@ -42,32 +42,68 @@ for file in files:
             "efficiency_score": efficiency_score,
             "total_score" : mean_score * efficiency_score
         }
-
 def plotG():
-        keys = list(outputs.keys())
-        mean_scores = [outputs[key]["mean_score"] for key in keys]
-        efficiency_scores = [outputs[key]["efficiency_score"] for key in keys]
-        total_scores = [outputs[key]["total_score"] for key in keys]
+    # Ensure demo.csv is always first
+    keys = sorted(outputs.keys(), key=lambda x: (x != "optimal_human_code.csv", x))
+    mean_scores = [outputs[key]["mean_score"] for key in keys]
+    efficiency_scores = [outputs[key]["efficiency_score"] for key in keys]
+    total_scores = [outputs[key]["total_score"] for key in keys]
 
-        x = np.arange(len(keys))  # the label locations
-        width = 0.25  # the width of the bars
+    x = np.arange(len(keys))  # the label locations
+    width = 0.5  # the width of the bars
 
-        fig, ax = plt.subplots(figsize=(10, 6))
+    # Plot Mean Score
+    fig, ax = plt.subplots(figsize=(10, 6))
+    rects1 = ax.bar(x, mean_scores, width, label='Mean Score', color='blue')
+    ax.set_xlabel('Files')
+    ax.set_ylabel('Pass @ 1 Score')
+    ax.set_title('Pass@1 Score by File')
+    ax.set_xticks(x)
+    ax.set_xticklabels(keys, rotation=45, ha="right")
+    for rect in rects1:
+        height = rect.get_height()
+        ax.annotate(f'{height:.2f}',
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+    plt.tight_layout()
+    plt.show()
 
-        rects1 = ax.bar(x - width, mean_scores, width, label='Mean Score')
-        rects2 = ax.bar(x, efficiency_scores, width, label='Efficiency Score')
-        rects3 = ax.bar(x + width, total_scores, width, label='Total Score')
+    # Plot Efficiency Score
+    fig, ax = plt.subplots(figsize=(10, 6))
+    rects2 = ax.bar(x, efficiency_scores, width, label='Efficiency Score', color='green')
+    ax.set_xlabel('Files')
+    ax.set_ylabel('Efficiency Score')
+    ax.set_title('Efficiency Score by File')
+    ax.set_xticks(x)
+    ax.set_xticklabels(keys, rotation=45, ha="right")
+    for rect in rects2:
+        height = rect.get_height()
+        ax.annotate(f'{height:.2f}',
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+    plt.tight_layout()
+    plt.show()
 
-        # Add some text for labels, title, and custom x-axis tick labels
-        ax.set_xlabel('Files')
-        ax.set_ylabel('Scores')
-        ax.set_title('Comparison of Scores by File')
-        ax.set_xticks(x)
-        ax.set_xticklabels(keys, rotation=45, ha="right")
-        ax.legend()
+    # Plot Total Score
+    fig, ax = plt.subplots(figsize=(10, 6))
+    rects3 = ax.bar(x, total_scores, width, label='Total Score', color='red')
+    ax.set_xlabel('Files')
+    ax.set_ylabel('Total Score')
+    ax.set_title('Total Score by File')
+    ax.set_xticks(x)
+    ax.set_xticklabels(keys, rotation=45, ha="right")
+    for rect in rects3:
+        height = rect.get_height()
+        ax.annotate(f'{height:.2f}',
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
+    plt.tight_layout()
+    plt.show()
 
-        # Display the plot
-        plt.tight_layout()
-        plt.show()
-        
 plotG()

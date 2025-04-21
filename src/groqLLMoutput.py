@@ -17,7 +17,9 @@ start = df.entry_point
 
 Prompt = prompt(problem, start)
 
-def generate_response(prompt, model="deepseek-r1-distill-llama-70b", max_tokens=58250):
+not_present = [6,8,9,10,11,13,14,15,16,18,19,20,23,26,27,29,30,31,34,36,37,39,40,41,42,43,44,45]
+
+def generate_response(prompt, model="qwen-qwq-32b", max_tokens=58250):
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
@@ -29,8 +31,13 @@ def generate_response(prompt, model="deepseek-r1-distill-llama-70b", max_tokens=
 output = {}
 
 for i in tqdm.tqdm(range(len(df)), desc="Processing problems"):
-    response = generate_response(prompt(df.problem_description[i], df.entry_point[i])).split("```python\n")[1].split("```")[0]
-    output["Solution_" + str(i)] = response
+ if i in not_present:
+        
+    try:
+        response = generate_response(prompt(df.problem_description[i], df.entry_point[i])).split("```python\n")[1].split("```")[0]
+        output["Solution_" + str(i)] = response
+    except Exception as e:
+        continue
 
-with open("data/deepseek-r1.json", "w") as f:
+with open("data/qwen-qwq-32b2.json", "w") as f:
     json.dump(output, f, indent=4)

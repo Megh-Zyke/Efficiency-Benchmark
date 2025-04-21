@@ -244,4 +244,4 @@ def compute_score(filename):
 
 
 # Run the function
-compute_score("groq_llama.json")
+compute_score("optimal_human_code.json")
